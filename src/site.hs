@@ -2,9 +2,14 @@
 
 import           Control.Applicative (empty, (<$>))
 import           Control.Monad (liftM)
+import           Data.List (intersperse)
 import qualified Data.Map as M
 import           Data.Monoid (mappend, mconcat)
 import           System.FilePath
+import           Text.Blaze.Html                 (toHtml, toValue, (!))
+import           Text.Blaze.Html.Renderer.String (renderHtml)
+import qualified Text.Blaze.Html5                as H
+import qualified Text.Blaze.Html5.Attributes     as A
 
 import           Hakyll hiding (defaultContext)
 import           Text.Pandoc.Options
@@ -98,7 +103,7 @@ main = hakyllWith hakyllConf $ do
                       constField "tag" tag `mappend`
                       constField "number" (show number) `mappend`
                       listField "posts" (postCtx tags) (return posts) `mappend`
-                      defaultContext
+                      tagCtx
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/tag.html" ctx
@@ -197,7 +202,7 @@ postCtx tags = mconcat
     , strippedUrlField "url"
     , urlField "urllol"
     , dateField "date" "%B %e, %Y"
-    , tagsField "tags" tags
+    , tagsField' "tags" tags
     , constField "author" "Thomas Sutton"
     , defaultContext
     , maybeMetadataField
@@ -220,6 +225,18 @@ maybeMetadataField = Context $ \key item -> do
     case M.lookup key metadata of
       Nothing -> fmap StringField . return $ ""
       Just v  -> fmap StringField . return $ v
+
+-- | Custom "tags" context to process tag URLs.
+tagsField' :: String -> Tags -> Context a
+tagsField' = tagsFieldWith
+             getTags
+             simpleRenderLink
+             (mconcat . intersperse ", ")
+  where
+    simpleRenderLink :: String -> (Maybe FilePath) -> Maybe H.Html
+    simpleRenderLink _   Nothing         = Nothing
+    simpleRenderLink tag (Just filePath) =
+      Just $ H.a ! A.href (toValue $ dropFileName $ toUrl filePath) $ toHtml tag
 
 -- | Build a tag template context.
 pageCtx :: Context String
