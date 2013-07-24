@@ -1,6 +1,6 @@
 ---
 title: FP-Syd July 2013
-tags: functional programming, fpsyd
+tags: functional programming, fp-syd, haskell, array programming, discipline, typing
 location: Sydney, New South Wales
 excerpt: 
   Here are some notes from the July, 2013 meeting of the Sydney functional
@@ -53,12 +53,13 @@ doFFT :: Acc (Array DIM2 Complex)
 	  -> Acc (Array DIM2 Complex)
 doFFT arr = foreignAcc (CuForeign foreignFFT)
                        pureFFT
-					   arr
+                       arr
 	where
 		pureFFT arr = ... a slow, pure Accelerate FFT ...
 		foriegnFFT arr = do
 		...
 ````
+
 You can nest calls to `foreignAcc` in the pure branch to offer implementations
 for multiple backends.
 
@@ -68,7 +69,7 @@ for multiple backends.
 compiled, generates a C header file for the module.
 
 Additional Template Haskell functions `exportAfun1`, `exportAfun2`, etc. are
-used to export specific functions.
+used to export specific functions (the `dotp` function in this example).
 
 Generates two C functions from `dotp`:
 
@@ -101,6 +102,10 @@ comments.
 Similar: hdevtools for vim. Has a persistent server.
 
 # Ben talking about DDC
+
+> Note to self: the way you've captured the typing rules in this section is
+> truly horrible. Please remember LaTeX and figure out how you want to render
+> it with Pandoc & Hakyll.
 
 Pushing to make DDC be something like LLVM for functional programming
 languages; a generally applicable core language.
