@@ -16,11 +16,24 @@ import           Text.Pandoc.Options
 
 
 --------------------------------------------------------------------------------
+
+-- | Site configuration
 hakyllConf :: Configuration
 hakyllConf = defaultConfiguration
   { deployCommand = "rsync -ave 'ssh' _site/ passingcuriosity.com:/var/www/passingcuriosity.com/htdocs"
   }
 
+-- | Pandoc reader options.
+readerOptions :: ReaderOptions
+readerOptions = defaultHakyllReaderOptions
+
+-- | Pandoc write options.
+writerOptions :: WriterOptions
+writerOptions = defaultHakyllWriterOptions
+    { writerHTMLMathMethod = MathJax ""
+    }
+
+-- | Feed configuration.
 feedConf :: FeedConfiguration
 feedConf = FeedConfiguration
     { feedTitle       = "Passing Curiosity"
@@ -64,16 +77,24 @@ main = hakyllWith hakyllConf $ do
     -- Build tags
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
+    match "references.bib" $ do
+      compile $ biblioCompiler
+
+    match "references.csl" $ do
+      compile $ cslCompiler
+
     -- Posts
     match "posts/*" $ do
         route   $ routePosts
-        compile $ pandocCompiler
-          >>= saveSnapshot "content"
-          >>= return . fmap demoteHeaders
-          >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
-          >>= saveSnapshot "post"
-          >>= loadAndApplyTemplate "templates/default.html" defaultContext
-          >>= relativizeUrls
+        compile $ do
+
+          bibtexCompiler "references.csl" "references.bib"
+            >>= saveSnapshot "content"
+            >>= return . fmap demoteHeaders
+            >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
+            >>= saveSnapshot "post"
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     -- Generate archives.
     match "archives.md" $ do
@@ -284,6 +305,13 @@ tagsField' = tagsFieldWith
 --------------------------------------------------------------------------------
 -- Compilers
 --------------------------------------------------------------------------------
+
+bibtexCompiler sid bid = do 
+  csl <- load sid
+  bib <- load bid
+  getResourceBody 
+    >>= readPandocBiblio readerOptions (Just csl) bib
+    >>= return . (writePandocWith writerOptions)
 
 -- | Compile images
 resizeImageCompiler = copyFileCompiler
