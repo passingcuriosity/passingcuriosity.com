@@ -35,8 +35,8 @@ operation:
 foreignAcc :: (Arrays arr, Arrays res, Foreign ff)
            => ff arr res -- ^ The foriegn code
            -> (Acc arr -> Acc res) -- ^ The pure equivalent
-		   -> Acc res
-		   -> Acc res
+           -> Acc res
+           -> Acc res
 ````
 
 Each backend needs to provide its own instance of Foreign; subclass of Typable2
@@ -48,16 +48,14 @@ Use an "abstract" monad CIO, which is like IO but has a few new operations:
 is just "private parts are private".
 
 ````haskell
-
 doFFT :: Acc (Array DIM2 Complex)
-	  -> Acc (Array DIM2 Complex)
+      -> Acc (Array DIM2 Complex)
 doFFT arr = foreignAcc (CuForeign foreignFFT)
                        pureFFT
                        arr
-	where
-		pureFFT arr = ... a slow, pure Accelerate FFT ...
-		foriegnFFT arr = do
-		...
+    where
+      pureFFT arr = ... a slow, pure Accelerate FFT ...
+      foriegnFFT arr = ...
 ````
 
 You can nest calls to `foreignAcc` in the pure branch to offer implementations
@@ -112,15 +110,13 @@ languages; a generally applicable core language.
 
 ## Typing application
 
-````latex
-\Gamma \vdash M :: t_{1} -> t_{2}
-
-\Gamma \vdash N :: t_{1}
-
----------
-
-\Gamma \vdash M N :: t_{2}
-````
+$$\large\frac{
+	\Gamma \vdash M :: t_{1} \rightarrow t_{2}
+	\qquad
+	\Gamma \vdash N :: t_{1}
+}{
+	\Gamma \vdash M N :: t_{2}
+}$$
 
 Evaluation
 
@@ -137,22 +133,19 @@ stages? Not really. (From me: should it be linear logic)
 
 Perhaps adding effects to types.
 
-````latex
-\Gamma \vdash M :: t_{1} -> t_{2} ; e1
+$$\large\frac{
+  \Gamma \vdash M :: t_{1} \rightarrow t_{2} ; e1
+  \qquad
+  \Gamma \vdash N :: t_{1} ; e2
+}{
+  \Gamma \vdash M N :: t_{3} ; e_{1} \vee e_{2} \vee e_{3}
+}$$
 
-\Gamma \vdash N :: t_{1} ; e2
-
------
-
-\Gamma \vdash M N :: t_{3} ; e_{1} \join e_{2} \join e_{3}
-
-````
-
-> (Where `\join` is a lattice join; written as V or + or something.)
+> Where $\vee$ is a lattice join:
 >
-> e1 \join e2 = e2 \join e1
+> $e_{1} \vee e_{2} = e_{2} \vee e_{1}$
 > 
-> e1 \join e1 = e1
+> $e_{1} \vee e_{1} = e_{1}$
 
 Now there's something in the typing rule which represents each phase:
 
@@ -176,9 +169,15 @@ You can use monad transformers, but they suck.
 
 An effect system allows you to write something like
 
-````latex
-foo :: Int -(State \join IO)-> Int
-````
+$$\large foo :: Int \xrightarrow{State \vee IO} Int$$
+
+instead of choosing between options like:
+
+$$\large foo :: Int \rightarrow \text{State Int}$$
+
+$$\large foo :: Int \rightarrow \text{IO Int}$$
+
+$$\large foo :: Int \rightarrow \text{StateT s IO Int}$$
 
 ## Impact on kinds
 
@@ -190,7 +189,7 @@ Adding effects forces us to change the kind of the `->`. In Haskell:
 
 In an effectful language, every arrow has an effect component:
 
-````
+````haskell
 (->) :: * -> * -> Effect -> *
 ````
 
@@ -204,67 +203,62 @@ It also changes the nature of application (just substitution) and mixing the
 
 What if we remove substitution (can only apply values to values):
 
-````latex
-\Gamma \vdash v_{1} :: t1 -(e1)-> t2 ; \bottom
+$$\large\frac{
+  \Gamma \vdash v_{1} :: t_{1} \xrightarrow{e_{1}} t_{2} ; \bot
+  \qquad
+  \Gamma \vdash v_{2} :: t_{1} ; \bot
+}{
+  \Gamma \vdash v_{1} v_{2} :: t_{2} ; e_{2}
+}$$
 
-\Gamma \vdash v_{2} :: t1 ; \bottom
-
------
-
-\Gamma \vdash v_{1} v_{2} :: t2 ; e2
-````
+(Note, if you haven't already, that an effect of $\bot$ is pure.)
 
 So:
 
-````
-foo :: Int -> S (State \join IO) Int
-````
+$$\large foo :: Int \rightarrow \text{S (State}\vee\text{IO) Int}$$
 
 Here `S` is a suspended computation which, when invoked, will perform some
 actions and return an integer.
 
 Introducing a suspended computation:
 
-````latex
+$$\large\frac{
+  \Gamma \vdash M :: t_{1} ; e_{1}
+}{
+  \Gamma \vdash suspend M :: S e_{1} t_{1} ; \bot
+}$$
 
-\Gamma \vdash M :: t1 ; e1
+Running a suspended computation:
 
-----
+$$\large\frac{
+\Gamma \vdash M :: S e_{1} t; e_{2}
+}{
+\Gamma \vdash run M :: t ; e_{2} \vee e_{1}
+}$$
 
-\Gamma \vdash suspend M :: S e1 t1 ; \bottom
-
-````
-
-Elimination
-
-````latex
-\Gamma \vdash M :: S e1 t; e2
-----
-\Gamma \vdash run M :: t ; e2 \join e1
-````
 
 Also need:
 
-````latex
+$$\large\frac{
+\Gamma, x : t_1 \vdash M :: t_2 ; \bot
+}{
+\Gamma \vdash (\lambda (x:t_1) . M) :: t_1 \rightarrow t_2 ; \bot
+}$$
 
-\Gamma, x : t1 \vdash M :: t2 ; \bottom
-----
-\Gamma \vdash (\lamba (x:t1) . M) :: t1 -> t2 ; \bottom
-````
+$$\large\frac{
+\Gamma \in x:t_1
+}{
+\Gamma \vdash x :: t_1 ; \bot
+}$$
 
-````latex
-\Gamma \in x:t1
-----
-\Gamma \vdash x :: t1 ; \bottom
-````
-
-````latex
-\Gamma \vdash M :: t1 -> t2; e1
-
-\Gamma \vdash N :: t1 ; e2
----- ("oblivious application")
-\Gamma \vdash M N :: t2 ; e1 \join e2
-````
+And application 
+$$\large\frac{
+  \Gamma \vdash M :: t_1 \rightarrow t2; e_1
+  \qquad
+  \Gamma \vdash N :: t_1 ; e_2
+}{
+  \Gamma \vdash M N :: t_2 ; e_1 \vee e_2
+}$$
 
 Claim that this system is better than the original effect system which forces
 us to add an effect to the arrow kind (our arrow has the original pure type)
@@ -285,29 +279,24 @@ It's obvious where to insert `suspend` as abstration bodies must be pure.
 Constructive logics have judgements like this (M terminates and proves A is
 true):
 
-````latex
-\Gamma \vdash M : A true
-````
+$$\large\Gamma \vdash M :: \text{A true}$$
 
 Also have a judgement like this (*if* M terminates, it proves A):
 
-````latex
-\Gamma \vdash M : A lax
-````
+$$\large\Gamma \vdash M :: \text{A lax}$$
 
 And:
 
-````latex
-\Gamma \vdash M :: A lax
--------
-\Gamma \vdash box M :: \Box A true
-````
+$$\large\frac{
+  \Gamma \vdash M :: \text{A lax}
+}{
+  \Gamma \vdash box M :: \Box \text{A true}
+}$$
 
 (See PL summer school video?)
 
 See also the Haskell Symposium paper (papers!) doing extensible effects in
 Haskell.
-
 
 # Yow! Conference
 
