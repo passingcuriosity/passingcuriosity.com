@@ -222,7 +222,7 @@ pageCtx = defaultContext
 -- | Build a tag template context.
 tagCtx :: String -> Tags -> Context String
 tagCtx tag tags =
-  tagCloudField' "tagcloud" 20.0 200.0 tags `mappend`
+  tagCloudField' "tagcloud" 75.0 300.0 tags `mappend`
   defaultContext
 
 
@@ -237,7 +237,7 @@ tagCloudField' key minSize maxSize tags =
           size     = floor $ minSize + relative * (maxSize - minSize) :: Int
       in renderHtml $
          H.a ! A.style (toValue $ "font-size: " ++ show size ++ "%")
-             ! A.href (toValue $ joinPath $ init $ splitDirectories url)
+             ! A.href (toValue $ (++ "/") $ joinPath $ init $ splitDirectories url)
              $ toHtml tag
 
 
