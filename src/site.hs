@@ -2,7 +2,7 @@
 
 import           Control.Applicative (empty, (<$>))
 import           Control.Monad (liftM)
-import           Data.List (intersperse)
+import           Data.List (intersperse, intercalate)
 import qualified Data.Map as M
 import           Data.Monoid (mappend, mconcat)
 import           System.FilePath
@@ -29,7 +29,6 @@ feedConf = FeedConfiguration
     , feedAuthorEmail = "me@thomas-sutton.id.au"
     , feedRoot        = "http://passingcuriosity.com/"
     }
-
 
 --------------------------------------------------------------------------------
 
@@ -103,7 +102,7 @@ main = hakyllWith hakyllConf $ do
                       constField "tag" tag `mappend`
                       constField "number" (show number) `mappend`
                       listField "posts" (postCtx tags) (return posts) `mappend`
-                      tagCtx
+                      tagCtx tag tags
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/tag.html" ctx
@@ -124,7 +123,18 @@ main = hakyllWith hakyllConf $ do
                 >>= fmap (take 10) . recentFirst
                 >>= renderAtom (feedConf) (feedCtx tags)
 
+    match "tag.md" $ do
+      route $ routeFileToDirectory
+      compile $ do
+        let ctx = tagCtx "" tags
 
+        getResourceBody
+          >>= applyAsTemplate ctx
+          >>= return . renderPandoc
+          >>= loadAndApplyTemplate "templates/tags.html" ctx
+          >>= loadAndApplyTemplate "templates/default.html" ctx
+          >>= relativizeUrls
+        
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
@@ -199,22 +209,55 @@ postList tags pattern sortFilter = do
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ modificationTimeField "mtime" "%U"
-    , strippedUrlField "url"
-    , urlField "urllol"
     , dateField "date" "%B %e, %Y"
     , tagsField' "tags" tags
-    , constField "author" "Thomas Sutton"
     , defaultContext
     , maybeMetadataField
+    ]
+
+-- | Build a page template context.
+pageCtx :: Context String
+pageCtx = defaultContext
+
+-- | Build a tag template context.
+tagCtx :: String -> Tags -> Context String
+tagCtx tag tags =
+  tagCloudField' "tagcloud" 20.0 200.0 tags `mappend`
+  defaultContext
+
+
+tagCloudField' key minSize maxSize tags =
+  tagCloudFieldWith key makeLink cat minSize maxSize tags
+  where
+    cat = (intercalate " ")
+    makeLink minSize maxSize tag url count min' max' =
+      -- Show the relative size of one 'count' in percent
+      let diff     = 1 + fromIntegral max' - fromIntegral min'
+          relative = (fromIntegral count - fromIntegral min') / diff
+          size     = floor $ minSize + relative * (maxSize - minSize) :: Int
+      in renderHtml $
+         H.a ! A.style (toValue $ "font-size: " ++ show size ++ "%")
+             ! A.href (toValue $ joinPath $ init $ splitDirectories url)
+             $ toHtml tag
+
+
+-- | Build a feed template context.
+--
+-- XXXTODO: Add categories, etc.
+feedCtx :: Tags -> Context String
+feedCtx _ = mconcat
+    [ bodyField "description"
+    , defaultContext
     ]
 
 defaultContext :: Context String
 defaultContext =
     bodyField     "body"     `mappend`
     metadataField            `mappend`
-    urlField      "url"      `mappend`
+    strippedUrlField "url"   `mappend`
     pathField     "path"     `mappend`
-    titleField    "title"
+    titleField    "title"    `mappend`
+    constField    "author" (feedAuthorName feedConf)
 
 
 --------------------------------------------------------------------------------
@@ -237,29 +280,6 @@ tagsField' = tagsFieldWith
     simpleRenderLink _   Nothing         = Nothing
     simpleRenderLink tag (Just filePath) =
       Just $ H.a ! A.href (toValue $ dropFileName $ toUrl filePath) $ toHtml tag
-
--- | Build a tag template context.
-pageCtx :: Context String
-pageCtx = mconcat
-    [ strippedUrlField "url"
-    , defaultContext
-    ]
-
--- | Build a tag template context.
-tagCtx :: Context String
-tagCtx = mconcat
-    [ strippedUrlField "url"
-    , defaultContext
-    ]
-
--- | Build a feed template context.
---
--- XXXTODO: Add categories, etc.
-feedCtx :: Tags -> Context String
-feedCtx _ = mconcat
-    [ bodyField "description"
-    , defaultContext
-    ]
 
 --------------------------------------------------------------------------------
 -- Compilers
