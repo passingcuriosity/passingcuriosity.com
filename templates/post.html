@@ -1,19 +1,30 @@
 <article>
   <header class="jumbotron">
     <h1>$title$</h1>
-    <p class="lead"><small class="date">$date$</small> - $excerpt$ $tags$</p>
+    <p class="lead"><small class="date">$date$</small>
+      $if(excerpt)$ - $excerpt$$endif$
+      $tags$</p>
   </header>
   <hr>
+
+  $if(toc)$
+  <nav id="table-of-contents">
+    <h2>Table of Contents</h2>
+    $toc$
+  </nav>
+  $endif$
 
   <div class="row-fluid marketing">
     $body$
   </div>
 
   <footer>
-  	<p>If you'd like to comment on this post, contact me on Twitter at <a
-  	href="https://twitter.com/thsutton">@thsutton</a> or by email at <a
-  	href="mailto:me@thomas-sutton.id.au">me@thomas-sutton.id.au</a>.</p>
+    <p>If you'd like to comment on this post, contact me on Twitter at <a
+    href="https://twitter.com/thsutton">@thsutton</a> or by email at <a
+    href="mailto:me@thomas-sutton.id.au">me@thomas-sutton.id.au</a>.</p>
 
-  	<p class="pull-right">&mdash; $location$</p>
+    $if(location)$
+    <p class="pull-right">&mdash; $location$</p>
+    $endif$
   </footer>
 </article>
