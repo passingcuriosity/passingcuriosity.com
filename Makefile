@@ -1,10 +1,10 @@
 
 build:
-	./dist_passingcuriosity.com/build/pc/pc build
+	site build
 
 
 clean:
-	./dist_passingcuriosity.com/build/pc/pc clean
+	site clean
 
 sync:
 	rsync -vr _site/ forceit.in:/var/www/passingcuriosity.com/htdocs
