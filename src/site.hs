@@ -146,6 +146,23 @@ main = hakyllWith hakyllConf $ do
                 >>= fmap (take 10) . recentFirst
                 >>= renderAtom (feedConf) (feedCtx tags)
 
+    -- Paginated archives.
+    pages <- buildPaginateWith 5 (\i-> fromFilePath $ ("archives/" ++ show i ++ ".html")) "posts/*"
+    paginateRules pages $ \n pattern -> do
+        route $ routeFileToDirectory
+        compile $ do
+          posts <- recentFirst =<< loadAll pattern
+          let indexCtx =
+                listField "posts" (postCtx tags) (return posts) `mappend`
+                paginateContext pages `mappend`
+                defaultContext
+
+          makeItem ""
+            >>= loadAndApplyTemplate "templates/archive.html" indexCtx
+            >>= loadAndApplyTemplate "templates/default.html" indexCtx
+            >>= relativizeUrls
+
+
     match "tag.md" $ do
       route $ routeFileToDirectory
       compile $ do
@@ -183,9 +200,9 @@ routeFileToDirectory :: Routes
 routeFileToDirectory = customRoute fileToDirectory
   where fileToDirectory :: Identifier -> FilePath
         fileToDirectory ident = let p = toFilePath ident
-                                    fn = takeFileName p
+                                    (dir,fn) = splitFileName p
                                     bn = dropExtension fn
-                                in joinPath [bn, "index.html"]
+                                in joinPath [dir, bn, "index.html"]
 
 -- | Route dated posts.
 routePosts :: Routes
