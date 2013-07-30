@@ -100,11 +100,27 @@ main = hakyllWith hakyllConf $ do
 
     -- Generate archives.
     match "archives.md" $ do
+      -- RSS feed
+      version "rss" $ do
+        route   $ routeFileToDirectory `composeRoutes` setExtension "rss"
+        compile $ loadAllSnapshots "posts/*" "content"
+          >>= fmap (take 10) . recentFirst
+          >>= renderRss (feedConf) (feedCtx tags)
+
+      -- Atom feed
+      version "atom" $ do
+        route   $ routeFileToDirectory `composeRoutes` setExtension "xml"
+        compile $ loadAllSnapshots "posts/*" "content"
+          >>= fmap (take 10) . recentFirst
+          >>= renderAtom (feedConf) (feedCtx tags)
+
       route $ routeFileToDirectory
       compile $ do
         posts <- recentFirst =<< loadAll "posts/*"
         let indexCtx =
               listField "posts" (postCtx tags) (return posts) `mappend`
+              field "atom" (fmap (maybe empty toUrl) . getRoute . (setVersion $ Just "atom") . itemIdentifier) `mappend`
+              field "rss" (fmap (maybe empty toUrl) . getRoute . (setVersion $ Just "rss") . itemIdentifier) `mappend`
               defaultContext
 
         getResourceBody
@@ -114,9 +130,25 @@ main = hakyllWith hakyllConf $ do
           >>= loadAndApplyTemplate "templates/default.html" indexCtx
           >>= relativizeUrls
 
+    -- Generate tag indexes, with RSS and Atom feeds.
     tagsRules tags $ \tag pattern -> do
         let title = "Posts tagged " ++ tag
 
+        -- RSS feed
+        version "rss" $ do
+            route   $ routeTags `composeRoutes` setExtension "rss"
+            compile $ loadAllSnapshots pattern "content"
+                >>= fmap (take 10) . recentFirst
+                >>= renderRss (feedConf) (feedCtx tags)
+
+        -- Atom feed
+        version "atom" $ do
+            route   $ routeTags `composeRoutes` setExtension "xml"
+            compile $ loadAllSnapshots pattern "content"
+                >>= fmap (take 10) . recentFirst
+                >>= renderAtom (feedConf) (feedCtx tags)
+
+        -- Plain HTML version
         route routeTags
         compile $ do
             posts <- recentFirst =<< loadAll pattern
@@ -125,26 +157,14 @@ main = hakyllWith hakyllConf $ do
                       constField "tag" tag `mappend`
                       constField "number" (show number) `mappend`
                       listField "posts" (postCtx tags) (return posts) `mappend`
+                      field "atom" (fmap (maybe empty toUrl) . getRoute . (setVersion $ Just "atom") . itemIdentifier) `mappend`
+                      field "rss" (fmap (maybe empty toUrl) . getRoute . (setVersion $ Just "rss") . itemIdentifier) `mappend`
                       tagCtx tag tags
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/tag.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
-
-        -- Create an RSS feed as well
-        version "rss" $ do
-            route   $ routeTags `composeRoutes` setExtension "rss"
-            compile $ loadAllSnapshots pattern "content"
-                >>= fmap (take 10) . recentFirst
-                >>= renderRss (feedConf) (feedCtx tags)
-
-        -- Create an Atom feed as well
-        version "atom" $ do
-            route   $ routeTags `composeRoutes` setExtension "xml"
-            compile $ loadAllSnapshots pattern "content"
-                >>= fmap (take 10) . recentFirst
-                >>= renderAtom (feedConf) (feedCtx tags)
 
     -- Paginated archives.
     pages <- buildPaginateWith 5 (\i-> fromFilePath $ ("archives/" ++ show i ++ ".html")) "posts/*"

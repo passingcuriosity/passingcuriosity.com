@@ -15,6 +15,9 @@
     <!--[if lt IE 9]>
       <script src="/js/html5shiv.js"></script>
     <![endif]-->
+
+    $if(rss)$<link rel="alternate" type="application/rss+xml" href="$rss$" />$endif$
+    $if(atom)$<link rel="alternate" type="application/atom+xml" href="$atom$" />$endif$
   </head>
 
   <body>
