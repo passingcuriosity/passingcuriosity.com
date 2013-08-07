@@ -272,6 +272,7 @@ postCtx tags = mconcat
     , dateField "date" "%B %e, %Y"
     , tagsField' "tags" tags
     , defaultContext
+    , maybeMetadataField
     ]
 
 -- | Build a page template context.
@@ -339,6 +340,15 @@ maybeField name def = field name $ \item -> do
     case M.lookup name metadata of
       Nothing -> return name
       Just v  -> return v
+
+-- | Map any field to its metadata value, if present
+maybeMetadataField :: Context String
+maybeMetadataField = Context $ \key item -> do
+    metadata <- getMetadata $ itemIdentifier item
+    case M.lookup key metadata of
+      Nothing -> fmap StringField . return $ ""
+      Just v  -> fmap StringField . return $ v
+
 
 -- | Custom "tags" context to process tag URLs.
 tagsField' :: String -> Tags -> Context a
