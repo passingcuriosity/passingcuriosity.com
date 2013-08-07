@@ -1,8 +1,16 @@
 <nav class="pagination">
   <ul>
-    $if(firstPage)$<li class="first"><a href="$firstPage$">First</a></li>$endif$
-    $if(previousPage)$<li class="previous"><a href="$previousPage$">Previous</a></li>$endif$
-    $if(nextPage)$<li class="next"><a href="$nextPage$">Next</a></li>$endif$
-    $if(lastPage)$<li class="last"><a href="$lastPage$">Last</a></li>$endif$
+    <li class="first">
+      $if(firstPage)$<a href="$firstPage$">First</a>$else$<span>First</span>$endif$
+    </li>
+    <li class="previous">
+      $if(previousPage)$<a href="$previousPage$">Previous</a>$else$<span>Previous</span>$endif$
+    </li>
+    <li class="next">
+      $if(nextPage)$<a href="$nextPage$">Next</a>$else$<span>Next</span>$endif$
+    </li>
+    <li class="last">
+      $if(lastPage)$<a href="$lastPage$">Last</a>$else$<span>Last</span>$endif$
+    </li>
   </ul>
 </nav>
