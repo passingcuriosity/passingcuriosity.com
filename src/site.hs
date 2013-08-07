@@ -255,6 +255,7 @@ postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ modificationTimeField "mtime" "%U"
     , dateField "date" "%B %e, %Y"
+    , dateField "datetime" "%Y-%m-%d"
     , tagsField' "tags" tags
     , defaultContext
     , maybeMetadataField

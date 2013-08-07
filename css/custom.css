@@ -31,8 +31,9 @@ body {
     margin-top: 28px;
 }
 
-.list .date {
+.list time {
     line-height: 40px;
+    font-style: italic;
 }
 .list h3 {
     margin-top: 0;
