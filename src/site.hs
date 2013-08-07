@@ -250,21 +250,6 @@ strippedUrlField key = field key $
 
 --------------------------------------------------------------------------------
 
-{-
-postList :: Tags -- ^ Collection of tags in the site.
-         -> Pattern -- ^ Pattern to identify appropriate posts.
-         -> ([Item String] -> [Item String]) -- ^ Filter for posts.
-         -> Compiler String
--}
-postList tags pattern sortFilter = do
-    posts   <- loadAll pattern
-    sorted <- sortFilter posts
-    itemTpl <- loadBody "templates/postitem.html"
-    list    <- applyTemplateList itemTpl (postCtx tags) sorted
-    return list
-
---------------------------------------------------------------------------------
-
 -- | Build a post template context.
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
