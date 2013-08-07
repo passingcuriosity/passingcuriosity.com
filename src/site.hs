@@ -167,12 +167,13 @@ main = hakyllWith hakyllConf $ do
                 >>= relativizeUrls
 
     -- Paginated archives.
-    pages <- buildPaginateWith 5 (\i-> fromFilePath $ ("archives/" ++ show i ++ ".html")) "posts/*"
+    pages <- buildPaginateWith 20 (\i-> fromFilePath $ ("archives/" ++ show i ++ ".html")) "posts/*"
     paginateRules pages $ \n pattern -> do
         route $ routeFileToDirectory
         compile $ do
           posts <- recentFirst =<< loadAll pattern
           let indexCtx =
+                constField "title" ("Page " ++ show n) `mappend`
                 listField "posts" (postCtx tags) (return posts) `mappend`
                 paginateContext pages `mappend`
                 defaultContext
