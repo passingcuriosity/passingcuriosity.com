@@ -173,7 +173,8 @@ main = hakyllWith hakyllConf $ do
         compile $ do
           posts <- recentFirst =<< loadAll pattern
           let indexCtx =
-                constField "title" ("Page " ++ show n) `mappend`
+                constField "page" (show n) `mappend`
+                constField "page" (show n) `mappend`
                 listField "posts" (postCtx tags) (return posts) `mappend`
                 paginateContext pages `mappend`
                 defaultContext
