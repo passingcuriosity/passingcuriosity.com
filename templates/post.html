@@ -1,9 +1,9 @@
-<article>
+<article itemscope itemtype="http://schema.org/BlogPosting">
   <header class="jumbotron">
-    <h1>$title$</h1>
+    <h1 itemprop="name">$title$</h1>
     <p class="lead">
-	  $if(excerpt)$$excerpt$$endif$
-      $tags$
+	  $if(excerpt)$<span itemprop="description">$excerpt$</span>$endif$
+      <span itemprop="keywords">$tags$</span>
     </p>
 	<p class="meta">$if(location)$<span class="location">$location$</span>; $endif$<time itemprop="dateCreated" datetime="$datetime$">$date$</time></p>
   </header>
