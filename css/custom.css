@@ -31,6 +31,12 @@ body {
     margin-top: 28px;
 }
 
+.jumbotron .meta {
+	font-size: small;
+	text-align: right;
+	margin: 0;
+}
+
 .list time {
     line-height: 40px;
     font-style: italic;

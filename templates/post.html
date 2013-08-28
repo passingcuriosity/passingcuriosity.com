@@ -1,9 +1,11 @@
 <article>
   <header class="jumbotron">
     <h1>$title$</h1>
-    <p class="lead"><small class="date">$date$</small>
-      $if(excerpt)$ - $excerpt$$endif$
-      $tags$</p>
+    <p class="lead">
+	  $if(excerpt)$$excerpt$$endif$
+      $tags$
+    </p>
+	<p class="meta">$if(location)$<span class="location">$location$</span>; $endif$<time itemprop="dateCreated" datetime="$datetime$">$date$</time></p>
   </header>
   <hr>
 
@@ -12,19 +14,16 @@
     <h2>Table of Contents</h2>
     $toc$
   </nav>
-  $endif$
 
+  $endif$
   <div class="row-fluid marketing">
     $body$
   </div>
 
+  <hr>
   <footer>
     <p>If you'd like to comment on this post, contact me on Twitter at <a
     href="https://twitter.com/thsutton">@thsutton</a> or by email at <a
     href="mailto:me@thomas-sutton.id.au">me@thomas-sutton.id.au</a>.</p>
-
-    $if(location)$
-    <p class="pull-right">&mdash; $location$</p>
-    $endif$
   </footer>
 </article>
