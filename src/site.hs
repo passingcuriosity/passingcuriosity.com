@@ -40,7 +40,7 @@ feedConf = FeedConfiguration
     , feedDescription = ""
     , feedAuthorName  = "Thomas Sutton"
     , feedAuthorEmail = "me@thomas-sutton.id.au"
-    , feedRoot        = "http://passingcuriosity.com/"
+    , feedRoot        = "http://passingcuriosity.com"
     }
 
 --------------------------------------------------------------------------------
@@ -184,7 +184,6 @@ main = hakyllWith hakyllConf $ do
             >>= loadAndApplyTemplate "templates/default.html" indexCtx
             >>= relativizeUrls
 
-
     match "tag.md" $ do
       route $ routeFileToDirectory
       compile $ do
@@ -260,7 +259,6 @@ postCtx tags = mconcat
     , dateField "datetime" "%Y-%m-%d"
     , tagsField' "tags" tags
     , defaultContext
-    , maybeMetadataField
     ]
 
 -- | Build a page template context.
@@ -300,13 +298,14 @@ feedCtx _ = mconcat
 
 defaultContext :: Context String
 defaultContext =
-    tocField      "toc"      `mappend`
+    tocField      "contents" `mappend`
     bodyField     "body"     `mappend`
     metadataField            `mappend`
     strippedUrlField "url"   `mappend`
     pathField     "path"     `mappend`
     titleField    "title"    `mappend`
-    constField    "author" (feedAuthorName feedConf)
+    constField    "author" (feedAuthorName feedConf) `mappend`
+    missingField
 
 --------------------------------------------------------------------------------
 -- Fields
@@ -321,22 +320,6 @@ tocField name = field name $ \item -> do
     Just v -> if null v
               then empty
               else tocCompiler >>= return . itemBody
-
-maybeField :: String -> String -> Context String
-maybeField name def = field name $ \item -> do
-    metadata <- getMetadata (itemIdentifier item)
-    case M.lookup name metadata of
-      Nothing -> return name
-      Just v  -> return v
-
--- | Map any field to its metadata value, if present
-maybeMetadataField :: Context String
-maybeMetadataField = Context $ \key item -> do
-    metadata <- getMetadata $ itemIdentifier item
-    case M.lookup key metadata of
-      Nothing -> fmap StringField . return $ ""
-      Just v  -> fmap StringField . return $ v
-
 
 -- | Custom "tags" context to process tag URLs.
 tagsField' :: String -> Tags -> Context a
