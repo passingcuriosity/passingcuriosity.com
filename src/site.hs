@@ -90,7 +90,7 @@ main = hakyllWith hakyllConf $ do
         route   $ routePosts
         compile $ do
 
-          postCompiler "references.csl" "references.bib"
+          postCompiler 
             >>= saveSnapshot "content"
             >>= return . fmap demoteHeaders
             >>= loadAndApplyTemplate "templates/post.html" (postCtx tags)
@@ -271,7 +271,6 @@ tagCtx tag tags =
   tagCloudField' "tagcloud" 75.0 300.0 tags `mappend`
   defaultContext
 
-
 tagCloudField' key minSize maxSize tags =
   tagCloudFieldWith key makeLink cat minSize maxSize tags
   where
@@ -285,7 +284,6 @@ tagCloudField' key minSize maxSize tags =
          H.a ! A.style (toValue $ "font-size: " ++ show size ++ "%")
              ! A.href (toValue $ (++ "/") $ joinPath $ init $ splitDirectories url)
              $ toHtml tag
-
 
 -- | Build a feed template context.
 --
@@ -336,7 +334,7 @@ tagsField' = tagsFieldWith
 --------------------------------------------------------------------------------
 -- Compilers
 --------------------------------------------------------------------------------
-postCompiler sid bid = bibtexCompiler sid bid
+postCompiler = bibtexCompiler "references.csl" "references.bib"
 
 bibtexCompiler sid bid = do 
   csl <- load sid
@@ -344,9 +342,6 @@ bibtexCompiler sid bid = do
   getResourceBody 
     >>= readPandocBiblio readerOptions (Just csl) bib
     >>= return . (writePandocWith writerOptions)
-
--- | Compile images
-resizeImageCompiler = copyFileCompiler
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
