@@ -98,38 +98,6 @@ main = hakyllWith hakyllConf $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    -- Generate archives.
-    match "archives.md" $ do
-      -- RSS feed
-      version "rss" $ do
-        route   $ routeFileToDirectory `composeRoutes` setExtension "rss"
-        compile $ loadAllSnapshots "posts/*" "content"
-          >>= fmap (take 10) . recentFirst
-          >>= renderRss (feedConf) (feedCtx tags)
-
-      -- Atom feed
-      version "atom" $ do
-        route   $ routeFileToDirectory `composeRoutes` setExtension "xml"
-        compile $ loadAllSnapshots "posts/*" "content"
-          >>= fmap (take 10) . recentFirst
-          >>= renderAtom (feedConf) (feedCtx tags)
-
-      route $ routeFileToDirectory
-      compile $ do
-        posts <- recentFirst =<< loadAll "posts/*"
-        let indexCtx =
-              listField "posts" (postCtx tags) (return posts) `mappend`
-              field "atom" (fmap (maybe empty toUrl) . getRoute . (setVersion $ Just "atom") . itemIdentifier) `mappend`
-              field "rss" (fmap (maybe empty toUrl) . getRoute . (setVersion $ Just "rss") . itemIdentifier) `mappend`
-              defaultContext
-
-        getResourceBody
-          >>= applyAsTemplate indexCtx
-          >>= return . renderPandoc
-          >>= loadAndApplyTemplate "templates/index.html" defaultContext
-          >>= loadAndApplyTemplate "templates/default.html" indexCtx
-          >>= relativizeUrls
-
     -- Generate tag indexes, with RSS and Atom feeds.
     tagsRules tags $ \tag pattern -> do
         let title = "Posts tagged " ++ tag
@@ -195,7 +163,38 @@ main = hakyllWith hakyllConf $ do
           >>= loadAndApplyTemplate "templates/tags.html" ctx
           >>= loadAndApplyTemplate "templates/default.html" ctx
           >>= relativizeUrls
-        
+
+    -- Generate archives.
+    match "archives.md" $ do
+      -- RSS feed
+      version "rss" $ do
+        route   $ routeFileToDirectory `composeRoutes` setExtension "rss"
+        compile $ loadAllSnapshots "posts/*" "content"
+          >>= fmap (take 10) . recentFirst
+          >>= renderRss (feedConf) (feedCtx tags)
+
+      -- Atom feed
+      version "atom" $ do
+        route   $ routeFileToDirectory `composeRoutes` setExtension "xml"
+        compile $ loadAllSnapshots "posts/*" "content"
+          >>= fmap (take 10) . recentFirst
+          >>= renderAtom (feedConf) (feedCtx tags)
+
+      route $ routeFileToDirectory
+      compile $ do
+        posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
+        let indexCtx =
+              listField "posts" (postCtx tags) (return posts) `mappend`
+              defaultContext
+
+        getResourceBody
+          >>= applyAsTemplate indexCtx
+          >>= return . renderPandoc
+          >>= loadAndApplyTemplate "templates/index.html" defaultContext
+          >>= loadAndApplyTemplate "templates/default.html" indexCtx
+          >>= relativizeUrls
+
+    -- Generate index.
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
