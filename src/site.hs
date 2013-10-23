@@ -33,7 +33,7 @@ hakyllConf = defaultConfiguration
 
 -- | Number of posts to list on a page.
 pageSize :: Int
-pageSize = 10
+pageSize = 20
 
 -- | Pandoc reader options.
 readerOptions :: ReaderOptions
@@ -76,18 +76,6 @@ main = hakyllWith hakyllConf $ do
 
     -- Compile templates
     match "templates/*" $ compile templateCompiler
-
-    -- Compile standard pages
-    match (fromList ["contact.md", "about.md"]) $ do
-      route   $ routeFileToDirectory
-      compile $ do
-        pandocCompiler
-            >>= saveSnapshot "content"
-            >>= return . fmap demoteHeaders
-            >>= loadAndApplyTemplate "templates/page.html" defaultContext
-            >>= saveSnapshot "post"
-            >>= loadAndApplyTemplate "templates/_default.html" defaultContext
-            >>= relativizeUrls
 
     -- Build tags
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
@@ -158,38 +146,6 @@ main = hakyllWith hakyllConf $ do
           >>= loadAndApplyTemplate "templates/_default.html" ctx
           >>= relativizeUrls
 
-{-
-    -- Generate archives.
-    match "archives.md" $ do
-      -- RSS feed
-      version "rss" $ do
-        route   $ routeFileToDirectory `composeRoutes` setExtension "rss"
-        compile $ loadAllSnapshots "posts/*" "content"
-          >>= fmap (take 10) . recentFirst
-          >>= renderRss (feedConf) feedCtx
-
-      -- Atom feed
-      version "atom" $ do
-        route   $ routeFileToDirectory `composeRoutes` setExtension "xml"
-        compile $ loadAllSnapshots "posts/*" "content"
-          >>= fmap (take 10) . recentFirst
-          >>= renderAtom (feedConf) feedCtx
-
-      route $ routeFileToDirectory
-      compile $ do
-        posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
-        let indexCtx =
-              listField "posts" postCtx (return posts) `mappend`
-              defaultContext
-
-        getResourceBody
-          >>= applyAsTemplate indexCtx
-          >>= return . renderPandoc
-          >>= loadAndApplyTemplate "templates/index.html" defaultContext
-          >>= loadAndApplyTemplate "templates/_default.html" indexCtx
-          >>= relativizeUrls
--}
-
     -- Paginated archives.
     paginate pageSize $ \index maxIndex postIds -> do
         let id = fromFilePath $ if index == 1
@@ -218,7 +174,7 @@ main = hakyllWith hakyllConf $ do
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
-        posts <- fmap (take pageSize) . recentFirst =<< loadAll "posts/*"
+        posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
         let indexCtx =
               listField "posts" postCtx (return posts) `mappend`
               sectionField "home" `mappend`
@@ -294,10 +250,6 @@ feedContext _ = mconcat
     [ bodyField "description"
     , defaultContext
     ]
-
--- | Build a page template context.
-pageCtx :: Context String
-pageCtx = defaultContext
 
 -- | Default context to use in the site.
 defaultContext :: Context String
