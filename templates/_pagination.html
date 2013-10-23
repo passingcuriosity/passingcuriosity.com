@@ -1,0 +1,19 @@
+$if(pagination-links)$
+<ul class="pagination">
+$if(pagination-prev-url)$
+  <li class="prev"><a href="$pagination-prev-url$">&lt;</a></li>
+$else$
+  <li class="prev disabled"><span>&lt;</span></li>
+$endif$
+
+$for(pagination-links)$
+  <li class="$class$"><a href="$url$">$number$</a></li>
+$endfor$
+
+$if(pagination-next-url)$
+  <li class="next"><a href="$pagination-next-url$">&gt;</a></li>
+$else$
+  <li class="next disabled"><span>&gt;</span></li>
+$endif$
+</ul>
+$endif$
