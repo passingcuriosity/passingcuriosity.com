@@ -71,3 +71,7 @@ pre.sourceCode span.er { color: red; font-weight: bold; }
 /* Style MathJax */
 .math {
 }
+
+.well-large h1 {
+  text-align: center;
+}

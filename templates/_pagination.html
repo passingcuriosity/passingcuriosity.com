@@ -1,5 +1,5 @@
 $if(pagination-links)$
-<ul class="pagination">
+<div class="pagination pagination-mini"><ul>
 $if(pagination-prev-url)$
   <li class="prev"><a href="$pagination-prev-url$">&lt;</a></li>
 $else$
@@ -15,5 +15,5 @@ $if(pagination-next-url)$
 $else$
   <li class="next disabled"><span>&gt;</span></li>
 $endif$
-</ul>
+</ul></div>
 $endif$
