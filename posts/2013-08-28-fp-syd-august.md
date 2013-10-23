@@ -1,6 +1,6 @@
 ---
 title: FP-Syd, August 2013
-tags: functional programming, fp-syd, simulation, testing, compiling, SAT, logic
+tags: event, functional programming, fp-syd, simulation, testing, compiling, SAT, logic
 location: Sydney, New South Wales
 contents: display
 excerpt: 

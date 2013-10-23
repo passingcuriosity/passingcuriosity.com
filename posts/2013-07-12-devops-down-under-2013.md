@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Devops Downunder 2013, Day One
-tags: devops, operations, conference
+tags: event, devops, operations, conference
 location: Sydney, New South Wales
 toc: display
 excerpt: 

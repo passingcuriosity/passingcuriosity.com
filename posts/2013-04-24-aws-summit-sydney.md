@@ -2,7 +2,7 @@
 layout: post
 title: AWS Summit, Sydney
 categories: [operations, cloud]
-tags: aws, amazon, conference, aws-summit
+tags: event, aws, amazon, conference, aws-summit
 location: Sydney, New South Wales
 excerpt: 
   My thoughts on the Amazon Web Services Summit 2013 in Sydney.

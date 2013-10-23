@@ -1,6 +1,6 @@
 ---
 title: FP-Syd July 2013
-tags: functional programming, fp-syd, haskell, array programming, discipline, typing
+tags: event, functional programming, fp-syd, haskell, array programming, discipline, typing
 location: Sydney, New South Wales
 toc: display
 excerpt: 

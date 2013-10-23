@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PyCon Australia 2013, Day Two
-tags: python, conference
+tags: event, python, conference
 location: Hobart, Tasmania
 toc: display
 excerpt: 

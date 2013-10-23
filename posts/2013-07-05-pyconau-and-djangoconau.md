@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DjangoConAU 2013
-tags: python, django, web, conference
+tags: event, python, django, web, conference
 location: Hobart, Tasmania
 toc: display
 excerpt: 
