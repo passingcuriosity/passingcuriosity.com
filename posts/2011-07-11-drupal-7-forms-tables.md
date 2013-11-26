@@ -28,14 +28,16 @@ seems to do the trick for me. The approach works like this:
 
 Create a new form element that will be the table:
 
-    $form['people'] = array(
-      '#prefix' => '<div id="people">',
-      '#suffix' => '</div>',
-      '#tree' => TRUE,
-      '#theme' => 'table',
-      '#header' => array(t(First name), t('Family name')),
-      '#rows' => array(),
-    );
+````{.php}
+$form['people'] = array(
+  '#prefix' => '<div id="people">',
+  '#suffix' => '</div>',
+  '#tree' => TRUE,
+  '#theme' => 'table',
+  '#header' => array(t('First name'), t('Family name')),
+  '#rows' => array(),
+);
+````
 
 Then loop over your data to create the rows in the table. This is a
 little tricky: if you just put your fields straight into
@@ -55,55 +57,56 @@ Assuming you've got an array `$people` containing your data you can
 loop over them to add the rows to your table like so (and yes, I know
 this could be structured better):
 
-    for ($i = 0; $i < count($people); $i++) {
-    
-      // Build the fields for this row in the table. We'll be adding
-      // these to the form several times, so it's easier if they are
-      // individual variables rather than in an array.
+````{.php}
+for ($i = 0; $i < count($people); $i++) {
 
-      $fname = array(
-        '#id' => 'people-' . $i . '-fname',
-	'#type' => 'textfield',
-	'#default_value' => $people[$i]['fname'],
-      );
-      $sname = array(
-        '#id' => 'people-' . $i . '-sname',
-	'#type' => 'textfield',
-	'#default_value' => $people[$i]['sname'],
-      );
-      
+  // Build the fields for this row in the table. We'll be adding
+  // these to the form several times, so it's easier if they are
+  // individual variables rather than in an array.
 
-      // Include the fields so they'll be rendered and named
-      // correctly, but they'll be ignored here when rendering as
-      // we're using #theme => table.
-      //
-      // Note that we're using references to the variables, not just
-      // copying the values into the array.
+  $fname = array(
+    '#id' => 'people-' . $i . '-fname',
+    '#type' => 'textfield',
+    '#default_value' => $people[$i]['fname'],
+  );
+  $sname = array(
+    '#id' => 'people-' . $i . '-sname',
+    '#type' => 'textfield',
+    '#default_value' => $people[$i]['sname'],
+  );
 
-      $form['people'][] = array(
-        'fname' => &$fname,
-        'sname' => &$sname,
-      );
-      
-      // Now add references to the fields to the rows that
-      // `theme_table()` will use.
-      //
-      // As we've used references, the table will use the very same
-      // field arrays as the FAPI used above.
+  // Include the fields so they'll be rendered and named
+  // correctly, but they'll be ignored here when rendering as
+  // we're using #theme => table.
+  //
+  // Note that we're using references to the variables, not just
+  // copying the values into the array.
 
-      $form['people']['#rows'][] = array(
-        array('data' => &$fname),
-	array('data' => &$sname),
-      );
+  $form['people'][] = array(
+    'fname' => &$fname,
+    'sname' => &$sname,
+  );
+  
+  // Now add references to the fields to the rows that
+  // `theme_table()` will use.
+  //
+  // As we've used references, the table will use the very same
+  // field arrays as the FAPI used above.
 
-      // Because we've used references we need to `unset()` our
-      // variables. If we don't then every iteration of the loop will
-      // just overwrite the variables we created the first time
-      // through leaving us with a form with 3 copies of the same fields.
-      
-      unset($fname);
-      unset($sname);
-    }
+  $form['people']['#rows'][] = array(
+    array('data' => &$fname),
+    array('data' => &$sname),
+  );
+
+  // Because we've used references we need to `unset()` our
+  // variables. If we don't then every iteration of the loop will
+  // just overwrite the variables we created the first time
+  // through leaving us with a form with 3 copies of the same fields.
+  
+  unset($fname);
+  unset($sname);
+}
+````
 
 Now you should have a form full of fields all laid out nicely in a
 table. Hoorah!
