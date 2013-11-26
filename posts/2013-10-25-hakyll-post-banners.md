@@ -1,6 +1,7 @@
 ---
 title: Post banner images with Hakyll
 tags: howto, hakyll, images, imagemagick, haskell
+location: Sydney, New South Wales
 excerpt: 
   This post describes a proof-of-concept Hakyll site which associates a banner
   image with each post, automatically generates several versions of it, and
