@@ -29,6 +29,7 @@ seems to do the trick for me. The approach works like this:
 Create a new form element that will be the table:
 
 ````{.php}
+<?php
 $form['people'] = array(
   '#prefix' => '<div id="people">',
   '#suffix' => '</div>',
@@ -58,6 +59,7 @@ loop over them to add the rows to your table like so (and yes, I know
 this could be structured better):
 
 ````{.php}
+<?php
 for ($i = 0; $i < count($people); $i++) {
 
   // Build the fields for this row in the table. We'll be adding
