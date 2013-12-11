@@ -7,7 +7,8 @@ excerpt:
   Elasticsearch clusters and on the impending 1.0 release.
 ---
 
-The inaugural [Sydney Elasticsearch meetup][1] at Atlassian featured two talks:
+The inaugural [Sydney Elasticsearch meetup][1] at Atlassian (who provided the
+space, beer, and pizza) featured two talks:
 
 - [Sharif Olorin][2] from Anchor systems spoke about monitoring Elasticsearch
   clusters; and 
@@ -16,6 +17,7 @@ The inaugural [Sydney Elasticsearch meetup][1] at Atlassian featured two talks:
   the impending 1.0 release.
 
 [1]: http://www.meetup.com/Elasticsearch-Sydney-Meetup/events/149068632/
+[2]: http://tesser.org
 [3]: https://twitter.com/clintongormley
 
 # Sharif Olorin on Monitoring Elasticsearch
@@ -64,97 +66,54 @@ parameters, reproducing each test as closely as possible (same time of day,
 etc.), consider *actual numbers* (not just graphs), etc. Essentially: use
 science!
 
+[Sharif's slides][4] are available on Speaker Deck; I've probably got a bunch
+of stuff wrong here, so you should probably go and review them for yourself!
+
+[4]: https://speakerdeck.com/fractalcat/monitoring-elasticsearch-for-fun-profit-and-not-getting-woken-up-at-3am
+
 # Clinton Gormley on Elasticsearch 1.0
 
-Clinton works for Elasticsearch where he 
+Clinton works for Elasticsearch where he develops the Perl client libraries,
+does training and evangelising, "keeps Elasticsearch honest" and some other
+stuff. He gave us a run down on the new features and other improvements in the
+forthcoming Elasticsearch 1.0 release.
 
-ES around 0.4 in 2010.
+Amongst the many things mentioned, these few stuck out to me:
 
-## Rolling upgrades
+You cannot currently use different versions of Elasticsearch in the same
+cluster; upgrades involve tearing down your entire cluster and bringing up a
+new one (possibly not in that order). 1.0 will allow **rolling upgrades** of
+your nodes without having to do the whole cluster in one fell swoop.
 
-Currently cant have clusters with mixed versions. Need to bring up a new
-cluster and down the old.
+You *can* **backup** the data in current Elasticsearch clusters, but it's very
+much a do-it-yourself process: disable flushing, find all primary shard
+locations, copy their files, enable flushing. Version 1.0 will provide API
+methods to trigger a snapshot which will be written to a configured
+*repository* (S3, HDFS, etc.) Comparable changes have been made to the process
+of **restoring** a snapshot: the current manual process will be replaced with a
+few API calls.
 
-## Snapshot and restore (backup)
+The **percolator** functionality -- which allows applications to do things like
+reverse search, alerts, and updatable result sets -- is now implemented in a
+way which lets it scale as well as any other index in the cluster. It also
+supports multiple indices, aliases, and has a bunch of other improvements.
 
-Currently a bit fiddly:
+The new **cat API** provides direct access to a range of metrics in
+human-friendly formats (i.e. not large JSON documents). This includes a bunch
+of things that humans and monitoring systems are often curious about: sizes,
+counts, statuses, etc.
 
-1. Disable flush
-2. Copy data files
-3. Enable flush
+The existing support for facets has been drastically improved with a new
+feature called **aggregations**. These allow you to express a bunch of things
+which aren't really expressible with traditional facets. These looked very
+powerful and very cool!
 
-Now controlled by API. Supports shared file system storage "repositories"
-accessible by all nodes (S3, Glusterfs, etc).
+[Clinton's slides][5] (originally prepared by Igor Motov) are available on
+Speaker Deck; go read them!
 
-Restore is similarly fiddly
+[5]: https://speakerdeck.com/elasticsearch/new-features-in-elasticsearch-v1-dot-0
 
-1. close indices
-2. find shards
-3. replace files
-4. open indices
-5. wait for recovery
-
-Also exposed through API now (though still involves closing indices)
-
-Lucene's immutable file structure will make snapshots efficient
-
-## Percolator
-
-reverse search
-updated search results
-
-Register queries with percolator index, submit documents and get back list of
-matching queries.
-
-Current approach is linear in the number of queries (in memory index, run each
-query); 1.0-beta1 improves percolator:
-
-- based in an arbitrary index
-- gives distribution
-- existing documents
-- counting
-- highlight
-- facets
-- bulk API
-
-## Cat API
-
-Humans are crap at reading JSON documents.
-
-exposes information under `/_cat/` in human-readable formats: allocation,
-nodes, shards, master, etc.
-
-## Aggregations
-
-Had facets for a long time. Works very well, but want more.
-
-Aggregations were added to make more sophisticated combined facets.
-
-Buckets group things together, Calculators operate on values in buckets. Seems
-directly comparable to `GROUP BY` and aggregate functions in SQL with nested
-queries.
-
-Probably in beta3?
-
-## Q&A
-
-Splunk partner asking about predictions. But they *have* just hired 3 machine
-learning people.
-
-When's 1.0 due? Before 2.0 (in Q1).
-
-Commercial support and training are the way ES make money.
-
-LogStash and Kibana? are in ES (company or project) now. Apparently a lot of
-users deploy ES as part of LogStash rather than for itself.
-
-Replicating between clusters in different data-centres? Currently restoring is
-whole-index. Coming soon is incremental restore to read-only indices. This is
-high-up on the list.
-
-For the list, see tags on the issue tracker.
-
-What sort of ML are you going to integrate? Not sure yet, still evaluating
-options (probably pick one first off); personally want an automated tuning.
-
-
+The questions prompted a few interesting details: Elasticsearch have just hired
+a few machine learning people to work on the product; they aren't yet sure
+what, specifically, they'll be working on, but we can expect some learning-type
+things in Elasticsearch soon.
