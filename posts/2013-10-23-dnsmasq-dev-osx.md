@@ -44,6 +44,8 @@ There are plenty of ways to install Dnsmasq but my favourite (on OS X) is to
 use the [Homebrew][] package manager. Installing Homebrew is fairly simple but
 beyond my scope here.
 
+[Homebrew]: http://brew.sh
+
 Once you have Homebrew installed, using it to install Dnsmasq is easy:
 
 ````{.bash}
@@ -59,12 +61,12 @@ commands but you should use whichever commands `brew` tells you to:
 
 ````{.bash}
 # Copy the default configuration file.
-cp /usr/local/opt/dnsmasq/dnsmasq.conf.example /usr/local/etc/dnsmasq.conf
+cp $(brew list dnsmasq | grep /dnsmasq.conf.example$) /usr/local/etc/dnsmasq.conf
+# Copy the daemon configuration file into place.
+sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/
 # Start Dnsmasq automatically.
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 ````
-
-[Homebrew]: http://brew.sh
 
 # Configuring Dnsmasq
 
