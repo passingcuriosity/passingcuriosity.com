@@ -1,6 +1,6 @@
 ---
 title: Sydney Continuous Delivery Meetup
-tags: continuous delivery, atlassian, stash, git
+tags: continuous delivery, event, atlassian, stash, git
 location: Sydney, New South Wales
 excerpt: 
   The October Continuous Delivery meetup had talks about the continuous
