@@ -1,5 +1,5 @@
 ---
-title: FP-Syd October 2013
+title: FP-Syd, October 2013
 tags: event, fp-syd, meetup, functional programming, icfp
 location: Sydney, New South Wales
 excerpt: 
