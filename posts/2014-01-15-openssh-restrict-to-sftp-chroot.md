@@ -41,7 +41,7 @@ Then create the new directory:
 ````{.bash}
 sudo mkdir -p /home/exchangefiles/
 sudo chgrp exchangefiles /home/exchangefiles/
-sudo chown g+rwx /home/exchangefiles/
+sudo chmod g+rwx /home/exchangefiles/
 ````
 
 # SSHD configuration
@@ -93,3 +93,35 @@ Match Group exchangefiles
   AllowTcpForwarding no
   X11Forwarding no
 ````
+
+# Testing
+
+To apply the configuration change, just restart your SSH server, create a user
+and try to access the site.
+
+````{.bash}
+# On the server:
+sudo adduser --ingroup exchangefiles testfiles
+sudo service ssh restart
+
+# On a test machine:
+sftp testfiles@server.example.com
+ssh testfiles@server.example.com
+````
+
+Connecting with `sftp` should result in a connection, but `ssh` should return
+an error message:
+
+> This service allows sftp connections only.
+>
+> Connection to server.example.com closed.
+
+# TODO
+
+If you're doing something like this, you probably want the users to be able to
+access each other's files -- otherwise why bother sharing a space? To do this
+you'll need to set the umask so that files are created with the correct
+permissions.
+
+The `internal-sftp` command has a `-u` option which might help, but I haven't
+tested this.
