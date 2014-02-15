@@ -3,8 +3,8 @@ title: Puppet Camp Sydney 2014
 location: Sydney, New South Wales
 tags: event, puppet, devops, cloud
 excerpt: 
-  I attended Puppetcamp Sydney yesterday. This is a quick round-up of the
-  sessions.
+  I attended Puppet Camp Sydney 2014 last Monday. This is a quick round-up of
+  the sessions.
 ---
 
 [Puppet Camps][1] are regular, regional events for the Puppet community and
@@ -51,9 +51,12 @@ process *and* in deployment as one of their monitoring and compliance tools.
 Lots of Jenkins and automated building of AMIs and CloudFoundry templates and
 such.
 
-**Aaron Hicks** from Landcare Research NZ spoke about the way he uses Puppet to
-formalise the configuration of the many precious snowflake machines he deals
-with in a scientific research environment.
+**Aaron Hicks** from Landcare Research NZ spoke about the way he uses Puppet in
+a scientific research environment. Particularly interesting was the use of
+Puppet to formalise the configuration of the many, many precious snowflake
+machines used in the various research projects his organisation supports. The
+idea of supplying Puppet manifests to help in the replication of scientific
+computing sounds great.
 
 **James Dymond** and **John Painter** from Sourced Group described a series of
 "Puppet in the AWS cloud" architectures they'd developed for clients in their
@@ -62,11 +65,21 @@ where they implemented a "gateway" between AWS autoscaling notifications and
 Puppet, allowing the master to sign certificates, delete node reports, etc. as
 the AWS autoscaling system adds and removes nodes.
 
-**Matt Moor** from Atlassian 
+**Matt Moor** from Atlassian described the way they use Puppet to manage their
+SaaS offering. Each SaaS client has their own VM which, now, is managed using
+Puppet. This allows them to manage service and version dependencies much more
+reliably than their previous approach of building massive WAR files using Maven
+and managing them with hack-y shell scripts.
 
 The last talk was by **Chris Barker** from Puppet Labs who gave a product
 demonstration of Puppet Enterprise. I'd already used most of the features
 demoed but some of the newer stuff -- especially the [event inspector][6] --
 looked pretty cool.
 
+Puppet Camp Sydney 2014 was a great event and brought to mind again just how
+much fun operations work (what little I've done) can be. In time, I expect the
+slides and videos of the presentations will be available from the Puppet Labs
+web-site on the [Previous Puppet Camps][7] page.
+
 [6]: http://puppetlabs.com/presentations/introducing-puppet-enterprises-event-inspector
+[7]: http://puppetlabs.com/community/puppet-camp#previous
