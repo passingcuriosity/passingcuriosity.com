@@ -1,7 +1,7 @@
 ---
 title: Puppet Camp Sydney 2014
 location: Sydney, New South Wales
-tags: event, puppet, devops, cloud
+tags: event, puppet camp, puppet, operations, devops, cloud
 excerpt: 
   I attended Puppet Camp Sydney 2014 last Monday. This is a quick round-up of
   the sessions.
