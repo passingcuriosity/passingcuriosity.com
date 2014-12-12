@@ -18,9 +18,12 @@ Executable site
     blaze-html,
     bytestring,
     containers,
+    directory,
     filepath,
     hakyll == 4.6.*,
     mtl,
     old-locale,
     pandoc,
+    pandoc-types,
+    process,
     time

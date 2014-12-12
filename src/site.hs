@@ -1,31 +1,34 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import           Control.Applicative             (empty, (<$>))
-import           Control.Monad                   (liftM, zipWithM_)
+import           Control.Monad                   (unless, zipWithM_)
 import           Control.Monad.Error.Class
+import qualified Data.ByteString                 as BS
 import           Data.ByteString.Lazy            (ByteString)
-import qualified Data.ByteString.Lazy            as BS
+import qualified Data.ByteString.Lazy            as BL
+import qualified Data.ByteString.Lazy.Char8      as BC
 import           Data.List                       (intercalate, intersperse,
                                                   sortBy)
-import qualified Data.Map                        as M
-import           Data.Monoid                     (mappend, mconcat, mempty)
+import           Data.Monoid
+import           Data.Time
 import           Data.Traversable                (traverse)
+import           System.Directory
+import           System.Environment
+import           System.Exit
 import           System.FilePath
+import           System.Locale                   (defaultTimeLocale)
 import           Text.Blaze.Html                 (toHtml, toValue, (!))
 import           Text.Blaze.Html.Renderer.String (renderHtml)
 import qualified Text.Blaze.Html5                as H
 import qualified Text.Blaze.Html5.Attributes     as A
+import           Text.Pandoc
 import           Text.Pandoc.PDF
-import           Text.Pandoc.Writers.LaTeX
-
--- For pagination.
-import           Data.Time
-import           Data.Time.Clock
-import           Data.Time.Format
-import           System.Locale                   (defaultTimeLocale)
+import           Text.Pandoc.Process             (pipeProcess)
+import           Text.Pandoc.Shared              (withTempDir)
+import qualified Text.Pandoc.UTF8                as UTF8
+import           Text.Pandoc.Walk
 
 import           Hakyll                          hiding (defaultContext)
-import           Text.Pandoc.Options
 
 --------------------------------------------------------------------------------
 -- Configuration
@@ -97,7 +100,16 @@ main = hakyllWith hakyllConf $ do
         -- PDF
         version "pdf" $ do
             route   $ routePostPDF
-            compile $ pdfCompiler
+            compile $ parsePandocCompiler
+                -- Making links, etc. absolute.
+                >>= transformPandoc absolutize
+                -- Translate to LaTeX source.
+                >>= generateTeXCompiler
+                -- Apply the LaTeX template for posts.
+                >>= loadAndApplyTemplate "templates/post.tex" postCtx
+                -- Compile to PDF.
+                >>= pdfLaTeXCompiler
+
 
         -- Default "final" version.
         version "html" $ do
@@ -163,10 +175,10 @@ main = hakyllWith hakyllConf $ do
 
     -- Paginated archives.
     paginate pageSize $ \index maxIndex postIds -> do
-        let id = fromFilePath $ if index == 1
+        let ident = fromFilePath $ if index == 1
                                 then "archives/index.html"
                                 else "archives/" ++ (show index) ++ "/index.html"
-        create [id] $ do
+        create [ident] $ do
             route idRoute
             compile $ do
               posts <- mapM (load . (setVersion (Just "html"))) postIds
@@ -263,7 +275,7 @@ postContext tags = mconcat
 
 -- | Build a tag template context.
 tagContext :: Tags -> String  -> Context String
-tagContext tags tag =
+tagContext tags _tag =
   tagCloudField' "tagcloud" 75.0 300.0 tags `mappend`
   sectionField "tag" `mappend`
   defaultContext
@@ -344,27 +356,74 @@ sectionField s = constField "section" s `mappend`
 postCompiler :: Compiler (Item String)
 postCompiler = pandocCompiler
 
--- | Compile posts to PDF.
-pdfCompiler :: Compiler (Item ByteString)
-pdfCompiler = cached "PC.pdfCompiler" $ do
-    txt <- (readPandocWith ropt <$> getResourceBody)
-    pdf <- unsafeCompiler $ makePDF "pdflatex" writeLaTeX wopt (itemBody txt)
-    case pdf of
-        Left e -> throwError [show e]
-        Right p -> return $ itemSetBody p txt
+-- | Parse a Markdown document to 'Pandoc'
+parsePandocCompiler :: Compiler (Item Pandoc)
+parsePandocCompiler =
+    traverse f =<< readPandocWith ropt <$> getResourceBody
   where
     ropt = defaultHakyllReaderOptions
+    f = return . id
+
+-- | Apply a Pandoc transformation to a document.
+transformPandoc :: (Pandoc -> Pandoc) -> Item Pandoc -> Compiler (Item Pandoc)
+transformPandoc f = withItemBody (return . walk f)
+
+-- | Generate LaTeX source from a 'Pandoc' document.
+generateTeXCompiler :: Item Pandoc -> Compiler (Item String)
+generateTeXCompiler = return . render
+  where
+    render = fmap $ writeLaTeX wopt
     wopt = defaultHakyllWriterOptions
-        { writerStandalone = True
-        , writerListings = True
-        , writerTemplate = concat
-            [ "\\documentclass{article} "
-            , "\\usepackage{lmodern,amssymb,amsmath,geometry,listings,graphicx}"
-            , "\\usepackage[unicode=true]{hyperref} "
-            , "\\urlstyle{same} \\renewcommand{\\href}[2]{#2\\footnote{\\url{#1}}}"
-            , "\\begin{document} $body$ \\end{document}"
-            ]
-        }
+
+-- | Generate a PDF document from LaTeX source.
+pdfLaTeXCompiler :: Item String -> Compiler (Item ByteString)
+pdfLaTeXCompiler i = cached "PC.pdfCompiler" $ do
+    (status, err, pdf) <- unsafeCompiler . withTempDir "tex2pdf." $ \tmp_dir ->
+        runTeXProgram "xelatex" 3 tmp_dir $ itemBody i
+    case status of
+        ExitFailure c -> throwError ["xelatex exited with code "
+            <> show c <> ": " <> BC.unpack err]
+        ExitSuccess ->
+            case pdf of
+                Nothing -> throwError [show $ "Could not process PDF: " <> err]
+                Just pdf' -> return . itemSetBody pdf' $ i
+
+-- Run a TeX program on an input bytestring and return (exit code,
+-- contents of stdout, contents of produced PDF if any).  Rerun
+-- a fixed number of times to resolve references.
+runTeXProgram :: String -> Int -> FilePath -> String
+              -> IO (ExitCode, ByteString, Maybe ByteString)
+runTeXProgram program runsLeft tmpDir source = do
+    let file = tmpDir </> "input.tex"
+    exists <- doesFileExist file
+    unless exists $ UTF8.writeFile file source
+    let tmpDir' = tmpDir
+    let file' = file
+    let programArgs = ["-halt-on-error", "-interaction", "nonstopmode",
+         "-output-directory", tmpDir', file']
+    env' <- getEnvironment
+    let sep = searchPathSeparator:[]
+    let texinputs = maybe (tmpDir' ++ sep) ((tmpDir' ++ sep) ++)
+          $ lookup "TEXINPUTS" env'
+    let env'' = ("TEXINPUTS", texinputs) :
+                  [(k,v) | (k,v) <- env', k /= "TEXINPUTS"]
+    (exit, out, err) <- pipeProcess (Just env'') program programArgs BL.empty
+    if runsLeft > 1
+       then runTeXProgram program (runsLeft - 1) tmpDir source
+       else do
+         let pdfFile = replaceDirectory (replaceExtension file ".pdf") tmpDir
+         pdfExists <- doesFileExist pdfFile
+         pdf <- if pdfExists
+                   -- We read PDF as a strict bytestring to make sure that the
+                   -- temp directory is removed on Windows.
+                   -- See https://github.com/jgm/pandoc/issues/1192.
+                   then (Just . BL.fromChunks . (:[])) `fmap` BS.readFile pdfFile
+                   else return Nothing
+         return (exit, out <> err, pdf)
+
+-- | Transform a 'Pandoc' document by making all links absolute.
+absolutize :: Pandoc -> Pandoc
+absolutize = id
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
