@@ -15,10 +15,12 @@ Executable site
 
   Build-depends:
     base >= 4 && < 5,
-    hakyll == 4.5.*,
+    blaze-html,
+    bytestring,
     containers,
     filepath,
+    hakyll == 4.6.*,
+    mtl,
+    old-locale,
     pandoc,
-    blaze-html,
-    time,
-    old-locale
+    time

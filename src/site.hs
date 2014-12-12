@@ -1,23 +1,30 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import           Control.Applicative (empty, (<$>))
-import           Control.Monad (liftM, zipWithM_)
-import           Data.List (intersperse, intercalate, sortBy)
-import qualified Data.Map as M
-import           Data.Monoid (mappend, mconcat, mempty)
+import           Control.Applicative             (empty, (<$>))
+import           Control.Monad                   (liftM, zipWithM_)
+import           Control.Monad.Error.Class
+import           Data.ByteString.Lazy            (ByteString)
+import qualified Data.ByteString.Lazy            as BS
+import           Data.List                       (intercalate, intersperse,
+                                                  sortBy)
+import qualified Data.Map                        as M
+import           Data.Monoid                     (mappend, mconcat, mempty)
+import           Data.Traversable                (traverse)
 import           System.FilePath
 import           Text.Blaze.Html                 (toHtml, toValue, (!))
 import           Text.Blaze.Html.Renderer.String (renderHtml)
 import qualified Text.Blaze.Html5                as H
 import qualified Text.Blaze.Html5.Attributes     as A
+import           Text.Pandoc.PDF
+import           Text.Pandoc.Writers.LaTeX
 
 -- For pagination.
 import           Data.Time
 import           Data.Time.Clock
 import           Data.Time.Format
-import           System.Locale (defaultTimeLocale)
+import           System.Locale                   (defaultTimeLocale)
 
-import           Hakyll hiding (defaultContext)
+import           Hakyll                          hiding (defaultContext)
 import           Text.Pandoc.Options
 
 --------------------------------------------------------------------------------
@@ -87,15 +94,23 @@ main = hakyllWith hakyllConf $ do
     --
     -- @todo Store a "teaser" snapshot of post content.
     match "posts/*" $ do
-        route   $ routePosts
-        compile $ do
-          postCompiler 
-            >>= saveSnapshot "content"
-            >>= return . fmap demoteHeaders
-            >>= loadAndApplyTemplate "templates/post.html" postCtx
-            >>= saveSnapshot "post"
-            >>= loadAndApplyTemplate "templates/_default.html" postCtx
-            >>= relativizeUrls
+        -- PDF
+        version "pdf" $ do
+            route   $ routePostPDF
+            compile $ pdfCompiler
+
+        -- Default "final" version.
+        version "html" $ do
+            route   $ routePosts
+            compile $ do
+              postCompiler
+                >>= saveSnapshot "content"
+                >>= return . fmap demoteHeaders
+                >>= loadAndApplyTemplate "templates/post.html" postCtx
+                >>= loadAndApplyTemplate "templates/_default.html" postCtx
+                >>= relativizeUrls
+                >>= saveSnapshot "post"
+
 
     -- Generate tag indexes, with RSS and Atom feeds.
     tagsRules tags $ \tag pattern -> do
@@ -104,21 +119,21 @@ main = hakyllWith hakyllConf $ do
         -- RSS feed
         version "rss" $ do
             route   $ routeTags `composeRoutes` setExtension "rss"
-            compile $ loadAllSnapshots pattern "content"
+            compile $ loadAllSnapshots (pattern .&&. hasVersion "html") "content"
                 >>= fmap (take 10) . recentFirst
                 >>= renderRss (feedConf) feedCtx
 
         -- Atom feed
         version "atom" $ do
             route   $ routeTags `composeRoutes` setExtension "xml"
-            compile $ loadAllSnapshots pattern "content"
+            compile $ loadAllSnapshots (pattern .&&. hasVersion "html") "content"
                 >>= fmap (take 10) . recentFirst
                 >>= renderAtom (feedConf) feedCtx
 
         -- Plain HTML version
         route routeTags
         compile $ do
-            posts <- recentFirst =<< loadAll pattern
+            posts <- recentFirst =<< loadAllSnapshots (pattern .&&. hasVersion "html") "post"
             let number = length posts
             let ctx = constField "title" title `mappend`
                       constField "tag" tag `mappend`
@@ -154,7 +169,7 @@ main = hakyllWith hakyllConf $ do
         create [id] $ do
             route idRoute
             compile $ do
-              posts <- mapM load postIds
+              posts <- mapM (load . (setVersion (Just "html"))) postIds
               let archiveCtx =
                       listField "posts" postCtx (return posts) `mappend`
                       paginationField (\i -> if (i == 1) then "/archives/" else "/archives/" ++ (show i) ++ "/") index maxIndex `mappend`
@@ -169,12 +184,11 @@ main = hakyllWith hakyllConf $ do
                   >>= loadAndApplyTemplate "templates/_default.html" archiveCtx
                   >>= relativizeUrls
 
-
     -- Generate index.
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
-        posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
+        posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots ("posts/*" .&&. hasVersion "html") "post"
         let indexCtx =
               listField "posts" postCtx (return posts) `mappend`
               sectionField "home" `mappend`
@@ -208,6 +222,15 @@ routePosts = customRoute fileToDirectory
                                     y = take 4 fn
                                 in joinPath [y, bn, "index.html"]
 
+routePostPDF :: Routes
+routePostPDF = customRoute fileToDirectory
+  where fileToDirectory :: Identifier -> FilePath
+        fileToDirectory ident = let p = toFilePath ident
+                                    fn = takeFileName p
+                                    bn = drop 11 $ dropExtension fn
+                                    y = take 4 fn
+                                in joinPath [y, bn, "index.pdf"]
+
 -- | Route tag pages.
 routeTags :: Routes
 routeTags = customRoute tagPath
@@ -232,6 +255,9 @@ postContext tags = mconcat
     , dateField "datetime" "%Y-%m-%d"
     , tagsField' "tags" tags
     , sectionField "archive"
+    -- LaTeX fields
+    , constField "documentclass" "article"
+    , constField "papersize" "a4paper"
     , defaultContext
     ]
 
@@ -256,11 +282,13 @@ defaultContext :: Context String
 defaultContext =
     tocField      "contents" `mappend`
     bodyField     "body"     `mappend`
-    metadataField            `mappend`
     strippedUrlField "url"   `mappend`
     pathField     "path"     `mappend`
     titleField    "title"    `mappend`
     constField    "author" (feedAuthorName feedConf) `mappend`
+    constField    "author-meta" (feedAuthorName feedConf) `mappend`
+    titleField    "title-meta" `mappend`
+    metadataField            `mappend`
     missingField
 
 --------------------------------------------------------------------------------
@@ -313,7 +341,30 @@ sectionField s = constField "section" s `mappend`
 --------------------------------------------------------------------------------
 -- Compilers
 --------------------------------------------------------------------------------
+postCompiler :: Compiler (Item String)
 postCompiler = pandocCompiler
+
+-- | Compile posts to PDF.
+pdfCompiler :: Compiler (Item ByteString)
+pdfCompiler = cached "PC.pdfCompiler" $ do
+    txt <- (readPandocWith ropt <$> getResourceBody)
+    pdf <- unsafeCompiler $ makePDF "pdflatex" writeLaTeX wopt (itemBody txt)
+    case pdf of
+        Left e -> throwError [show e]
+        Right p -> return $ itemSetBody p txt
+  where
+    ropt = defaultHakyllReaderOptions
+    wopt = defaultHakyllWriterOptions
+        { writerStandalone = True
+        , writerListings = True
+        , writerTemplate = concat
+            [ "\\documentclass{article} "
+            , "\\usepackage{lmodern,amssymb,amsmath,geometry,listings,graphicx}"
+            , "\\usepackage[unicode=true]{hyperref} "
+            , "\\urlstyle{same} \\renewcommand{\\href}[2]{#2\\footnote{\\url{#1}}}"
+            , "\\begin{document} $body$ \\end{document}"
+            ]
+        }
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
@@ -336,7 +387,7 @@ paginate :: Int -- ^ Items per page.
          -> Rules ()
 paginate itemsPerPage rules = do
     identifiers <- getMatches "posts/*"
- 
+
     let sorted = reverse $ sortBy byDate identifiers
         chunks = chunk itemsPerPage sorted
         maxIndex = length chunks
@@ -363,9 +414,9 @@ indexNavLink i d m = let n = i + d
                         then ""
                         else "<a href='" ++ url ++ "'>Page " ++ (show n) ++ "</a>"
 
-data Page = Page { pageTitle :: String
-                 , pageUrl :: String
-                 , pageClass :: String
+data Page = Page { pageTitle  :: String
+                 , pageUrl    :: String
+                 , pageClass  :: String
                  , pageNumber :: String
                  }
 
@@ -406,7 +457,7 @@ paginationField url i m = if (1 == m)
     makePages url i m = let s = max (i - (number `div` 2)) 1
                             p = [1..m]
                         in map (makePage i) p
-      where 
+      where
         number = 5
         makePage i p = Page ("Page " ++ show p) (url p) (if (i == p) then "active" else "") (show p)
 
