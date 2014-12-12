@@ -282,13 +282,13 @@ defaultContext :: Context String
 defaultContext =
     tocField      "contents" `mappend`
     bodyField     "body"     `mappend`
+    metadataField            `mappend`
     strippedUrlField "url"   `mappend`
     pathField     "path"     `mappend`
     titleField    "title"    `mappend`
     constField    "author" (feedAuthorName feedConf) `mappend`
     constField    "author-meta" (feedAuthorName feedConf) `mappend`
     titleField    "title-meta" `mappend`
-    metadataField            `mappend`
     missingField
 
 --------------------------------------------------------------------------------
