@@ -195,7 +195,7 @@ generate an interface automatically? I'm not sure.
 
 # [Thomas Sewell][ts] on learnings about SAT
 
-[ts]: http://ssrg.nicta.com.au/people/?cn=Thomas+Sewell
+[Thomas Sewell](http://ssrg.nicta.com.au/people/?cn=Thomas+Sewell)
 
 > Survey: who can name an NP-complete problem?
 

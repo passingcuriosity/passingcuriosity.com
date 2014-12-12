@@ -38,7 +38,7 @@ time. Unfortunately, this leads to very messy graphs like this one:
 
 [3]: http://prefuse.sourceforge.net
 
-![A naïve radial plot of the GRP024 problem](/radial/naive/GRP024-1000.png)
+[A naïve radial plot of the GRP024 problem](/radial/naive/GRP024-1000.png)
 
 I'm going to try and simplify the dataset and see if that will help resolve
 the problem. If not, I think we'll have to find another visualisation for the

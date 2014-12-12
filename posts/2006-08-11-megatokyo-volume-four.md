@@ -7,7 +7,7 @@ wordpressid: 1708
 wordpressurl: http://passingcuriosity.com/2006/megatokyo-volume-four/
 ---
 
-![Megatokyo Volume 4 Cover](/files/2006/08/11/megatokyo-four-cover.jpg)
+![Megatokyo Volume 4 Cover](files/2006/08/11/megatokyo-four-cover.jpg)
 
 My copy of [Megatokyo](http://megatokyo.com/) volume 4 finally came in
 and I bought it yesterday. It's good to see another Megatokyo book out

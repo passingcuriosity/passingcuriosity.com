@@ -5,7 +5,7 @@ wordpressid: 1394
 wordpressurl: http://passingcuriosity.com/2005/colouring-inside-the-box/
 ---
 
-![SET012-demo.png (PNG Image, 2551x284 pixels)](/matrix/developing/SET012-demo.png)
+[SET012-demo.png (PNG Image, 2551x284 pixels)](/matrix/developing/SET012-demo.png)
 
 Now that the data sets can be reprocessed more easily, and have more,
 relevant, data in them, I've started working on the colouring code. At the

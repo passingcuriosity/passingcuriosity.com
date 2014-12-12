@@ -129,7 +129,7 @@ being displayed is `field-event-location-value-1`. You can use this to work
 out what the theme function you are about to write should be called. It will
 be something like this:
 
-    <prefix>_views_view_field__<view_name>__attachment__<field_name>
+    `<prefix>_views_view_field__<view_name>__attachment__<field_name>`
 
 where `<prefix>` is your theme name (or theme engine name), `<view_name>` is
 the name you assigned your view when you created it, and `<field_name>` is the
@@ -159,4 +159,4 @@ Once this new function is in place you will need to refresh your theme caches
 (just hitting "Save" on `/admin/build/themes` will do the trick). And now your
 calendar page should look something like this:
 
-![The finished calendar](/files/2010/07/litecal-themed-calendar.jpg)
+![The finished calendar](files/2010/07/litecal-themed-calendar.jpg)

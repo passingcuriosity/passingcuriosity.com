@@ -77,7 +77,10 @@ directory, so I amended the `<Directory>` section in
     Options +ExecCGI
 ``````
 
-Restart Apache and you're good to go. If anything goes wrong, try looking at the [`mod_fastcgi` documentation](http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html).
+Restart Apache and you're good to go. If anything goes wrong, try looking at
+the [`mod_fastcgi` documentation][docs].
+
+[docs]: http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html
 
 ### Installing the Haskell libraries
 
@@ -101,9 +104,9 @@ Building a test application
 ---------------------------
 
 A simple Haskell FastCGI application looks like this (largely cribbed from
-[Paul Brown's blog][blog]:
+[Paul Brown's blog][blog]):
 
-[blog]: <http://mult.ifario.us/p/wiring-haskell-into-a-fastcgi-web-server
+[blog]: http://mult.ifario.us/p/wiring-haskell-into-a-fastcgi-web-server
 
 ``````haskell
     module Main ( main ) where

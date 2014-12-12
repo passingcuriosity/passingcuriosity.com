@@ -382,9 +382,9 @@ separate statements and expressions.
 
 Statements have three types:
 
-- s : {\bar T_{s}}
-- s : fails {\bar T_{f}}
-- s : {\bar T_{?}} fails {\bar T_{?}}
+- s : ${\bar T_{s}}$
+- s : $fails {\bar T_{f}}$
+- s : ${\bar T_{?}} fails {\bar T_{?}}$
 
 Type of `if then else` is `T_{t} \leastupperbound T_{e}`. Lattice join,
 subtype, etc.

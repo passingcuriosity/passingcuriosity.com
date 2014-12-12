@@ -5,7 +5,7 @@ title: Onward, to a less nonsensical visualisation!
 wordpressurl: http://passingcuriosity.com/2004/onward-to-a-less-nonsensical-visualisation/
 ---
 
-![SET012-clip2.png](/matrix/initial/SET012-clip2.png)
+[SET012-clip2.png](/matrix/initial/SET012-clip2.png)
 
 The new, matrix inspired, visualisation method is coming along nicely and, as
 can be seen in the picture linked above, allows one to identify possibly
