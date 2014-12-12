@@ -346,7 +346,7 @@ postCompiler = pandocCompiler
 
 -- | Compile posts to PDF.
 pdfCompiler :: Compiler (Item ByteString)
-pdfCompiler = do
+pdfCompiler = cached "PC.pdfCompiler" $ do
     txt <- (readPandocWith ropt <$> getResourceBody)
     pdf <- unsafeCompiler $ makePDF "pdflatex" writeLaTeX wopt (itemBody txt)
     case pdf of
