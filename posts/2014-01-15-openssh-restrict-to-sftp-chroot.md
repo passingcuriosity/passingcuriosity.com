@@ -15,7 +15,7 @@ server for a range of usecases. In this post we'll do the following:
 
 - Create a system group `exchangefiles`.
 
-- Create a `/home/exchangefiles/` directory.
+- Create a `/home/exchangefiles/` directory and `files/` directory within it.
 
 - Allow users in the `exchangefiles` group to connect to the server using SFTP
   (but not SSH).
@@ -36,12 +36,19 @@ First, lets create the new group:
 sudo addgroup exchangefiles
 ````
 
-Then create the new directory:
+Then create the new directories:
 
 ````{.bash}
-sudo mkdir -p /home/exchangefiles/
-sudo chgrp exchangefiles /home/exchangefiles/
-sudo chmod g+rwx /home/exchangefiles/
+# Create the chroot directory
+sudo mkdir /home/exchangefiles/
+sudo chmod g+rx /home/exchangefiles/
+
+# Create the group-writable directory
+sudo mkdir -p /home/exchangefiles/files/
+sudo chmod g+rwx /home/exchangefiles/files/
+
+# Give them both to the new group.
+sudo chgrp -R exchangefiles /home/exchangefiles/
 ````
 
 # SSHD configuration
@@ -116,6 +123,9 @@ an error message:
 >
 > Connection to server.example.com closed.
 
+When connected you should be able to list, upload and delete files under
+`/files/`.
+
 # TODO
 
 If you're doing something like this, you probably want the users to be able to
@@ -125,3 +135,8 @@ permissions.
 
 The `internal-sftp` command has a `-u` option which might help, but I haven't
 tested this.
+
+# Updates
+
+- 2015-01-08: Tweaked group write permissions on `/home/exchangefiles` after
+feedback from "Nik". Thanks Nik!
