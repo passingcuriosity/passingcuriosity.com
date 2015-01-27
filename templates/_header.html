@@ -1,0 +1,35 @@
+<header class="intro-header" style="background-image:
+$if(image)$url('/$image$')
+$else$$if(section)$url('/assets/img/$section$-bg.jpg')
+$else$url('/assets/img/post-bg.jpg')
+$endif$$endif$">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="$if(layout)$ $layout$-heading $else$ post-heading$endif$">
+                <h1>$title$</h1>
+                $if(strapline)$
+                    <hr class="small">
+                    <h2 class="subheading">$strapline$</h2>
+                $else$
+                $if(excerpt)$
+                    <hr class="small">
+                    <span class="subheading">$excerpt$</span>
+                $endif$
+                $endif$
+                $if(author)$
+                        $if(date)$
+                        <span class="meta">Posted by <a href="#">$author$</a> on $date$</span>
+                        $else$
+                        <span class="meta">Posted by <a href="#">$author$</a></span>
+                        $endif$
+                $else$
+                        $if(date)$
+                        <span class="meta">Posted on $date$</span>
+                        $endif$
+                $endif$
+            </div>
+        </div>
+    </div>
+</div>
+</header>

@@ -1,0 +1,10 @@
+$for(posts)$
+<div class="post-preview">
+<a href="$url$">
+  <h2 class="post-title">$title$</h2>
+  $if(excerpt)$<h3 class="post-subtitle">$excerpt$</h3>$endif$
+  </a>
+  <p class="post-meta">Posted $if(author)$by <a href="#">$author$</a>$endif$ on $date$.</p>
+</div>
+<hr>
+$endfor$
