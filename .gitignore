@@ -3,21 +3,12 @@
 .#*
 .*.swp
 
-# OS X
-.DS_Store
-._*
-
 # Ignore Hakyll output
 /_*/
-/htdocs
-/log
 
 # Cabal
+/.cabal-sandbox/
+/cabal.sandbox.config
 /dist/
 
-# Cabal dev
-/cabal-dev/
-
-# HS Env
-/.hsenv*
-/dist_*
+/assets/raw/

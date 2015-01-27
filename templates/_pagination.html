@@ -1,19 +1,66 @@
-$if(pagination-links)$
-<div class="pagination pagination-mini"><ul>
-$if(pagination-prev-url)$
-  <li class="prev"><a href="$pagination-prev-url$">&lt;</a></li>
+$if(numPages)$
+<nav class="pages"><ul class="pagination pagination-sm">
+$if(firstPageUrl)$
+  <li class="first">
+      <a href="$dropFileName(firstPageUrl)$" aria-label="First">
+          <span aria-hidden="true">&laquo;</span>
+      </a>
+  </li>
 $else$
-  <li class="prev disabled"><span>&lt;</span></li>
+  <li class="first disabled">
+      <span aria-label="First">
+          <span aria-hidden="true">&laquo;</span>
+      </span>
+  </li>
 $endif$
 
-$for(pagination-links)$
-  <li class="$class$"><a href="$url$">$number$</a></li>
-$endfor$
-
-$if(pagination-next-url)$
-  <li class="next"><a href="$pagination-next-url$">&gt;</a></li>
+$if(previousPageUrl)$
+  <li class="prev">
+    <a href="$dropFileName(previousPageUrl)$" aria-label="Previous">
+      <span aria-hidden="true">&lt;</span>
+    </a>
+  </li>
 $else$
-  <li class="next disabled"><span>&gt;</span></li>
+  <li class="prev disabled">
+    <span aria-label="Previous">
+      <span aria-hidden="true">&lt;</span>
+    </span>
+  </li>
 $endif$
-</ul></div>
+
+  <li class="active">
+    <span aria-label="Page $currentPageNum$ of $numPages$ pages." aria-hidden="true">
+      $currentPageNum$ / $numPages$
+    </span>
+  </li>
+
+$if(nextPageUrl)$
+  <li class="next">
+    <a href="$dropFileName(nextPageUrl)$" aria-label="Next">
+      <span aria-hidden="true">&gt;</span>
+    </a>
+  </li>
+$else$
+  <li class="next disabled">
+    <span aria-label="Next">
+      <span aria-hidden="true">&gt;</span>
+    </span>
+  </li>
+$endif$
+
+$if(lastPageUrl)$
+  <li class="last">
+    <a href="$dropFileName(lastPageUrl)$" aria-label="Last">
+        <span aria-hidden="true">&raquo;</span>
+    </a>
+  </li>
+$else$
+  <li class="last disabled">
+    <span aria-label="Last">
+        <span aria-hidden="true">&raquo;</span>
+    </span>
+  </li>
+$endif$
+</ul></nav>
+
 $endif$

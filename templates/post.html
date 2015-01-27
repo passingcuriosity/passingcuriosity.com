@@ -1,29 +1,17 @@
-<article itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="jumbotron">
-    <h1 itemprop="name">$title$</h1>
-    <p class="lead">
-	  $if(excerpt)$<span itemprop="description">$excerpt$</span>$endif$
-      <span itemprop="keywords">$tags$</span>
-    </p>
-	<p class="meta">$if(location)$<span class="location">$location$</span>; $endif$<time itemprop="dateCreated" datetime="$datetime$">$date$</time></p>
-  </header>
-  <hr>
+$partial("templates/_header.html")$
 
-  $if(contents)$
-  <nav id="table-of-contents">
-    <h2>Table of Contents</h2>
-    $contents$
-  </nav>
+<!-- Post Content -->
+<article>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+$body$
 
-  $endif$
-  <div class="row-fluid marketing">
-    $body$
-  </div>
-
-  <hr>
-  <footer>
-    <p>If you'd like to comment on this post, contact me on Twitter at <a
-    href="https://twitter.com/thsutton">@thsutton</a> or by email at <a
-    href="mailto:me@thomas-sutton.id.au">me@thomas-sutton.id.au</a>.</p>
-  </footer>
+<p class="meta">
+This post was published on $date$$if(mdate)$ and last modified on $mdate$$endif$.
+$if(tags)$It is tagged with: $tags$.$endif$
+</p>
+        </div>
+    </div>
+</div>
 </article>

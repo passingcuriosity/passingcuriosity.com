@@ -1,9 +1,12 @@
-<div class="jumbotron">
-	<h1>$title$</h1>
-	<p class="lead">All $number$ posts tagged with <em>$tag$</em>.</p>
-</div>
-<hr>
+$partial("templates/_header.html")$
 
-<div class="row-fluid marketing">
-$partial("templates/post-list.html")$
+<div class="container">
+<div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<p class="feeds">If you are interested in "$tag$" why not subscribe to the
+<a href="$atom_feed$" title="Atom feed of $tag$ posts">Atom feed</a> or
+<a href="$rss_feed$" title="RSS feed of $tag$ posts">RSS feed</a>?</p> 
+
+$partial("templates/_post-list.html")$
+</div></div>
 </div>
