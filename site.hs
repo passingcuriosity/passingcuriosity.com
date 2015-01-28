@@ -2,7 +2,6 @@
 
 module Main where
 
-
 import           Control.Applicative
 import           Control.Monad
 import           Data.Hashable
@@ -15,6 +14,8 @@ import           Text.Blaze.Html.Renderer.String (renderHtml)
 import qualified Text.Blaze.Html5                as BH
 import qualified Text.Blaze.Html5.Attributes     as BA
 import           Text.Pandoc
+
+{-# ANN module ("HLint: ignore Use liftM" :: String) #-}
 
 --------------------------------------------------------------------------------
 -- * Configuration
@@ -356,12 +357,12 @@ tagsField' =
     simpleRenderLink :: String -> Maybe FilePath -> Maybe BH.Html
     simpleRenderLink _   Nothing         = Nothing
     simpleRenderLink tag (Just filePath) =
-      Just $ BH.a ! BA.href (toValue $ dropFileName $ toUrl filePath) $ toHtml tag
+      Just . (BH.a ! BA.href (toValue . dropFileName $ filePath)) $ toHtml tag
 
 -- | Context to de-/activate menu entries.
 sectionField :: String -> Context a
-sectionField s = constField "section" s `mappend`
-                 constField ("section_" ++ s) s
+sectionField s = constField "section" s <>
+                 constField ("section_" <> s) s
 
 -- | Make a tag cloud.
 tagCloudField' :: String -> Double -> Double -> Tags -> Context a
@@ -373,10 +374,10 @@ tagCloudField' key =
       let diff     = 1 + fromIntegral max' - fromIntegral min'
           relative = (fromIntegral count - fromIntegral min') / diff
           size     = floor $ minSize + relative * (maxSize - minSize) :: Int
-      in renderHtml $
-         BH.a ! BA.style (toValue $ "font-size: " ++ show size ++ "%")
-             ! BA.href (toValue $ (++ "/") $ joinPath $ init $ splitDirectories url)
-             $ toHtml tag
+      in renderHtml
+         . (BH.a ! BA.style (toValue $ "font-size: " <> show size <> "%")
+                 ! BA.href (toValue . dropFileName $ url))
+         $ toHtml tag
 
 -- | Absolute url to the resulting item
 strippedUrlField :: String -> Context a
@@ -421,7 +422,6 @@ tocCompiler = pandocCompilerWith
 -- | Load images for use with 'imageField'.
 getImages :: Compiler [FilePath]
 getImages =
-    map (toFilePath . itemIdentifier) <$>
+    fmap (toFilePath . itemIdentifier) <$>
     (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
 
-{-# ANN module ("HLint: ignore Use liftM" :: String) #-}
