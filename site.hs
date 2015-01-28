@@ -1,5 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
+
 module Main where
+
 
 import           Control.Applicative
 import           Control.Monad
@@ -17,6 +19,9 @@ import           Text.Pandoc
 --------------------------------------------------------------------------------
 -- * Configuration
 --------------------------------------------------------------------------------
+
+twitterUser :: String
+twitterUser = "@thsutton"
 
 -- | Site configuration
 hakyllCfg :: Configuration
@@ -315,13 +320,29 @@ defaultContext _ =
     pathField     "path"     <>
     titleField    "title"    <>
     titleField    "title-meta" <>
+
+    constField "twitter_card" "summary" <>
+    constField "twitter_site" twitterUser <>
+    constField "twitter_creator" twitterUser <>
+    titleField "twitter_title" <>
+
     sectionField  "page" <>
     functionField "dropFileName" dropFN <>
+    functionField "first" firstFN <>
     missingField
   where
     dropFN :: [String] -> Item a -> Compiler String
     dropFN [fn] _ = return . dropFileName . toUrl $ fn
     dropFN _ _ = error "Called dropFileName with no arguments"
+
+    firstFN :: [String] -> Item a -> Compiler String
+    firstFN ss _ = case ss of
+        [] -> error "Called first with no arguments"
+        _  -> return . worker $ ss
+      where
+        worker [] = mempty
+        worker (h:r) | null h    = worker r
+                     | otherwise = h
 
 -- ** Fields
 
@@ -373,7 +394,7 @@ tocField name = field name $ \item -> do
     Nothing -> empty
     Just v -> if null v
               then empty
-              else tocCompiler >>= return . itemBody
+              else itemBody <$> tocCompiler
 
 -- | Select an image and include the URL.
 imageField :: String -> [FilePath] -> Context a
@@ -402,3 +423,5 @@ getImages :: Compiler [FilePath]
 getImages =
     map (toFilePath . itemIdentifier) <$>
     (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
+
+{-# ANN module ("HLint: ignore Use liftM" :: String) #-}
