@@ -4,6 +4,7 @@ layout: post
 title: Emulating Operators for Core Data
 wordpressurl: http://passingcuriosity.com/?p=56
 ---
+
 My last Cocoa post described a problem I encountered extending a Core Data tutorial by using bindings operators to aggregate a property of Core Data entities through a relationship. With a bit of grovelling through documentation and some help and guidance from [Tim Isted](http://www.timisted.net/) I've managed to get it to work, sort of.
 
 Given Department and Employee entities and a 'employees/department' relationship between them, I tried to bind a column in an NSTableView to `employees.@sum.fte` to display the Full Time Equivalent staffing for each department. Alas, it was not to be and in this post I'll explain [a little] why this is not the case, and one way [a dirty, filthy hack] to work around it.
@@ -16,6 +17,6 @@ Where `NSMutableSet`, `NSArray`, their subclasses, and assorted others allow the
 
 The new problem then is to convert this `_NSFaultingMutableSet` into something the widget can display. Looking at the binding inspector in Interface Builder, the most obvious option is that *Value Transformer* box. Thankfully, value transforms are reasonably simple, especially when they are one way. After you subclass `NSValueTransformer` to do what you need, create an instance, and register it with a given name (I did it in `[MyDocument init]` as suggested by Tim, how ever you do it, it probably needs to be done before the NIB is loaded). Then entering the name in the *Value Transformer* box in IB gets it called. A little bit of code using an `NSEnumerator` to emulate `@sum` and it now works:
 
-![Emulating Operators with an NSValueTransformer](files/2008/07/emulating-operators-with-value-transformers.png)
+![Emulating Operators with an NSValueTransformer](/files/2008/07/emulating-operators-with-value-transformers.png)
 
 Thanks to Tim Isted for his help, guidance, and sample code. Suggestions are welcome as to other, perhaps better, ways to get this to work.
