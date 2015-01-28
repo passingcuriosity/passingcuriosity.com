@@ -317,11 +317,21 @@ defaultContext _ =
     titleField    "title-meta" <>
     sectionField  "page" <>
     functionField "dropFileName" dropFN <>
+    functionField "first" firstFN <>
     missingField
   where
     dropFN :: [String] -> Item a -> Compiler String
     dropFN [fn] _ = return . dropFileName . toUrl $ fn
     dropFN _ _ = error "Called dropFileName with no arguments"
+
+    firstFN :: [String] -> Item a -> Compiler String
+    firstFN ss _ = case ss of
+        [] -> error "Called first with no arguments"
+        _  -> worker ss
+      where
+        worker [] = mempty
+        worker (h:r) | null h    = worker r
+                     | otherwise = h
 
 -- ** Fields
 
