@@ -2,6 +2,7 @@
 title: Haskell at Work
 strapline: Using Haskell in the Real World at my new job.
 tags: haskell, functional programming, work
+location: Sydney, New South Wales
 excerpt: 
   I've recently (in blog years) started a new job at a company which uses
   Haskell quite extensively. Here are some things we do with it.

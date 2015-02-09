@@ -424,4 +424,3 @@ getImages :: Compiler [FilePath]
 getImages =
     fmap (toFilePath . itemIdentifier) <$>
     (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
-
