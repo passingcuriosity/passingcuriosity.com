@@ -357,7 +357,7 @@ tagsField' =
     simpleRenderLink :: String -> Maybe FilePath -> Maybe BH.Html
     simpleRenderLink _   Nothing         = Nothing
     simpleRenderLink tag (Just filePath) =
-      Just . (BH.a ! BA.href (toValue . dropFileName $ filePath)) $ toHtml tag
+      Just . (BH.a ! BA.href (toValue . dropFileName $ "/" </> filePath)) $ toHtml tag
 
 -- | Context to de-/activate menu entries.
 sectionField :: String -> Context a
