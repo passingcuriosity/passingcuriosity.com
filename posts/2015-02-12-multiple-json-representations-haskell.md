@@ -273,7 +273,7 @@ Conclusion
 
 By using a "wrapper" type like `Upstream a` I reduced the amount of code I need
 to write and maintain (in particular, there's no converting back and forth
-between `Colour` and `WeiredlyFormattedColour` data types). The values of my
+between `Colour` and `WeirdlyFormattedColour` data types). The values of my
 various types are clearly still related and `Upstream` is completely agnostic
 to the type being wrapped -- an `Upstream Robot` is just a `Robot` inside an
 `Upstream` and neither the `Robot` not the `Upstream` cares about the other
