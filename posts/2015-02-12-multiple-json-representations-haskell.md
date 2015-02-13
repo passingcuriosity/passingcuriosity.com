@@ -69,8 +69,7 @@ deriving instance FromJSON ColourName
 deriving instance ToJSON ColourName
 
 instance FromJSON [Colour] where
-    parseJSON (Object v) = sequence $ HashMap.foldrWithKey
-        (\key obj colours -> colour key obj : colours) [] v
+    parseJSON (Object v) = mapM (uncurry colour) $ HashMap.toList v
       where
         colour name (Object o) = Colour
                 <$> parseJSON (String name)
@@ -194,7 +193,7 @@ instance FromJSON (Upstream Robot) where
         -- have @status == "active".
         activeColours :: Value -> Parser [ColourName]
         activeColours (Object o) = (fmap fst . filter snd) <$>
-            sequence (HM.foldrWithKey (\k r l -> colour k r:l) [] o)
+            mapM (uncurry colour) (HM.toList o)
         activeColours _ = fail "Colours must be a JSON object."
 
         -- Given a name and a JSON value, parse a pair containing the name and
