@@ -100,9 +100,9 @@ main = hakyllWith hakyllCfg $ do
                       postCtx
 
             pandocCompiler
+                >>= return . fmap demoteHeaders
                 >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= saveSnapshot "content"
-                >>= return . fmap demoteHeaders
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
