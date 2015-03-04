@@ -142,7 +142,7 @@ main = hakyllWith hakyllCfg $ do
                 loadAll ("posts/*" .&&. hasNoVersion)
 
             let indexCtx =
-                    listField "posts" postCtx (return posts) <>
+                    numberedListField "posts" postCtx (return posts) <>
                     imageField "image" images <>
                     sectionField "home" <>
                     defaultCtx
@@ -201,7 +201,7 @@ main = hakyllWith hakyllCfg $ do
                     constField "layout" "page" <>
                     sectionField "archive" <>
                     imageField "image" images <>
-                    listField "posts" postCtx (return posts) <>
+                    numberedListField "posts" postCtx (return posts) <>
                     paginateContext paginated_archives page_number <>
                     defaultCtx
 
@@ -358,6 +358,22 @@ defaultContext _ =
                      | otherwise = h
 
 -- ** Fields
+
+-- | A 'listField' which adds an @item-number@ field to the context.
+numberedListField :: String -> Context a -> Compiler [Item a] -> Context b
+numberedListField key ctx items =
+    let ctx' = ctx <> listNumberField "item-number" items
+    in listField key ctx' items
+
+-- | Extend a 'Context' with an item's position in a list.
+listNumberField :: String -> Compiler [Item a] -> Context b
+listNumberField key items = field key $
+    fmap (maybe empty show) . getNumber . itemIdentifier
+  where
+    getNumber :: Identifier -> Compiler (Maybe Int)
+    getNumber ident = do
+        idents <- items
+        return . fmap (+1) . elemIndex ident $ fmap itemIdentifier idents
 
 tagsField' :: String -> Tags -> Context a
 tagsField' =

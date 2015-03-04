@@ -1,5 +1,5 @@
 $for(posts)$
-<div class="post-preview">
+<div class="post-preview"$if(item-number)$ id="item-$item-number$"$endif$>
 <a href="$url$">
   <h2 class="post-title">$title$</h2>
   $if(excerpt)$<h3 class="post-subtitle">$excerpt$</h3>$endif$
