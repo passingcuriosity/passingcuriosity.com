@@ -27,7 +27,7 @@ twitterUser = "@thsutton"
 -- | Site configuration
 hakyllCfg :: Configuration
 hakyllCfg = defaultConfiguration
-  { deployCommand = "rsync -ave 'ssh' _site/ thomas@passingcuriosity.com:/srv/passingcuriosity.com/htdocs"
+  { deployCommand = "rsync -rlpve 'ssh' _site/ thomas@passingcuriosity.com:/srv/passingcuriosity.com/htdocs"
   }
 
 feedCfg :: FeedConfiguration
