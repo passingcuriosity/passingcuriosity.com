@@ -14,7 +14,7 @@ and reading its output goes something like this:
 
 [process]: https://hackage.haskell.org/package/process
 
-````{haskell}
+````{.haskell}
 import System.Exit
 import System.Process
 
