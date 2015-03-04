@@ -11,9 +11,9 @@ solved, and events I've attended. Prominent topics include
 [Drupal][], [Haskell][], and [events][] related to programming and
 IT.
 
-[Drupal]: /tag/drupal/
-[Haskell]: /tag/haskell/
-[events]: /tag/event/
+[Drupal]: /tags/drupal/
+[Haskell]: /tags/haskell/
+[events]: /tags/event/
 
 # Recent Posts {.recent}
 
