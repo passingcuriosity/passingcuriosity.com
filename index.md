@@ -21,5 +21,5 @@ $partial("templates/_post-list.html")$
 
 <!-- Pager -->
 <ul class="pager">
-<li class="next"><a href="/archives/">Older Posts &rarr;</a></li>
+<li class="next"><a href="/archives/#item-4">Older Posts &rarr;</a></li>
 </ul>
