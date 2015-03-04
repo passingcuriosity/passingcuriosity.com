@@ -210,45 +210,57 @@ main = hakyllWith hakyllCfg $ do
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    tagsRules tags $ \tag pattern -> do
+    tagsRules tags $ \tag tag_pattern -> do
+
         let title = "Posts tagged " <> tag
 
         -- Atom feed
         version "atom" $ do
             route $ routeTags (tag <> ".xml")
-            compile $ loadAllSnapshots pattern "content"
+            compile $ loadAllSnapshots tag_pattern "content"
                 >>= fmap (take 10) . recentFirst
                 >>= renderAtom feedCfg feedCtx
 
         -- Atom feed
         version "rss" $ do
             route $ routeTags (tag <> ".rss")
-            compile $ loadAllSnapshots pattern "content"
+            compile $ loadAllSnapshots tag_pattern "content"
                 >>= fmap (take 10) . recentFirst
                 >>= renderRss feedCfg feedCtx
 
-        route $ routeTags "index.html"
-        compile $ do
-            images <- getImages
-            posts <- recentFirst =<< loadAll (pattern .&&. hasNoVersion)
+        paginated_tags <- buildPaginateWith
+            (sortRecentFirst >=> return . paginateEvery pageSize)
+            tag_pattern
+            (\n -> fromFilePath $ if n == 1
+                then "tags" </> tag </> "index.html"
+                else "tags" </> tag </> show n </> "index.html")
 
-            let number = length posts
-            let excerpt = "There are " <> show number <> " posts tagged with "
-                        <> tag <> "."
-            let ctx = constField "title" title <>
-                    constField "tag" tag <>
-                    constField "number" (show number) <>
-                    constField "excerpt" excerpt <>
-                    imageField "image" images <>
-                    listField "posts" postCtx (return posts) <>
-                    field "rss_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "rss") . itemIdentifier) `mappend`
-                    field "atom_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "atom") . itemIdentifier) `mappend`
-                    tagCtx tag
+        paginateRules paginated_tags $ \page_number pattern -> do
+            route idRoute
+            compile $ do
+                all_posts <- recentFirst =<< loadAll (tag_pattern .&&. hasNoVersion)
+                let number = length (all_posts :: [Item String])
 
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/tag.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= relativizeUrls
+                images <- getImages
+                posts <- recentFirst =<< loadAll (pattern .&&. hasNoVersion)
+
+                let excerpt = "There are " <> show number <> " posts tagged with "
+                            <> tag <> "."
+                let ctx = constField "title" title <>
+                        constField "tag" tag <>
+                        constField "number" (show number) <>
+                        constField "excerpt" excerpt <>
+                        imageField "image" images <>
+                        listField "posts" postCtx (return posts) <>
+                        field "rss_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "rss") . itemIdentifier) `mappend`
+                        field "atom_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "atom") . itemIdentifier) `mappend`
+                        paginateContext paginated_tags page_number <>
+                        tagCtx tag
+
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/tag.html" ctx
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= relativizeUrls
 
 --------------------------------------------------------------------------------
 -- * Routing
@@ -333,7 +345,7 @@ defaultContext _ =
     missingField
   where
     dropFN :: [String] -> Item a -> Compiler String
-    dropFN [fn] _ = return . dropFileName . toUrl $ fn
+    dropFN [fn] _ = return . dropFileName $ fn
     dropFN _ _ = error "Called dropFileName with no arguments"
 
     firstFN :: [String] -> Item a -> Compiler String
@@ -376,7 +388,7 @@ tagCloudField' key =
           size     = floor $ minSize + relative * (maxSize - minSize) :: Int
       in renderHtml
          . (BH.a ! BA.style (toValue $ "font-size: " <> show size <> "%")
-                 ! BA.href (toValue . dropFileName $ url))
+                 ! BA.href (toValue . dropFileName $ "/" </> "tags" </> tag </> "index.html"))
          $ toHtml tag
 
 -- | Absolute url to the resulting item
