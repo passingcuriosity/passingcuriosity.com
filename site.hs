@@ -367,7 +367,8 @@ tagsField' =
         (mconcat . intersperse ", ")
   where
     simpleRenderLink :: String -> Maybe FilePath -> Maybe BH.Html
-    simpleRenderLink _   Nothing         = Nothing
+    simpleRenderLink tag Nothing         =
+      Just . (BH.a ! BA.href (toValue . dropFileName $ "/" </> "tags" </> tag </> "index.html")) $ toHtml tag
     simpleRenderLink tag (Just filePath) =
       Just . (BH.a ! BA.href (toValue . dropFileName $ "/" </> filePath)) $ toHtml tag
 
@@ -381,7 +382,7 @@ tagCloudField' :: String -> Double -> Double -> Tags -> Context a
 tagCloudField' key =
   tagCloudFieldWith key makeLink unwords
   where
-    makeLink minSize maxSize tag url count min' max' =
+    makeLink minSize maxSize tag _url count min' max' =
       -- Show the relative size of one 'count' in percent
       let diff     = 1 + fromIntegral max' - fromIntegral min'
           relative = (fromIntegral count - fromIntegral min') / diff
