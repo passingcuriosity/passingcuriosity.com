@@ -4,7 +4,7 @@ $for(posts)$
   <h2 class="post-title">$title$</h2>
   $if(excerpt)$<h3 class="post-subtitle">$excerpt$</h3>$endif$
   </a>
-  <p class="post-meta">Posted $if(author)$by <a href="#">$author$</a>$endif$ on $date$.</p>
+  <p class="post-meta">Posted $if(author)$by <a href="#">$author$</a>$endif$ on $date$.$if(tags)$ Tagged with: $tags$.$endif$</p>
 </div>
 <hr>
 $endfor$
