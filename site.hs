@@ -251,7 +251,7 @@ main = hakyllWith hakyllCfg $ do
                         constField "number" (show number) <>
                         constField "excerpt" excerpt <>
                         imageField "image" images <>
-                        listField "posts" postCtx (return posts) <>
+                        numberedListField "posts" postCtx (return posts) <>
                         field "rss_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "rss") . itemIdentifier) `mappend`
                         field "atom_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "atom") . itemIdentifier) `mappend`
                         paginateContext paginated_tags page_number <>
