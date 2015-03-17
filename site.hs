@@ -13,6 +13,7 @@ import           Text.Blaze.Html                 (toHtml, toValue, (!))
 import           Text.Blaze.Html.Renderer.String (renderHtml)
 import qualified Text.Blaze.Html5                as BH
 import qualified Text.Blaze.Html5.Attributes     as BA
+import qualified Text.HTML.TagSoup               as TS
 import           Text.Pandoc
 
 {-# ANN module ("HLint: ignore Use liftM" :: String) #-}
@@ -101,6 +102,7 @@ main = hakyllWith hakyllCfg $ do
 
             pandocCompiler
                 >>= return . fmap demoteHeaders
+                >>= return . fmap embedKMLImages
                 >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= saveSnapshot "content"
                 >>= loadAndApplyTemplate "templates/default.html" ctx
@@ -116,6 +118,7 @@ main = hakyllWith hakyllCfg $ do
                       defaultCtx
 
             pandocCompiler
+                >>= return . fmap embedKMLImages
                 >>= loadAndApplyTemplate "templates/page.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
@@ -130,6 +133,7 @@ main = hakyllWith hakyllCfg $ do
                       defaultCtx
 
             pandocCompiler
+                >>= return . fmap embedKMLImages
                 >>= loadAndApplyTemplate "templates/page.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
@@ -453,3 +457,21 @@ getImages :: Compiler [FilePath]
 getImages =
     fmap (toFilePath . itemIdentifier) <$>
     (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
+
+-- | Rewrite HTML, classify @<embed>@ tags for @.kml@ files so JavaScript can
+-- display them on embedded maps.
+--
+-- TODO: Use a 'Compiler' to convert KML files into GeoJSON. Then use GeoJSON
+-- directly in the JS.
+embedKMLImages :: String -> String
+embedKMLImages = withTags $ \tag -> case tag of
+    TS.TagOpen _ _ -> embed tag
+    _ -> tag
+  where
+    embed :: TS.Tag String -> TS.Tag String
+    embed t@(TS.TagOpen "embed" a) = case lookup "src" a of
+        Nothing -> t
+        Just src -> if ".kml" `isSuffixOf` src
+            then TS.TagOpen "embed" (a <> [("class", "embed-kml-map")])
+            else t
+    embed tag = tag

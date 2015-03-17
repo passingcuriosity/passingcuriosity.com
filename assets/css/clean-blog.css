@@ -416,3 +416,9 @@ pre.sourceCode span.er { color: red; font-weight: bold; }
 
 /* Pagination */
 nav.pages { text-align: center; }
+
+/* Maps */
+div.map { position: relative; width:100%; min-height: 20em; }
+@media (min-width: 1000px) {
+  div.map { min-height: 40em; }
+}

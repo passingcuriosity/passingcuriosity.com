@@ -1000,3 +1000,26 @@ $(function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
 });
+
+$(function(){
+    L.mapbox.accessToken = "pk.eyJ1IjoidGhzdXR0b24iLCJhIjoiNVlOV1NkUSJ9.zQlgMjgZ_1HaO1StXk_Zaw";
+    var map_c = 1;
+
+    $('.embed-kml-map').each(function(){
+        var id = "embedded_map_" + map_c++;
+        window.console.log("Initialising map ", id, " for: ", $(this));
+
+        var src = $(this).attr('src');
+
+        var div = $("<div class='map' id='" + id + "'>");
+        div.insertAfter($(this));
+        $(this).hide();
+
+        var map = L.mapbox.map(id, "thsutton.lg173al3");
+        var runLayer = omnivore.kml(src)
+            .on('ready', function() {
+                map.fitBounds(runLayer.getBounds());
+            })
+            .addTo(map);
+    });
+});
