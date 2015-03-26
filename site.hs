@@ -87,6 +87,7 @@ main = hakyllWith hakyllCfg $ do
     --
     -- Tags
     --
+
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
     let postCtx = postContext tags
     let feedCtx = feedContext tags
@@ -105,13 +106,11 @@ main = hakyllWith hakyllCfg $ do
             let ctx = imageField "image" images <>
                       postCtx
 
-            pandocCompiler
+            contentCompiler
                 >>= return . fmap demoteHeaders
-                >>= return . fmap embedKMLImages
                 >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= saveSnapshot "content"
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= shill
                 >>= relativizeUrls
 
     match "about.md" $ do
@@ -123,8 +122,7 @@ main = hakyllWith hakyllCfg $ do
                       imageField "image" images <>
                       defaultCtx
 
-            pandocCompiler
-                >>= return . fmap embedKMLImages
+            contentCompiler
                 >>= loadAndApplyTemplate "templates/page.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
@@ -138,8 +136,7 @@ main = hakyllWith hakyllCfg $ do
                       imageField "image" images <>
                       defaultCtx
 
-            pandocCompiler
-                >>= return . fmap embedKMLImages
+            contentCompiler
                 >>= loadAndApplyTemplate "templates/page.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
@@ -170,8 +167,8 @@ main = hakyllWith hakyllCfg $ do
             images <- getImages
 
             let ctx = tagCloudField' "tagcloud" 75.0 300.0 tags <>
-                      sectionField "tags" <>
                       imageField "image" images <>
+                      sectionField "tags" <>
                       defaultCtx
 
             getResourceBody
@@ -451,6 +448,13 @@ imageField name files = field name $ \item -> do
 --------------------------------------------------------------------------------
 -- * Compilers
 --------------------------------------------------------------------------------
+
+-- | Compiler for blog content.
+contentCompiler :: Compiler (Item String)
+contentCompiler =
+    pandocCompiler
+        >>= return . fmap embedKMLImages
+        >>= shill
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
