@@ -12,6 +12,8 @@ systems. In a few cases this required invoking existing command-line tools and
 parsing their output. The naive approach to invoking a [process][] in Haskell
 and reading its output goes something like this:
 
+![See Thomas d Run!](/files/2015/run.kml)
+
 [process]: https://hackage.haskell.org/package/process
 
 ````{.haskell}

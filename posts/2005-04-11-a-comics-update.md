@@ -76,3 +76,5 @@ art was quite nice, but the book seemed censored and perhaps a little
 On the whole, I'm really happy with the books I've bought, which is a good
 thing considering how much money I've spent on comics lately (more than $350
 in the last couple of months).
+
+<!-- TODO -->

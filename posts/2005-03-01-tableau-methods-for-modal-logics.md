@@ -2,14 +2,15 @@
 wordpressid: 1566
 layout: post
 title: Tableau Methods for Modal Logics
+tags: books, logic
 wordpressurl: http://passingcuriosity.com/2005/tableau-methods-for-modal-logics/
 ---
 
-<span style="font-style: italic;"><a
-href="ftp://arp.anu.edu.au/pub/techreports/1995/TR-ARP-15-95.ps.gz">Tableau
-Methods for Modal and Temporal Logics</a> in Handbook of Tableau Methods, M
-D'Agostino, D Gabbay, R Haehnle, J Posegga (Eds.), Kluwer Academic Publishers,
-1999.</span>
+[1]: ftp://arp.anu.edu.au/pub/techreports/1995/TR-ARP-15-95.ps.gz
+
+[Tableau Methods for Modal and Temporal Logics][1] in Handbook of Tableau
+Methods, M D'Agostino, D Gabbay, R Haehnle, J Posegga (Eds.), Kluwer Academic
+Publishers, 1999.
 
 I've been reading Rajeev Gore's chapter on tableau methods for modal logics
 for the last few days. I think I'm starting to understand the unlabelled
