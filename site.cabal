@@ -1,7 +1,16 @@
 name:               site
 version:            0.1.0.0
+synopsis:           Code and content for passingcuriosity.com
+description:        Code and content for passingcuriosity.com
+license:            AllRightsReserved
+maintainer:         Thomas Sutton <me@thomas-sutton.id.au>
+category:           Web
 build-type:         Simple
 cabal-version:      >= 1.10
+
+source-repository   HEAD
+  type: git
+  location: https://github.com/thsutton/passingcuriosity.com/
 
 executable site
   main-is:          site.hs
