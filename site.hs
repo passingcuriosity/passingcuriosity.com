@@ -367,7 +367,9 @@ defaultContext _ =
         worker (h:r) | null h    = worker r
                      | otherwise = h
 
+--------------------------------------------------------------------------------
 -- ** Fields
+--------------------------------------------------------------------------------
 
 -- | A 'listField' which adds an @item-number@ field to the context.
 numberedListField :: String -> Context a -> Compiler [Item a] -> Context b
@@ -446,7 +448,9 @@ imageField name files = field name $ \item -> do
     let img = files !! c
     return img
 
+--------------------------------------------------------------------------------
 -- * Compilers
+--------------------------------------------------------------------------------
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
@@ -463,6 +467,28 @@ getImages :: Compiler [FilePath]
 getImages =
     fmap (toFilePath . itemIdentifier) <$>
     (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
+
+-- | Sprinkle affiliate links, etc. over a blog.
+shill :: Item String -> Compiler (Item String)
+shill item = return $ fmap (withUrls amazon) item
+  where
+    amazon :: String -> String
+    amazon url = if "amazon.com/" `isInfixOf` url
+        then fromMaybe url $ urlAddQuery ("tag", amazonUSTag) url
+        else url
+
+--------------------------------------------------------------------------------
+-- * Utility
+--------------------------------------------------------------------------------
+
+-- | Sprinkle affiliate links, etc. over a blog.
+shill :: Item String -> Compiler (Item String)
+shill item = return $ fmap (withUrls amazon) item
+  where
+    amazon :: String -> String
+    amazon url = if "amazon.com/" `isInfixOf` url
+        then fromMaybe url $ urlAddQuery ("tag", amazonUSTag) url
+        else url
 
 -- | Rewrite HTML, classify @<embed>@ tags for @.kml@ files so JavaScript can
 -- display them on embedded maps.
@@ -482,14 +508,6 @@ embedKMLImages = withTags $ \tag -> case tag of
             else t
     embed tag = tag
 
--- | Sprinkle affiliate links, etc. over a blog.
-shill :: Item String -> Compiler (Item String)
-shill item = return $ fmap (withUrls amazon) item
-  where
-    amazon :: String -> String
-    amazon url = if "amazon.com/" `isInfixOf` url
-        then fromMaybe url $ urlAddQuery ("tag", amazonUSTag) url
-        else url
 
 -- | Add a query parameter to a URL.
 urlAddQuery :: (String, String) -> String -> Maybe String
