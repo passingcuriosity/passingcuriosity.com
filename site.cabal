@@ -13,5 +13,6 @@ executable site
                   , hashable
                   , pandoc
                   , tagsoup
+                  , url
   ghc-options:      -threaded
   default-language: Haskell2010

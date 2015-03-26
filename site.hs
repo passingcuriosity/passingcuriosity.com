@@ -6,8 +6,10 @@ import           Control.Applicative
 import           Control.Monad
 import           Data.Hashable
 import           Data.List
+import           Data.Maybe
 import           Data.Monoid
 import           Hakyll                          hiding (defaultContext)
+import           Network.URL
 import           System.FilePath
 import           Text.Blaze.Html                 (toHtml, toValue, (!))
 import           Text.Blaze.Html.Renderer.String (renderHtml)
@@ -24,6 +26,9 @@ import           Text.Pandoc
 
 twitterUser :: String
 twitterUser = "@thsutton"
+
+amazonUSTag :: String
+amazonUSTag = "passingcuriosity-20"
 
 -- | Site configuration
 hakyllCfg :: Configuration
@@ -477,8 +482,15 @@ embedKMLImages = withTags $ \tag -> case tag of
             else t
     embed tag = tag
 
+-- | Sprinkle affiliate links, etc. over a blog.
 shill :: Item String -> Compiler (Item String)
 shill item = return $ fmap (withUrls amazon) item
   where
     amazon :: String -> String
-    amazon url = if "amazon.com" `isInfixOf` url then url <> "#book" else url
+    amazon url = if "amazon.com/" `isInfixOf` url
+        then fromMaybe url $ urlAddQuery ("tag", amazonUSTag) url
+        else url
+
+-- | Add a query parameter to a URL.
+urlAddQuery :: (String, String) -> String -> Maybe String
+urlAddQuery param url = exportURL . flip add_param param <$> importURL url
