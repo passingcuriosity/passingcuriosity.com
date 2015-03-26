@@ -106,6 +106,7 @@ main = hakyllWith hakyllCfg $ do
                 >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= saveSnapshot "content"
                 >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= shill
                 >>= relativizeUrls
 
     match "about.md" $ do
@@ -475,3 +476,9 @@ embedKMLImages = withTags $ \tag -> case tag of
             then TS.TagOpen "embed" (a <> [("class", "embed-kml-map")])
             else t
     embed tag = tag
+
+shill :: Item String -> Compiler (Item String)
+shill item = return $ fmap (withUrls amazon) item
+  where
+    amazon :: String -> String
+    amazon url = if "amazon.com" `isInfixOf` url then url <> "#book" else url
