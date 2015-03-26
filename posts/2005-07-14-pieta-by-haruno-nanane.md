@@ -1,7 +1,8 @@
 ---
 wordpressid: 1610
 layout: post
-title: "Pieta by Haruno Nanane"
+title: Pieta by Haruno Nanane
+tags: comics, manga
 wordpressurl: http://passingcuriosity.com/2005/pieta-by-haruno-nanane/
 ---
 

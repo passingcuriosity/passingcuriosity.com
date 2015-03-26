@@ -4,6 +4,7 @@ layout: post
 title: Notes on "Tuning MySQL performance"
 wordpressurl: http://passingcuriosity.com/?p=1331
 ---
+
 [Trent "lathiat" Lloyd](http://lathiat.net/) talking about MySQL performance tuning. The slides are available on his [talks page](http://lathiat.net/talks).
 
 <!--more-->

@@ -1,7 +1,7 @@
 ---
 wordpressid: 1431
 layout: post
-title: "[Haskell-cafe] Re: Using type classes for polymorphism of data constructors"
+title: [Haskell-cafe] Re: Using type classes for polymorphism of data constructors
 wordpressurl: http://passingcuriosity.com/2005/haskell-cafe-re-using-type-classes-for-polymorphism-of-data-constructors/
 ---
 
