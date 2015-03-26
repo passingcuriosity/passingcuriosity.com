@@ -481,14 +481,9 @@ shill item = return $ fmap (withUrls amazon) item
 -- * Utility
 --------------------------------------------------------------------------------
 
--- | Sprinkle affiliate links, etc. over a blog.
-shill :: Item String -> Compiler (Item String)
-shill item = return $ fmap (withUrls amazon) item
-  where
-    amazon :: String -> String
-    amazon url = if "amazon.com/" `isInfixOf` url
-        then fromMaybe url $ urlAddQuery ("tag", amazonUSTag) url
-        else url
+-- | Add a query parameter to a URL.
+urlAddQuery :: (String, String) -> String -> Maybe String
+urlAddQuery param url = exportURL . flip add_param param <$> importURL url
 
 -- | Rewrite HTML, classify @<embed>@ tags for @.kml@ files so JavaScript can
 -- display them on embedded maps.
@@ -507,8 +502,3 @@ embedKMLImages = withTags $ \tag -> case tag of
             then TS.TagOpen "embed" (a <> [("class", "embed-kml-map")])
             else t
     embed tag = tag
-
-
--- | Add a query parameter to a URL.
-urlAddQuery :: (String, String) -> String -> Maybe String
-urlAddQuery param url = exportURL . flip add_param param <$> importURL url
