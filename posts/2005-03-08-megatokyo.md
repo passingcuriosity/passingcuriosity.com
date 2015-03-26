@@ -6,8 +6,9 @@ tags: comics, manga, books
 wordpressurl: http://passingcuriosity.com/2005/megatokyo/
 ---
 
-<a href="http://www.megatokyo.com/index.php?strip_id=683">Megatokyo: 683 Crazy
-Talk</a>
+[1]: http://www.megatokyo.com/index.php?strip_id=683
+
+[Megatokyo: 683 Crazy Talk][1]
 
 I've just caught up with Megatokyo (I'm between bank cards, so I've not been
 able to put any money on my 'Net account at home) and, for some reason, the

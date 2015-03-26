@@ -2,15 +2,15 @@
 wordpressid: 1555
 layout: post
 title: Tools for reading
+tags: computers, apple, reading
 wordpressurl: http://passingcuriosity.com/2005/tools-for-reading/
 ---
 
-Since I got my iBook, I've been using
-[Bibdesk](http://bibdesk.sourceforge.net/) to manage a BibTeX database of the
-papers I've downloaded (and bothered transferring to my laptop). It's quite
-cool. Well, once you get past a few bugs, it's quite cool. It ties in with
-Preview's recent documents or will move a file that you select to your "papers
-folder" (it won't do both as far as I can tell).
+Since I got my iBook, I've been using [Bibdesk][1] to manage a BibTeX database
+of the papers I've downloaded (and bothered transferring to my laptop). It's
+quite cool. Well, once you get past a few bugs, it's quite cool. It ties in
+with Preview's recent documents or will move a file that you select to your
+"papers folder" (it won't do both as far as I can tell).
 
 Whilst this is pretty cool, I've been thinking that BibTeX is a little
 annoying (what with it wanting to rewrite capital letters unless you use
@@ -32,3 +32,5 @@ former would help process those pesky documents without abstracts, whilst the
 latter would help note-taking and the like. If anyone happens to read this and
 knows of any free software (for Mac OS X, or UNIX) which fits the descriptions
 here, post links in a comment.
+
+[1]: http://bibdesk.sourceforge.net/

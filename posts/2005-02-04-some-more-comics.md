@@ -13,6 +13,8 @@ kitchenware and next weeks food (I'll have to cook my own meals after I move
 into B&G tomorrow). I got *[Dead@17: The Complete First Series][dead@17]*,
 *[Aria Volume One][aria]* and *[Remote Volume One][remote]*
 
+<!-- TODO -->
+
 [dead@17]: http://vipercomics.com/shop/book_dead_tpb.asp
 [aria]: http://www.advfilms.com/CatalogManga_Detail.asp?Vol=10056&Title=ARIA
 [remote]: http://www.tokyopop.com/dbpage.php?page=product&productid=2057

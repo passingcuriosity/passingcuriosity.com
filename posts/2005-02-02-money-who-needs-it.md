@@ -12,6 +12,6 @@ href="http://troacss.blogspot.com/2005/02/more-on-seikai-trilogy.html"
 title="TROACSS: More on the Seikai Trilogy">TROACSS: More on the Seikai
 Trilogy</a>
 
-I saw a comic shop whilst in town today, and decided to pop in for a look. I
-left having spent nearly $60 on the Seikei Trilogy. I've written a little about
-it in the two posts above from my reading blog.
+I saw a comic shop whilst in town today, and decided to pop in for a look.
+I left having spent nearly $60 on the Seikei Trilogy. I've written a little
+about it in the two posts above from my reading blog.

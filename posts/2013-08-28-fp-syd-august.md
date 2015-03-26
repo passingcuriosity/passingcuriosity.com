@@ -48,7 +48,7 @@ complex for linear models like unit testing. Generations of simulations:
 - Business scenarios predicting responses to, e.g., market crashes.
 
 Most of these can be done on a piece of paper or on a single machine, but
-systems which aren't ammenable to such approachs are becoming more common.
+systems which aren't amenable to such approaches are becoming more common.
 
 [Chris Okasaki's book Purely Functional Data Structures][pfds] popularised the
 use of purely functional approaches to data structures through sharing.
