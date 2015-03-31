@@ -2,6 +2,31 @@
 wordpressid: 1709
 layout: post
 title: Undead and Unwed
+tags: books, fiction, fantasy
 wordpressurl: http://passingcuriosity.com/2006/undead-and-unwed/
 ---
-<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://photos1.blogger.com/blogger/5615/352/1600/0_7499_3645_2.jpg"><img style="float:left; margin:0 10px 10px 0; width: 100px;" src="http://photos1.blogger.com/blogger/5615/352/200/0_7499_3645_2.jpg" border="0" alt="" /></a> <p>I've just finished reading  <a class="title" href="http://www.piatkus.co.uk/display.asp?type=book&isbn=0%207499%203645%202">Undead and Unwed</a> by <a href="http://www.maryjanicedavidson.net">MaryJanice Davidson</a> (who has <a href="http://maryjanicedavidson.blogspot.com/">a blog</a>) and published by <a href="http://www.piatkus.co.uk/">Piatkus Books</a>, the first in her <span class="title">Undead series</span>. It was a good read and it is certainly an interesting departure from the other books in this genre I've read (though Betsy did remind me of Charlaine Harris' Sookie Stackhouse).</p> <p>I'm not sure if the next book will continue the theme (judging by the excerpt, I think not), but Betsy brought to mind David Eddings' description of his hero, <a href="http://en.wikipedia.org/wiki/Garion">Garion</a>, as a "<a href="http://en.wikipedia.org/wiki/Perceval">Sir Perceval</a>":</p> <blockquote><q>Sir Perceval [...] is dumb &mdash; at least right at first... A dumb hero is the perfect hero, because he hasn't the faintest idea of what's going on, and in explaining things to <emph>him</emph>, the writer explains them to his reader.</q></blockquote> <p>In any case, I'll definitely have a look at the rest of Davidson's books.</p> <p><span class="tags"><strong>Tags:</strong><!-- <br />--> <a rel="tag" href="http://del.icio.us/thsutton/vampire">Vampire</a>,<!--<br />--> <a rel="tag" href="http://del.icio.us/thsutton/supernatural">Supernatural</a>,<!--<br />--> <a rel="tag" href="http://del.icio.us/thsutton/romance">Romance</a>,<!--<br />--> <a rel="tag" href="http://del.icio.us/thsutton/novels">Novels</a>,<!--<br />--> <a rel="tag" href="http://del.icio.us/thsutton/books">Books</a>,<!--<br />--> <a rel="tag" href="http://del.icio.us/thsutton/recommended">Recommended</a>,<!--<br />--> <a rel="tag" href="http://del.icio.us/thsutton/reading">Reading</a><!--<br />--></span></p>
+
+[![Undead and Unwed][0-1]][0-2]
+
+I've just finished reading [Undead and Unwed][1] by [MaryJanice Davidson][2]
+(who has [a blog][3]), the first in her *Undead* series. It was a good read and
+it is certainly an interesting departure from the other books in this genre
+I've read (though Betsy did remind me of Charlaine Harris' Sookie Stackhouse).
+
+I'm not sure if the next book will continue the theme (judging by the excerpt,
+I think not), but Betsy brought to mind David Eddings' description of his hero,
+[Garion][4], as a "[Sir Perceval][5]":
+
+> Sir Perceval [...] is dumb -- at least right at first... A dumb hero is the
+> perfect hero, because he hasn't the faintest idea of what's going on, and in
+> explaining things to *him*, the writer explains them to his reader.
+
+In any case, I'll definitely have a look at the rest of Davidson's books.
+
+[0-1]: http://photos1.blogger.com/blogger/5615/352/200/0_7499_3645_2.jpg
+[0-2]: http://photos1.blogger.com/blogger/5615/352/1600/0_7499_3645_2.jpg
+[1]: http://www.amazon.com/dp/0749936452/
+[2]: http://www.maryjanicedavidson.net/
+[3]: http://maryjanicedavidson.blogspot.com/
+[4]: http://en.wikipedia.org/wiki/Garion
+[5]: http://en.wikipedia.org/wiki/Perceval

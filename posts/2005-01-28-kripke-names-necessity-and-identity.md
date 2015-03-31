@@ -8,7 +8,7 @@ wordpressurl: http://passingcuriosity.com/2005/kripke-names-necessity-and-identi
 
 [Kripke: Names, necessity, and identity][1]
 
-[1]: http://ndpr.icaap.org/content/archives/2004/10/nelson-hughes.html
+[1]: http://www.amazon.com/dp/0199288682
 
 This sounds like an interesting book. I'll have to see if I can get a hold of
 it some how, as I don't really want to spend $130 on a book without at least

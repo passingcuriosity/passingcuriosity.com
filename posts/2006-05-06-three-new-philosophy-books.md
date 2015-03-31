@@ -2,6 +2,31 @@
 wordpressid: 1691
 layout: post
 title: Three new philosophy books
+tags: books, logic, philosophy
 wordpressurl: http://passingcuriosity.com/2006/three-new-philosophy-books/
 ---
-I've just bought three new philosophy books: <a class="title" href="http://consequently.org/logic/">Logic</a> by <a href="http://consequently.org/">Greg Restall</a> (<a href="http://isbn.nu/0415400686">buy</a>); <a class="title" href="http://www.penguin.co.uk/nf/Book/BookDisplay/0,,9780141023984,00.html">Conspicuous Consumption</a> by <a href="http://en.wikipedia.org/wiki/Thorstein_Veblen">Thorstein Veblen</a> (<a href="http://isbn.nu/0141023988">buy</a>); and <a class="title" href="http://www.routledge-ny.com/shopping_cart/products/product_detail.asp?isbn=0415327938">On The Public</a> by <a href="http://en.wikipedia.org/wiki/Alastair_Hannay">Alastair Hannay</a> (<a href="http://isbn.nu/0415327938">buy</a>).<br /><br />I happened to spot <span class="title">Logic</span> on the shelf and needed to buy it. Hence, now that I've got a bit of money to spare, I <emph>have</emph> bought it. I expect it will be brilliant.<br /><br />I've already read one volume from Routledge's <span class="title">Thinking In Action</span> series and, <a href="http://troacss.blogspot.com/2006/04/on-just-education.html">as</a> <a href="http://troacss.blogspot.com/2006/04/more-on-on-education.html">previously</a> <a href="http://troacss.blogspot.com/2006/04/final-post-on-on-education.html">noted</a>, I really liked it. Hopefully <span class="title">On The Public</span> will be just as good.<br /><br />I've liked some of the other books in Penguin's <span class="title">Great Ideas</span> series, so I hope that <span class="title">Conspicuous Consumption</span> will be just as interesting. <br /><br /><span class="tags"><strong>Tags:</strong> <a rel="tag" href="http:/del.icio.us/thsutton/logic">Logic</a> <a rel="tag" href="http:/del.icio.us/thsutton/philosophy">Philosophy</a> <a rel="tag" href="http:/del.icio.us/thsutton/books">Books</a></span>
+
+I've just bought three new philosophy books: [Logic][1] by [Greg Restall][1-1]
+[Conspicuous Consumption][2] by [Thorstein Veblen][2-0], and [On The Public][3]
+by [Alastair Hannay][3-0].
+
+I happened to spot [Logic: An Introduction][1] on the shelf and needed to buy
+it. Hence, now that I've got a bit of money to spare, I have bought it. I
+expect it will be brilliant.
+
+I've already read one volume from Routledge's *Thinking In Action* series and,
+[as][2-1] [previously][2-2] [noted][2-3] I really liked it. Hopefully [On The
+Public][2] will be just as good.
+
+I've liked some of the other books in Penguin's *Great Ideas* series, so I hope
+that [Conspicuous Consumption][3] will be just as interesting.
+
+[1]: http://www.amazon.com/dp/0415400686/
+[1-1]: http://www.consequently.org/
+[2]: http://www.amazon.com/dp/0415327938/
+[2-0]: http://en.wikipedia.org/wiki/Thorstein_Veblen
+[2-1]: /2006/on-just-education/
+[2-2]: /2006/more-on-on-education/
+[2-3]: /2006/final-post-on-on-education/
+[3]: http://www.amazon.com/dp/0143037595/
+[3-0]: http://en.wikipedia.org/wiki/Alastair_Hannay

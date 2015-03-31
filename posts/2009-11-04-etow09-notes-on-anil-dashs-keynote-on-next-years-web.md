@@ -7,8 +7,9 @@ excerpt:
   My notes on Anil Dash's keynot speech on "Next Year's Web" at Edge
   of the Web, 2009.
 ---
-This post is my notes on Anil Dash's keynote speech on "Next Year's Web." It's a bit messy, but most of it is here.
 
+This post is my notes on Anil Dash's keynote speech on "Next Year's Web." It's
+a bit messy, but most of it is here.
 
 Presumptuous to say what it'll look like. Instead give us a framework
 to decide what it will look like next year. We have the extraordinary

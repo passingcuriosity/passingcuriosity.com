@@ -2,6 +2,36 @@
 wordpressid: 1677
 layout: post
 title: On Just Education?
+tags: books, education, philosophy
 wordpressurl: http://passingcuriosity.com/2006/on-just-education/
 ---
-<a class="title" href="http://isbn.nu/0745625967">Justice</a> and <a class="title"  href="http://isbn.nu/0415327903">On Education</a>, both by <a href="http://philosophy.wisc.edu/brighouse.htm">Harry Brighouse</a>.<br /><br />My first Harry Brighouse book (<span class="title">Justice</span>) left me with a bit of a bad taste in my mouth. While the text is well written, accessible and far from dry; the content is interesting and the design is reasonably attractive, what I have read of it so far (about 60 pages) gives the impression that it has not enjoyed the benefit of a copy editor, or even spell and grammar checked in a word processor. Needless to say, this detracts somewhat from the impression of scholarly rigour.<br /><br />While <span class="title">Justice</span> was an impulse purchase (motivated by recognition of the name of a <a href="http://www.crookedtimber.org/author/harry/">blog</a>ger I read), my buying <span class="title">On Education</span> was a more deliberate &mdash; motivated not only by my enjoyment of Brighouse's writing, but a nascent (or emerging, I'm not sure which) interest in education and its philosophy. From a quick flick through, I get the impression that this book will have much higher production values than <span class="title">Justice</span> did and, hopefully, won't have contain the same evidence of a lack of copy editing.<br /><br />Along with <span class="title">On Education</span>, I also bought <a class="title" href="http://isbn.nu/1876045345">Teachers, students & the law</a> and <a class="title" href="http://isbn.nu/0321159446">VectorWorks 10 For Windows & Macintosh</a>, the former because it looked interesting and was cheap, the latter because it was recommended and will come in useful if I wind up teaching technical drawing.<br /><br /><span class="tags"><strong>Tags:</strong> <a rel="tag" href="http:/del.icio.us/thsutton/logic">Education</a> <a rel="tag" href="http:/del.icio.us/thsutton/philosophy">Philosophy</a> <a rel="tag" href="http:/del.icio.us/thsutton/books">Books</a></span>
+
+[Justice][1] and [On Education][2], both by [Harry Brighouse][3]
+
+My first Harry Brighouse book, *Justice*, left me with a bit of a bad taste in
+my mouth. While the text is well written, accessible and far from dry; the
+content is interesting and the design is reasonably attractive, what I have
+read of it so far (about 60 pages) gives the impression that it has not enjoyed
+the benefit of a copy editor, or even spell and grammar checked in a word
+processor. Needless to say, this detracts somewhat from the impression of
+scholarly rigour.
+
+While Justice was an impulse purchase (motivated by recognition of his name
+from a [blog][4] I read), my buying *On Education* was a more deliberate
+selection -- motivated not only by my enjoyment of Brighouse's writing, but a
+nascent (or emerging, I'm not sure which) interest in education and its
+philosophy. From a quick flick through, I get the impression that this book
+will have much higher production values than Justice did and, hopefully, won't
+have contain the same evidence of a lack of copy editing.
+
+Along with On Education, I also bought [Teachers, students & the law][5] and
+[VectorWorks 10 For Windows & Macintosh][6], the former because it looked
+interesting and was cheap, the latter because it was recommended and will come
+in useful if I wind up teaching technical drawing.
+
+[1]: http://www.amazon.com/dp/0745625967/
+[2]: http://www.amazon.com/dp/0415327903/
+[3]: http://philosophy.wisc.edu/brighouse.htm
+[4]: http://www.crookedtimber.org/author/harry/
+[5]: http://isbn.nu/1876045345
+[6]: http://www.amazon.com/dp/0321159446/

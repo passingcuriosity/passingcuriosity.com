@@ -7,7 +7,9 @@ excerpt:
   My notes on Lachlan Hardy's presentation "The Open Web" at Edge of
   the Web, 2009.
 ---
-There are my notes on Lachlan Hardy's ([@lachlanhardy](http://twitter.com/lachlanhardy)) session *The Open Web*.
+
+There are my notes on Lachlan Hardy's
+([@lachlanhardy](http://twitter.com/lachlanhardy)) session *The Open Web*.
 
 # What is the open web?
 

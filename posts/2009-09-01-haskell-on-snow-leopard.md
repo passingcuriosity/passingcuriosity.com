@@ -2,6 +2,7 @@
 wordpressid: 1997
 layout: post
 title: Haskell on Snow Leopard
+tags: howto, haskell, apple
 wordpressurl: http://passingcuriosity.com/?p=1997
 ---
 

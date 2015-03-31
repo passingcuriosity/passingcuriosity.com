@@ -2,10 +2,11 @@
 wordpressid: 1563
 layout: post
 title: On (or rather next to) my iPod
+tags: apple
 wordpressurl: http://passingcuriosity.com/2005/on-or-rather-next-to-my-ipod/
 ---
 
-<a href="http://developer.apple.com/hardware/ipod/ipodnotereader.pdf">iPod Note Reader User Guide (PDF)</a>
+[iPod Note Reader User Guide (PDF)][1]
 
 The other week, I bought myself a new iPod (and iWork) from my local Apple
 shop. Today I was poking around Apple's site and decided to see if they had an
@@ -20,3 +21,5 @@ a sound effect.
 I'm not sure I understand the reasoning behind using XML for some of that
 stuff, but it's their product after all, so they can engineer it anyway they
 like. All we have to do is buy them... :-)
+
+[1]: http://developer.apple.com/hardware/ipod/ipodnotereader.pdf

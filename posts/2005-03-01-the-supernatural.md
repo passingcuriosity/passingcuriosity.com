@@ -2,9 +2,9 @@
 wordpressid: 1567
 layout: post
 title: The Supernatural
+tags: books, reading, fiction
 wordpressurl: http://passingcuriosity.com/2005/the-supernatural/
 ---
-
 
 [*Cerulean Sins* by Laurell K. Hamilton][1] and [*Industrial Magic* by Kelley
 Armstrong][2]
@@ -33,10 +33,8 @@ books involving the supernatural (even film media like Channel 4's
 
 I'd appreciate any suggestions of more books similar to those above.
 
-<!-- TODO -->
-
-[1]: http://www.orbitbooks.co.uk/orbit/display.asp?isb=1841492019&TAG=BWC9CX5X7X9977X91T6HVD&CID=orbit
-[2]: http://www.orbitbooks.co.uk/orbit/display.asp?isb=1841493406&TAG=BWC9CX5X7X9977X91T6HVD&CID=orbit
-[3]: http://www.orbitbooks.co.uk/orbit/display.asp?isb=1841493163&TAG=BWC9CX5X7X9977X91T6HVD&CID=orbit
+[1]: http://www.amazon.com/dp/0515136816/
+[2]: http://www.amazon.com/dp/0553587072/
+[3]: http://www.amazon.com/dp/0515139750/
 [4]: http://www.orbitbooks.co.uk/orbit/armstrong-kelley.asp?TAG=BWC9CX5X7X9977X91T6HVD&CID=orbit#backlisttitles
 [5]: http://en.wikipedia.org/wiki/Ultraviolet_%28TV_serial%29

@@ -10,23 +10,20 @@ wordpressurl: http://passingcuriosity.com/2005/some-more-comics/
 
 I've just been to the comic shop spending the money I should be saving for
 kitchenware and next weeks food (I'll have to cook my own meals after I move
-into B&G tomorrow). I got *[Dead@17: The Complete First Series][dead@17]*,
-*[Aria Volume One][aria]* and *[Remote Volume One][remote]*
+into B&G tomorrow). I got [Dead@17: The Complete First Series][1] (available on
+[kindle][2]), [Aria Volume One][3] and [Remote Volume One][4].
 
-<!-- TODO -->
+[1]: http://www.amazon.com/dp/0975419307/
+[2]: http://www.amazon.com/dp/B0095PNI8M/
+[3]: http://www.amazon.com/dp/1413900402/
+[4]: http://www.amazon.com/dp/159182740X/
 
-[dead@17]: http://vipercomics.com/shop/book_dead_tpb.asp
-[aria]: http://www.advfilms.com/CatalogManga_Detail.asp?Vol=10056&Title=ARIA
-[remote]: http://www.tokyopop.com/dbpage.php?page=product&productid=2057
-
-I got *Aria* as the cover art reminded me a little of *Yokohama Kaidashi
-Kikou* ([English Scanlation][ykkscan]) as did the cover text. I've not read it
-yet, but a quick flick through has made me want to go back (though the shop'll
-be closed now) and buy the other two volumes although, now that I think about
-it, they only had the third on the shelf. If this book turns out to be
-anywhere near as good as *YKK*, I'll have to try an get some more of his work.
-
-[ykkscan]: http://ykk.misago.org/
+I got *Aria* as the cover art reminded me a little of *Yokohama Kaidashi Kikou*
+as did the cover text. I've not read it yet, but a quick flick through has made
+me want to go back (though the shop will be closed now) and buy the other two
+volumes although, now that I think about it, they only had the third on the
+shelf. If this book turns out to be anywhere near as good as *YKK*, I'll have
+to try an get some more of his work.
 
 I haven't read *Remote* yet, but I chose it due primarily to the cover text
 and the colour section at the front (though a quick flick through the book

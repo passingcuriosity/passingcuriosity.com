@@ -94,7 +94,7 @@ read this).
 > relational structures, like possible worlds, or instants in time, or any set
 > of things that can be represented as a graph (or network).
 >
-> The most basic interpretation of modal logic is <w r="" v="">, as set of
+> The most basic interpretation of modal logic is $<W,R,V>$, a set of
 > Worlds, a Relation between them, and an interpretation function that is a
 > little more complex than that for PC.
 >
@@ -109,7 +109,7 @@ read this).
 > gods eye perspective (e.g. you can see all the objects, not just the ones
 > you can reach from here).
 >
-> With plain modal logic, W (the set of worlds, times, whatevers) contains the
+> With plain modal logic, $W$ (the set of worlds, times, whatevers) contains the
 > "things" with which the logic is concerned and the most we can do regarding
 > things IN the worlds (or times, etc) is say "the cat is green" is true or
 > not. Combining QT with modal logic however we can say things like: it is

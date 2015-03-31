@@ -36,5 +36,3 @@ Restall](http://consequently.org/). I'm almost half way through and while I'd
 have preferred a slightly difference syntax (I prefer `&and;` as conjunction,
 rather than `&amp;`), it's easy to read and is much more accessible than most
 other books I've seen with titles like "Logic".
-
-

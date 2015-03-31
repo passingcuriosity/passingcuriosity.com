@@ -25,10 +25,8 @@ Suggestions of other books suitable for beginners in the areas of type systems,
 programming language theory, and related fields are most welcome in the
 comments.
 
-<!-- TODO -->
-
 [1]: http://www.coop-bookshop.com.au/
 [2]: http://lambda-the-ultimate.org/
-[3]: http://www.cis.upenn.edu/~bcpierce/tapl/
-[4]: http://www.gigamonkeys.com/book/
-[5]: http://www.info.ucl.ac.be/people/PVR/book.html
+[3]: http://www.amazon.com/dp/0262162091/
+[4]: http://www.amazon.com/dp/143021161X/
+[5]: http://www.amazon.com/dp/0262220695/

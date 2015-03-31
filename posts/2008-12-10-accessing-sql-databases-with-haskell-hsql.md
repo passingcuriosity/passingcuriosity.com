@@ -2,9 +2,12 @@
 wordpressid: 389
 layout: post
 title: Accessing SQL databases with Haskell -- HSQL
+tags: howto, haskell, database
 wordpressurl: http://passingcuriosity.com/?p=389
 ---
-(Or "Connecting to SQL databases with Haskell" as per DoeL's suggestion, it was getting a bit long)
+
+(Or "Connecting to SQL databases with Haskell" as per DoeL's suggestion, it was
+getting a bit long)
 
 As the first step on my journey into web-development with Haskell, I'm looking
 at interfacing with SQL databases. While there are a number of options
@@ -15,7 +18,8 @@ regularity on the Haskell mailing lists, and that if I don't write it down,
 I'm liable to forget, this post will describe accessing SQL databases
 using the `HSQL` package and one or more of its driver packages.
 
-This post is literate Haskell ([download the original](/files/2008/12/using-hsql.lhs)) and was tested with GHC 6.10.1.
+This post is literate Haskell ([download the
+original](/files/2008/12/using-hsql.lhs)) and was tested with GHC 6.10.1.
 
 <!--more-->
 

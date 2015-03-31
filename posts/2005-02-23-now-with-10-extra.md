@@ -2,6 +2,7 @@
 wordpressid: 1465
 layout: post
 title: Now with 10 percent extra!
+tags: university
 wordpressurl: http://passingcuriosity.com/2005/now-with-10-extra/
 ---
 
@@ -24,6 +25,7 @@ open due to the glare and general brightness. On the good side, I got two new
 books today (the texts for AI and Algorithms) which was good, even though they
 cost nearly $200, even with the Co-op members discount.
 
-I've also started reading up on my Honours topic. I've written a <a
-href="http://troacss.blogspot.com/2005/02/and-so-it-beings.html">little bit
-about it</a> on my reading blog.
+I've also started reading up on my Honours topic. I've written a [little bit
+about it][1] on my reading blog.
+
+[1]: /2005/and-so-it-beings/
