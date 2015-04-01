@@ -9,6 +9,7 @@ import           Data.List
 import           Data.Maybe
 import           Data.Monoid
 import           Hakyll                          hiding (defaultContext)
+import           Hakyll.Web.Pandoc
 import           Network.URL
 import           System.FilePath
 import           Text.Blaze.Html                 (toHtml, toValue, (!))
@@ -452,9 +453,15 @@ imageField name files = field name $ \item -> do
 -- | Compiler for blog content.
 contentCompiler :: Compiler (Item String)
 contentCompiler =
-    pandocCompiler
+    pandocCompilerWith read_opts write_opts
         >>= return . fmap embedKMLImages
         >>= shill
+  where
+    read_opts = defaultHakyllReaderOptions
+    write_opts = defaultHakyllWriterOptions
+        { writerHTMLMathMethod = MathJax mathjax
+        }
+    mathjax = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
