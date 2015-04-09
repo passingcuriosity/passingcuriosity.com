@@ -421,11 +421,14 @@ pre.sourceCode span.er { color: red; font-weight: bold; }
 /* Tables */
 th.center, td.center { text-align: center; }
 
-/* Pagination */
-nav.pages { text-align: center; }
+/* Figures */
+.figure img { display: block; margin: 0 auto; }
 
 /* Maps */
 div.map { position: relative; width:100%; min-height: 20em; }
 @media (min-width: 1000px) {
   div.map { min-height: 40em; }
 }
+
+/* Pagination */
+nav.pages { text-align: center; }
