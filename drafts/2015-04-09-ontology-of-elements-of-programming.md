@@ -39,12 +39,14 @@ attribute, for example, maps the concrete entity "Socrates" to the abstract
 entity "blue" and the "number of states" attribute maps the concrete entity
 "Australia" to the abstract entity "6".
 
-In addition to attributes, concrete entities also have an *identity*. Maybe
-it's the sceptical Haskell programmer in me but I'm dubious about semi-mystical
-[haecceities][2]. To my view identity appears to be introduced to avoid
-identifying concrete entities with just their proper attributes and thereby
-dodge problems with identity of mutable objects and justify reference equality
-when we get to talking about C++.
+Along with their attributes, concrete entities - which exist in the world and
+can change over time - also have an *identity*. The Haskell programmer in me
+makes me a little sceptical of semi-mystical [haecceities][2] like this;
+I can't help wondering if it's been introduced here to give a convenient
+justification for things like pointer equality when the authors start applying
+all this in C++.
+
+![Concrete and abstract entities, species, and genera][f1]
 
 # Values, value types, and objects
 
@@ -68,3 +70,5 @@ values or total otherwise;
 
 [1]: http://www.amazon.com/dp/032163537X/
 [2]: https://en.wikipedia.org/wiki/Haecceity
+
+[f1]: /files/2015/ontology-of-elements-of-programming/entities.png

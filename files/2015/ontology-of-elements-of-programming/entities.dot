@@ -1,0 +1,37 @@
+digraph ontology {
+    splines = ortho;
+    nodesep = 0.85;
+
+    /* The order is important; don't change it! */
+    AE
+    spacing [shape="point", width=0];
+    CE;
+    AE;
+    CS;
+    AG;
+    CG;
+
+
+    subgraph cluster_abstract {
+        label = "Abstract";
+        margin = "16,16";
+
+        AE [label="Entity"];
+        AS [label="Species"];
+        AG [label="Genera"];
+    }
+
+    subgraph cluster_concrete {
+        label = "Concrete";
+        margin = "16,16";
+
+        CE [label="Entity"];
+        CS [label="Species"];
+        CG [label="Genera"];
+    }
+
+    AE -> AS -> AG;
+    CE -> CS -> CG;
+    CE -> spacing [constraint=false, arrowhead=none];
+    spacing -> AE [constraint=false, xlabel="Attribute"];
+}
