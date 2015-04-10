@@ -6,10 +6,10 @@ import           Control.Applicative
 import           Control.Monad
 import           Data.Hashable
 import           Data.List
+import qualified Data.Map                        as M
 import           Data.Maybe
 import           Data.Monoid
 import           Hakyll                          hiding (defaultContext)
-import           Hakyll.Web.Pandoc
 import           Network.URL
 import           System.FilePath
 import           Text.Blaze.Html                 (toHtml, toValue, (!))
@@ -183,6 +183,13 @@ main = hakyllWith hakyllCfg $ do
     -- Generated
     --
 
+    create ["feed.rss"] $ do
+        route idRoute
+        compile $ do
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/*" "content"
+            renderRss feedCfg feedCtx posts
+
     create ["atom.xml"] $ do
         route idRoute
         compile $ do
@@ -222,20 +229,6 @@ main = hakyllWith hakyllCfg $ do
 
         let title = "Posts tagged " <> tag
 
-        -- Atom feed
-        version "atom" $ do
-            route $ routeTags (tag <> ".xml")
-            compile $ loadAllSnapshots tag_pattern "content"
-                >>= fmap (take 10) . recentFirst
-                >>= renderAtom feedCfg feedCtx
-
-        -- Atom feed
-        version "rss" $ do
-            route $ routeTags (tag <> ".rss")
-            compile $ loadAllSnapshots tag_pattern "content"
-                >>= fmap (take 10) . recentFirst
-                >>= renderRss feedCfg feedCtx
-
         paginated_tags <- buildPaginateWith
             (sortRecentFirst >=> return . paginateEvery pageSize)
             tag_pattern
@@ -243,7 +236,26 @@ main = hakyllWith hakyllCfg $ do
                 then "tags" </> tag </> "index.html"
                 else "tags" </> tag </> show n </> "index.html")
 
+        let p1_id = paginatePage paginated_tags 1
+
         paginateRules paginated_tags $ \page_number pattern -> do
+            -- If this is the FIRST page, create feeds.
+            when (1 == page_number) $ do
+                -- Atom feed
+                version "atom" $ do
+                    route $ customRoute (\_ -> joinPath ["tags", tag, tag <> ".xml"])
+                    compile $ loadAllSnapshots tag_pattern "content"
+                        >>= fmap (take 10) . recentFirst
+                        >>= renderAtom feedCfg feedCtx
+
+                -- Atom feed
+                version "rss" $ do
+                    route $ customRoute (\_ -> joinPath ["tags", tag, tag <> ".rss"])
+                    compile $ loadAllSnapshots tag_pattern "content"
+                        >>= fmap (take 10) . recentFirst
+                        >>= renderRss feedCfg feedCtx
+
+            -- Make the current page.
             route idRoute
             compile $ do
                 all_posts <- recentFirst =<< loadAll (tag_pattern .&&. hasNoVersion)
@@ -260,8 +272,7 @@ main = hakyllWith hakyllCfg $ do
                         constField "excerpt" excerpt <>
                         imageField "image" images <>
                         numberedListField "posts" postCtx (return posts) <>
-                        field "rss_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "rss") . itemIdentifier) `mappend`
-                        field "atom_feed" (fmap (maybe empty toUrl) . getRoute . setVersion (Just "atom") . itemIdentifier) `mappend`
+                        tagFeedCtx p1_id <>
                         paginateContext paginated_tags page_number <>
                         tagCtx tag
 
@@ -269,6 +280,21 @@ main = hakyllWith hakyllCfg $ do
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
                     >>= relativizeUrls
+
+paginatePage :: Paginate -> PageNumber -> Maybe Identifier
+paginatePage pag pageNumber
+    | pageNumber < 1                      = Nothing
+    | pageNumber > (M.size . paginateMap $ pag) = Nothing
+    | otherwise                           = Just $ paginateMakeId pag pageNumber
+
+tagFeedCtx :: Maybe Identifier -> Context a
+tagFeedCtx ident = case ident of
+    Nothing -> mempty
+    Just pid -> feedField "rss" pid <> feedField "atom" pid
+  where
+    feedField name an_id = field
+        (name <> "_feed")
+        (\_ -> fmap (maybe empty toUrl) . getRoute . setVersion (Just name) $ an_id)
 
 --------------------------------------------------------------------------------
 -- * Routing
@@ -294,14 +320,6 @@ routePosts = customRoute fileToDirectory
             bn = drop 11 $ dropExtension fn
             y = take 4 fn
         in joinPath [y, bn, "index.html"]
-
--- | Route tag pages.
-routeTags :: String -> Routes
-routeTags bn = customRoute tagPath
-    where tagPath ident = let p = toFilePath ident
-                              fn = takeFileName p
-                              t = dropExtension fn
-                          in joinPath ["tags", t, bn]
 
 --------------------------------------------------------------------------------
 -- * Contexts
@@ -346,6 +364,10 @@ defaultContext _ =
     constField "twitter_site" twitterUser <>
     constField "twitter_creator" twitterUser <>
     titleField "twitter_title" <>
+
+    -- Default to main feeds
+    constField "atom_feed" "/atom.xml" <>
+    constField "rss_feed" "/feed.rss" <>
 
     sectionField  "page" <>
     functionField "dropFileName" dropFN <>

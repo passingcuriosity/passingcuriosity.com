@@ -6,35 +6,26 @@
         <title>$title$ - Passing Curiosity</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Thomas Sutton">
-        $if(strapline)$
-        <meta name="description" content="$strapline$">
-        $else$
-        $if(excerpt)$<meta name="description" content="$excerpt$">$endif$
-        $endif$
+        $if(strapline)$<meta name="description" content="$strapline$">$else$$if(excerpt)$<meta name="description" content="$excerpt$">$endif$$endif$
 
         $if(twitter_card)$
-            <meta name="twitter:card" content="$twitter_card$">
-            <meta name="twitter:site" content="$twitter_site$">
-            <meta name="twitter:creator" content="$twitter_creator$">
-            <meta name="twitter:title" content="$title$">
-            $if(strapline)$<meta name="twitter:description" content="$strapline$">
-            $else$$if(excerpt)$<meta name="twitter:description" content="$excerpt$">
-            $endif$$endif$
-            $if(twitter_image)$<meta name="twitter:image" content="$twitter_image$">$endif$
+        <meta name="twitter:card" content="$twitter_card$">
+        <meta name="twitter:site" content="$twitter_site$">
+        <meta name="twitter:creator" content="$twitter_creator$">
+        <meta name="twitter:title" content="$title$">
+        $if(strapline)$<meta name="twitter:description" content="$strapline$">
+        $else$$if(excerpt)$<meta name="twitter:description" content="$excerpt$">
+        $endif$$endif$
+        $if(twitter_image)$<meta name="twitter:image" content="$twitter_image$">$endif$
         $else$<meta name="twitter:site" content="@thsutton">$endif$
         $if(atom_feed)$<link rel='alternate' type='application/atom+xml' title='Atom 0.3' href='$atom_feed$'>$endif$
         $if(rss_feed)$<link rel='alternate' type='application/rss+xml' title='RSS' href='$rss_feed$'>$endif$
-        <!-- Bootstrap Core CSS -->
+
         <link href="/assets/css/bootstrap.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
         <link href="/assets/css/clean-blog.css" rel="stylesheet">
-
-        <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
         <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 
         <!--[if lt IE 9]>

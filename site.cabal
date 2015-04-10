@@ -16,6 +16,7 @@ executable site
   main-is:          site.hs
   build-depends:    base == 4.*
                   , blaze-html
+                  , containers
                   , directory
                   , filepath
                   , hakyll == 4.6.*
