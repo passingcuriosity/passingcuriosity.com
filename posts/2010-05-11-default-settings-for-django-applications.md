@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Providing default settings for Django applications
-tags: programing, python, django, application, settings
-categories: [programing]
+tags: programming, python, django, application, settings
 location: Perth, Western Australia
 excerpt: 
   There doesn't seem to be an official way for a Django application to provide

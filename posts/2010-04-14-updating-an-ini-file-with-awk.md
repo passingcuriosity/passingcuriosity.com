@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Updating an INI file with AWK
-tags: programing, awk, text
-categories: [programing]
+tags: programming, awk, text
 location: Perth, Western Australia
 excerpt: 
   A colleague asked if I knew a way to edit a line in a particular section of 
