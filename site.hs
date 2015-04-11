@@ -438,17 +438,19 @@ sectionField s = constField "section" s <>
 -- | Make a tag cloud.
 tagCloudField' :: String -> Double -> Double -> Tags -> Context a
 tagCloudField' key =
-  tagCloudFieldWith key makeLink unwords
+    tagCloudFieldWith key makeLink (unwords . filter (not . null))
   where
-    makeLink minSize maxSize tag _url count min' max' =
-      -- Show the relative size of one 'count' in percent
-      let diff     = 1 + fromIntegral max' - fromIntegral min'
-          relative = (fromIntegral count - fromIntegral min') / diff
-          size     = floor $ minSize + relative * (maxSize - minSize) :: Int
-      in renderHtml
-         . (BH.a ! BA.style (toValue $ "font-size: " <> show size <> "%")
-                 ! BA.href (toValue . dropFileName $ "/" </> "tags" </> tag </> "index.html"))
-         $ toHtml tag
+    makeLink minSize maxSize tag _url count min' max'
+        | count <= 2 = mempty
+        | otherwise  =
+            -- Show the relative size of one 'count' in percent
+            let diff     = 1 + fromIntegral max' - fromIntegral min'
+                relative = (fromIntegral count - fromIntegral min') / diff
+                size     = floor $ minSize + relative * (maxSize - minSize) :: Int
+            in renderHtml
+                 . (BH.a ! BA.style (toValue $ "font-size: " <> show size <> "%")
+                         ! BA.href (toValue . dropFileName $ "/" </> "tags" </> tag </> "index.html"))
+                 $ toHtml tag
 
 -- | Absolute url to the resulting item
 strippedUrlField :: String -> Context a
