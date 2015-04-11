@@ -99,6 +99,16 @@ main = hakyllWith hakyllCfg $ do
     -- Content
     --
 
+    match "errors/*" $ do
+        route $ setExtension "html"
+        compile $ do
+            let ctx = defaultCtx
+
+            contentCompiler
+                >>= return . fmap demoteHeaders
+                >>= loadAndApplyTemplate "templates/error.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+
     match "posts/*" $ do
         route routePosts
         compile $ do
