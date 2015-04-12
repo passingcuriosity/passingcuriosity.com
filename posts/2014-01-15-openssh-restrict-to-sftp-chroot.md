@@ -1,7 +1,8 @@
 ---
 title: Restricted SFTP-only access to a single directory using OpenSSH
-location: Sydney, New South Wales
 tags: howto, ssh, sftp, chroot, linux
+location: Sydney, New South Wales
+adverts: display
 excerpt: 
   This is a short guide to providing users with restricted SFTP access to a
   single directory using built-in OpenSSH functionality.
