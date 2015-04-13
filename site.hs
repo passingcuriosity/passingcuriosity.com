@@ -46,6 +46,12 @@ feedCfg = FeedConfiguration
     , feedRoot = "http://passingcuriosity.com/"
     }
 
+specialFeed :: String -> FeedConfiguration
+specialFeed cat = feedCfg
+    { feedTitle = "Passing Curiosity: Posts tagged " <> cat
+    , feedDescription = "Latest posts tagged with " <> cat <> " from Passing Curiosity."
+    }
+
 -- | Number of posts to list on a page.
 pageSize :: Int
 pageSize = 10
@@ -247,23 +253,25 @@ main = hakyllWith hakyllCfg $ do
                 else "tags" </> tag </> show n </> "index.html")
 
         let p1_id = paginatePage paginated_tags 1
+        let path = joinPath ["tags", tag, tag <> ".xml"]
+        let feed = specialFeed tag
 
         paginateRules paginated_tags $ \page_number pattern -> do
             -- If this is the FIRST page, create feeds.
             when (1 == page_number) $ do
                 -- Atom feed
                 version "atom" $ do
-                    route $ customRoute (\_ -> joinPath ["tags", tag, tag <> ".xml"])
+                    route $ customRoute (const path)
                     compile $ loadAllSnapshots tag_pattern "content"
                         >>= fmap (take 10) . recentFirst
-                        >>= renderAtom feedCfg feedCtx
+                        >>= renderAtom feed feedCtx
 
-                -- Atom feed
+                -- RSS feed
                 version "rss" $ do
-                    route $ customRoute (\_ -> joinPath ["tags", tag, tag <> ".rss"])
+                    route $ customRoute (const path)
                     compile $ loadAllSnapshots tag_pattern "content"
                         >>= fmap (take 10) . recentFirst
-                        >>= renderRss feedCfg feedCtx
+                        >>= renderRss feed feedCtx
 
             -- Make the current page.
             route idRoute
