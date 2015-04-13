@@ -119,8 +119,8 @@ main = hakyllWith hakyllCfg $ do
 
             contentCompiler
                 >>= return . fmap demoteHeaders
-                >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= saveSnapshot "content"
+                >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
