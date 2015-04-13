@@ -1,9 +1,8 @@
 ---
-layout: post
+adverts: display
 title: Using Dnsmasq for local development on OS X
 tags: dns, howto, dnsmasq, local, development
 location: Sydney, New South Wales
-adverts: display
 excerpt: 
   This is a quick guide to installing Dnsmasq on OS X and using it to redirect
   development sites to your local machine.
