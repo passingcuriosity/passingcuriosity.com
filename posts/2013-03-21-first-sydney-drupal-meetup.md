@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sydney Drupal Meetup, March 2013
-tags: event, meetup, drupal, sydney, acquia, performance, profiling, xhprof
+tags: event, meetup, drupal, sydney, acquia, performance, profiling, xhprof, php
 location: Sydney, New South Wales
 excerpt: My first Drupal meetup since moving to Sydney.
 ---
