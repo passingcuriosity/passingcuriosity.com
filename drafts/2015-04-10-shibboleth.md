@@ -1,5 +1,5 @@
 ---
-title: Shibboleth
+title: Single sign-on with Shibboleth
 tags: howto, authentication, saml, shibboleth
 location: Sydney, New South Wales
 excerpt: 
