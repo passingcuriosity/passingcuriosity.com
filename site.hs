@@ -118,10 +118,7 @@ main = hakyllWith hakyllCfg $ do
     match "posts/*" $ do
         route routePosts
         compile $ do
-            images <- getImages
-
-            let ctx = imageField "image" images <>
-                      postCtx
+            let ctx = postCtx
 
             contentCompiler
                 >>= return . fmap demoteHeaders
@@ -133,10 +130,7 @@ main = hakyllWith hakyllCfg $ do
     match "about.md" $ do
         route routeFileToDirectory
         compile $ do
-            images <- getImages
-
             let ctx = sectionField "about" <>
-                      imageField "image" images <>
                       defaultCtx
 
             contentCompiler
@@ -147,10 +141,7 @@ main = hakyllWith hakyllCfg $ do
     match "contact.md" $ do
         route routeFileToDirectory
         compile $ do
-            images <- getImages
-
             let ctx = sectionField "contact" <>
-                      imageField "image" images <>
                       defaultCtx
 
             contentCompiler
@@ -161,13 +152,11 @@ main = hakyllWith hakyllCfg $ do
     match "index.md" $ do
         route   $ setExtension "html"
         compile $ do
-            images <- getImages
             posts <- fmap (take 3) . recentFirst =<<
                 loadAll ("posts/*" .&&. hasNoVersion)
 
             let indexCtx =
                     numberedListField "posts" postCtx (return posts) <>
-                    imageField "image" images <>
                     sectionField "home" <>
                     defaultCtx
 
@@ -181,10 +170,7 @@ main = hakyllWith hakyllCfg $ do
     match "tags.md" $ do
         route routeFileToDirectory
         compile $ do
-            images <- getImages
-
             let ctx = tagCloudField' "tagcloud" 75.0 300.0 tags <>
-                      imageField "image" images <>
                       sectionField "tags" <>
                       defaultCtx
 
@@ -221,7 +207,6 @@ main = hakyllWith hakyllCfg $ do
     paginateRules paginated_archives $ \page_number pattern -> do
         route routeFileToDirectory
         compile $ do
-            images <- getImages
             posts <- recentFirst =<< loadAll pattern
 
             let title = if page_number == 1
@@ -231,7 +216,6 @@ main = hakyllWith hakyllCfg $ do
                     constField "title" title <>
                     constField "layout" "page" <>
                     sectionField "archive" <>
-                    imageField "image" images <>
                     numberedListField "posts" postCtx (return posts) <>
                     paginateContext paginated_archives page_number <>
                     defaultCtx
@@ -279,7 +263,6 @@ main = hakyllWith hakyllCfg $ do
                 all_posts <- recentFirst =<< loadAll (tag_pattern .&&. hasNoVersion)
                 let number = length (all_posts :: [Item String])
 
-                images <- getImages
                 posts <- recentFirst =<< loadAll (pattern .&&. hasNoVersion)
 
                 let excerpt = "There are " <> show number <> " posts tagged with "
@@ -288,7 +271,6 @@ main = hakyllWith hakyllCfg $ do
                         constField "tag" tag <>
                         constField "number" (show number) <>
                         constField "excerpt" excerpt <>
-                        imageField "image" images <>
                         numberedListField "posts" postCtx (return posts) <>
                         tagFeedCtx p1_id <>
                         paginateContext paginated_tags page_number <>
@@ -377,6 +359,8 @@ defaultContext _ =
     pathField     "path"     <>
     titleField    "title"    <>
     titleField    "title-meta" <>
+
+    imageField "image" <>
 
     constField "twitter_card" "summary" <>
     constField "twitter_site" twitterUser <>
@@ -479,14 +463,23 @@ tocField name = field name $ \item -> do
               else itemBody <$> tocCompiler
 
 -- | Select an image and include the URL.
-imageField :: String -> [FilePath] -> Context a
-imageField name [] = field name (const empty)
-imageField name files = field name $ \item -> do
-    let m = length files
-    let f = toFilePath . itemIdentifier $ item
-    let c = hash f `mod` m
-    let img = files !! c
-    return img
+imageField :: String -> Context a
+imageField name = field name $ \item -> do
+    files <- getImages
+    case files of
+        [] -> empty
+        _  -> do
+            let m = length files
+            let f = toFilePath . itemIdentifier $ item
+            let c = hash f `mod` m
+            let img = files !! c
+            return img
+  where
+    -- | Load images for use with 'imageField'.
+    getImages :: Compiler [FilePath]
+    getImages =
+        fmap (toFilePath . itemIdentifier) <$>
+        (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
 
 --------------------------------------------------------------------------------
 -- * Compilers
@@ -515,11 +508,6 @@ tocCompiler = pandocCompilerWith
     , writerStandalone = True
     }
 
--- | Load images for use with 'imageField'.
-getImages :: Compiler [FilePath]
-getImages =
-    fmap (toFilePath . itemIdentifier) <$>
-    (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
 
 -- | Sprinkle affiliate links, etc. over a blog.
 shill :: Item String -> Compiler (Item String)
