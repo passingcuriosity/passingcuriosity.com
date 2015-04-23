@@ -81,7 +81,7 @@ main = hakyllWith hakyllCfg $ do
 
     match "assets/js/*" $ do
         route   idRoute
-        compile copyFileCompiler
+        compile $ getResourceLBS >>= withItemBody (unixFilterLBS "jsmin" [])
 
     match "assets/fonts/*" $ do
         route   idRoute
@@ -89,7 +89,7 @@ main = hakyllWith hakyllCfg $ do
 
     match "assets/img/*" $ do
         route   idRoute
-        compile copyFileCompiler
+        compile $ getResourceLBS >>= withItemBody (unixFilterLBS "jpegtran" ["-optimize"])
 
     --
     -- Tags
