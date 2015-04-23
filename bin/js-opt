@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$(which jsmin)" ]; then
+    jsmin
+else
+    cat
+fi

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$(which jpegtrann)" ]; then
+    jpegtran -optimize -copy none
+else
+    cat
+fi

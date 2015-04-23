@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Use jpegtran and other tools included in the same package to optimise JPEG
+# images.
+
+if [ -n "$(which jpegtran)" ]; then
+    djpeg | cjpeg -scale 1/2 | jpegtran -optimize -copy none
+else
+    cat
+fi

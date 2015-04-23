@@ -5,7 +5,12 @@ This repository contains the code and content for my personal web-site at
 <http://passingcuriosity.com/>. The code (see `src/`) is based on
 [Hakyll][hakyll], a static site generator library written in Haskell.
 
-[hakyll]: http://jaspervdj.be/hakyll
+Dependencies
+------------
+
+JPEG image processing tools from [Independant JPEG Group][ijg].
+
+[JSMin][jsmin] JavaScript minimiser.
 
 License
 -------
@@ -19,3 +24,7 @@ jQuery, which are covered by their own license terms.
 All other content in this repository -- include all Markdown, all images,
 source code offered for download, and all other files -- are copyright Thomas
 Sutton and may not be used without permission.
+
+[hakyll]: http://jaspervdj.be/hakyll
+[ijg]: http://www.ijg.org/
+[jsmin]: https://github.com/douglascrockford/JSMin
