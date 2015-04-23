@@ -431,3 +431,6 @@ div.map { position: relative; width:100%; min-height: 20em; }
 
 /* Pagination */
 nav.pages { text-align: center; }
+
+#footericons .ico,
+#footericons .lh { display: none; }

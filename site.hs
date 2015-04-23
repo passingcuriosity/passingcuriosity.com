@@ -4,6 +4,7 @@ module Main where
 
 import           Control.Applicative
 import           Control.Monad
+import qualified Data.ByteString.Lazy            as LBS
 import           Data.Hashable
 import           Data.List
 import qualified Data.Map                        as M
@@ -88,8 +89,13 @@ main = hakyllWith hakyllCfg $ do
         compile copyFileCompiler
 
     match "assets/img/*" $ do
-        route   idRoute
-        compile $ getResourceLBS >>= withItemBody (unixFilterLBS "jpegtran" ["-optimize"])
+        version "large" $ do
+            route   $ routeImage "large"
+            compile $ getResourceLBS >>= withItemBody (unixFilterLBS "jpegtran" ["-optimize"])
+
+        version "small" $ do
+            route   $ routeImage "small"
+            compile $ getResourceLBS >>= withItemBody (unixFilterLBS "./scalejpeg.sh" [])
 
     --
     -- Tags
@@ -300,6 +306,13 @@ tagFeedCtx ident = case ident of
 -- * Routing
 --------------------------------------------------------------------------------
 
+routeImage :: String -> Routes
+routeImage size = customRoute fn
+  where
+    fn :: Identifier -> FilePath
+    fn i = let (p,f) = splitFileName $ toFilePath i
+           in p </> size </> f
+
 -- | Route files to directory indexes.
 routeFileToDirectory :: Routes
 routeFileToDirectory = customRoute fileToDirectory
@@ -464,22 +477,26 @@ tocField name = field name $ \item -> do
 
 -- | Select an image and include the URL.
 imageField :: String -> Context a
-imageField name = field name $ \item -> do
-    files <- getImages
-    case files of
-        [] -> empty
-        _  -> do
-            let m = length files
-            let f = toFilePath . itemIdentifier $ item
-            let c = hash f `mod` m
-            let img = files !! c
-            return img
+imageField name =
+    (f  name              ("assets/img/site-*" .&&. hasVersion "large")) <>
+    (f (name <> "_small") ("assets/img/site-*" .&&. hasVersion "small"))
   where
+    f n p = field n $ \item -> do
+        files <- getImages p
+        case files of
+            [] -> empty
+            _  -> do
+                let m = length files
+                let f = toFilePath . itemIdentifier $ item
+                let c = hash f `mod` m
+                let img = files !! c
+                return img
     -- | Load images for use with 'imageField'.
-    getImages :: Compiler [FilePath]
-    getImages =
-        fmap (toFilePath . itemIdentifier) <$>
-        (loadAll "assets/img/site-*" :: Compiler [Item CopyFile])
+    getImages :: Pattern -> Compiler [FilePath]
+    getImages p = do
+        items <- loadAll p :: Compiler [Item LBS.ByteString]
+        urls <- mapM (getRoute . itemIdentifier) $ items
+        return $ catMaybes urls
 
 --------------------------------------------------------------------------------
 -- * Compilers

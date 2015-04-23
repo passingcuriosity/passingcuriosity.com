@@ -16,6 +16,7 @@ executable site
   main-is:          site.hs
   build-depends:    base == 4.*
                   , blaze-html
+                  , bytestring
                   , containers
                   , directory
                   , filepath

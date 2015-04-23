@@ -25,19 +25,29 @@
 
         <link href="/assets/css/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/clean-blog.css" rel="stylesheet">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet'>
 
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+    <style>
+        $if(image_small)$
+        .intro-header { background-image: url('/$image_small$'); }
+        $else$/* Missing mobile image */
+        $endif$
+        $if(image)$
+        @media only screen and (min-width: 768px) {
+        .intro-header { background-image: url('/$image$'); }
+        }
+        $else$/* Missing desktop image */
+        $endif$
+    </style>
 </head>
 <body>
-
 $partial("templates/_navigation.html")$
+
 $body$
 <hr>
 $partial("templates/_footer.html")$
@@ -53,11 +63,13 @@ $partial("templates/_footer.html")$
         })();
     </script>
 
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/clean-blog.js"></script>
+
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/clean-blog.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>
