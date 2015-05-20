@@ -1,0 +1,21 @@
+digraph values {
+    splines = "line";
+    nodesep = 0.85;
+
+    value [label="Value"];
+    interp [label="Entity"];
+    repr [label="Bitstring"];
+
+    value -> interp [label="Interpretation"];
+    value -> repr [label="Representation"];
+
+    a_val [label="Int(12)"];
+    an_interp [label="12"];
+    a_species [label="Integer"];
+    a_repr [label="0x000000B0"];
+
+    a_val -> an_interp [label="Interpretation"];
+    an_interp -> a_species [label="Species"];
+    a_val -> a_repr [label="Representation"];
+
+}

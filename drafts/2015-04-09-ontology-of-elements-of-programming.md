@@ -1,6 +1,6 @@
 ---
 title: Ontology in the Elements of Programming
-tags: reading, books, programming, ontology, types, values, c++
+tags: reading, books, programming, ontology, types, values
 location: Sydney, New South Wales
 excerpt: 
   I'm making another attempt at reading the Elements of Programming. Here is
@@ -55,11 +55,13 @@ entities, species, and genera, section 1.3 introduces the concepts value, value
 type, and object. 
 
 A *datum* is a particular finite sequence of bits. By itself a *datum* is
-completely meaningless but we can associate an entity a datum to form
+completely meaningless but we can associate an entity and a datum to form
 a *value*. We say that the data is the *representation* of the value and the
 entity is its *interpretation*. Note that we're talking about a value being
-single entity and bit sequence and, therefore, that these values are ideals,
-not things we have in our programs.
+composed of an entity and bit sequence and, therefore, that these values are
+ideals, not things we have in our programs.
+
+![][f2]
 
 Where values correspond to the entities the previous section, *value types*
 correspond to species: a value type associates a species with a set of values.
@@ -68,7 +70,11 @@ This association has a number of properties:
 - it is partial when only some entities in the species have corresponding
 values or total otherwise;
 
+![][f3]
+
 [1]: http://www.amazon.com/dp/032163537X/
 [2]: https://en.wikipedia.org/wiki/Haecceity
 
 [f1]: /files/2015/ontology-of-elements-of-programming/entities.png
+[f2]: /files/2015/ontology-of-elements-of-programming/values.png
+[f3]: /files/2015/ontology-of-elements-of-programming/value-types.png

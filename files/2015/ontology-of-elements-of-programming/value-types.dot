@@ -1,0 +1,36 @@
+digraph "value types" {
+    splines="line";
+    nodesep = 0.85;
+
+    edge [constraint=false];
+
+    e1;
+    space [shape=point,style=invis];
+    v1;
+    e2; v2;
+    e3; v3;
+    en; vn;
+
+    subgraph cluster_entities {
+        label="Entities";
+
+        e1;
+        e2;
+        e3 [shape=none,label=".\n.\n."];
+        en;
+    }
+    subgraph cluster_values {
+        label="Values";
+        v1;
+        v2;
+        v3 [shape=none,label=".\n.\n."];
+        vn;
+    }
+
+    e1 -> v2;
+    e2 -> v1;
+
+    e1 -> e2 -> e3 -> en [constraint=true,style=invis];
+    v1 -> v2 -> v3 -> vn [constraint=true,style=invis];
+
+}

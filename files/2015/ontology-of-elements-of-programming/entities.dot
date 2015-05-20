@@ -3,14 +3,13 @@ digraph ontology {
     nodesep = 0.85;
 
     /* The order is important; don't change it! */
-    AE
+    AE;
     spacing [shape="point", width=0];
     CE;
-    AE;
+    AS;
     CS;
     AG;
     CG;
-
 
     subgraph cluster_abstract {
         label = "Abstract";
