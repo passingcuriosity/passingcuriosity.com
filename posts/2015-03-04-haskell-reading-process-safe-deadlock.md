@@ -61,12 +61,12 @@ gatherOutput ph h = work mempty
         s <- getProcessExitCode ph
         -- Exit or loop.
         case s of
-            Nothing -> work acc
+            Nothing -> work acc'
             Just ec -> do
                 -- Get any last bit written between the read and the status
                 -- check.
                 last <- BS.hGetContents h
-                return (ec, acc <> last)
+                return (ec, acc' <> last)
 ````
 
 This is essentially a loop which reads some input from the `Handle` (possibly
