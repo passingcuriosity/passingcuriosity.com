@@ -90,3 +90,7 @@ though the root cause of this problem is some instance of
 `CanBuildFrom[Set[_], A, Set[A]]` but I've no idea how to go about
 figure out which one or why it's broken. In any case, I now know a bit
 more about working with Scala.
+
+For more information, see the [ScalaCheck issue #89][3].
+
+[3]: https://github.com/rickynils/scalacheck/issues/89
