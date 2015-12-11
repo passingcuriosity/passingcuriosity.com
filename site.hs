@@ -525,7 +525,6 @@ tocCompiler = pandocCompilerWith
     , writerStandalone = True
     }
 
-
 -- | Sprinkle affiliate links, etc. over a blog.
 shill :: Item String -> Compiler (Item String)
 shill item = return $ fmap (withUrls amazon) item
