@@ -29,7 +29,6 @@ favourite editor, manage it using my favourite version control system, etc.).
 All up, it's an interesting read (if only for the descriptions of the various
 language features the authors like).
 
-<a href="http://dx.doi.org/10.1007/11550679_1">DOI</a> | <a
-href="http://www.citeulike.org/article/523149">CiteULike</a> | <a
-href="http://del.icio.us/url/25a7f2a87e245020d4d17ccbe39b142f">Del.icio.us</a>
-| <a href="http://lambda-the-ultimate.org/node/852">LtU</a>
+<a href="http://dx.doi.org/10.1007/11550679_1">DOI</a> |
+<a href="http://www.citeulike.org/article/523149">CiteULike</a> |
+<a href="http://lambda-the-ultimate.org/node/852">LtU</a>

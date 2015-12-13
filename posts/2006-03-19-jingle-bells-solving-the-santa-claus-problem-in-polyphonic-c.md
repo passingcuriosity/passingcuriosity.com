@@ -20,4 +20,6 @@ This is, the authors claim, another piece of evidence supporting the claim that
 the join calculus is an effective basis for concurrent, as well as distributed,
 programming.
 
-<a href="http://scholar.google.com/scholar?hl=en&lr=&cluster=8641565189116214780">Google</a> | <a href="http://del.icio.us/url/944b7b261b4409f876b2ba9f8a82bb66">Del.icio.us</a> | <a href="http://www.citeulike.org/article/556532">CiteULike</a> | <a href="http://lambda-the-ultimate.org/node/479">LtU</a>
+<a href="http://scholar.google.com/scholar?cluster=8641565189116214780">Google</a> |
+<a href="http://www.citeulike.org/article/556532">CiteULike</a> |
+<a href="http://lambda-the-ultimate.org/node/479">LtU</a>

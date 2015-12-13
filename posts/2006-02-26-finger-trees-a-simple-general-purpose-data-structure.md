@@ -15,4 +15,4 @@ of all, the paper develops them in Haskell.
 I've started working through the code myself, but have not yet managed to get
 it finished. 
 
-<a href="http://dx.doi.org/10.1017/S0956796805005769">DOI</a> | <a href="http://lambda-the-ultimate.org/node/1059#comment-11091">LtU</a> | <a href="http://www.citeulike.org/article/522495">CiteULike</a> | <a href="http://del.icio.us/url/1d4a65a0cbef4e4c563b973ed0b6076d">Del.icio.us</a>
+<a href="http://dx.doi.org/10.1017/S0956796805005769">DOI</a> | <a href="http://lambda-the-ultimate.org/node/1059#comment-11091">LtU</a> | <a href="http://www.citeulike.org/article/522495">CiteULike</a>

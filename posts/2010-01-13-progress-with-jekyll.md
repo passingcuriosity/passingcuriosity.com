@@ -7,11 +7,13 @@ excerpt:
   I've made a bit of progress hacking on this blog the last few nights...
 ---
 
-I started this new incarnation of Passing Curiosity with stock [Jekyll][mjj],
-the content [imported][mji] imported from my old Wordpress blog, and [Mark Reid][mr]'s excellent Creative Commons licenced [design][mrn].
+I started this new incarnation of Passing Curiosity with stock
+[Jekyll][mjj], the content [imported][mji] imported from my old
+Wordpress blog, and [Mark Reid][mr]'s excellent Creative Commons
+licenced [design][mrn].
 
 [mji]: http://wiki.github.com/mojombo/jekyll/blog-migrations
-[mjj]: github.com/mojombo/jekyll
+[mjj]: https://github.com/mojombo/jekyll
 [mr]: http://mark.reid.name/
 [mrn]: http://github.com/mreid/mark.reid.name/
 
