@@ -10,8 +10,7 @@ excerpt:
 Most of the code I'll be working with in my new job (BTW blog: I have
 a new job) is written in [Scala][1] and uses property based testing
 with [ScalaCheck][2]. Yesterday I ran into a problem with an existing
-test suite that suddenly, for reasons I don't understand began failing
-with too many discarded tests:
+test suite that suddenly began failing with too many discarded tests:
 
 [1]: http://www.scala-lang.org/
 [2]: https://scalacheck.org/
@@ -27,13 +26,12 @@ with too many discarded tests:
 ````
 
 This test generates random `Metadata` values and makes sure that they
-can be serialised and deserialised correctly
-(i.e. $deserialise.serialise==id$). The property being test here is
-identical, only the `Arbitrary`, `Serialise`, and `Deserialise`
-instances vary in each case. The truly odd thing is that the pertinent
-code looks like this:
+can be serialised and deserialised correctly (i.e. values can be
+round-tripped). The property being test here is identical, only the
+`Arbitrary`, `Serialise`, and `Deserialise` instances vary in each
+case. The truly odd thing is that the pertinent code looks like this:
 
-````.scala
+````{.scala}
 case class Identifier(name: String)
 case class Metadata (id: Identifier, maps: Set[Identifier])
 
@@ -51,12 +49,12 @@ implicit val ArbMetadata = Arbitrary(
 )
 ````
 
-My first step was redefining a few related `Arbitrary` instances which
-used `suchThat` to instead just generate values which meet the
-requirements but this didn't fix the problem. Eventually I tried
-redefining `ArbMetadata` like this:
+My first step was redefining a few related `Arbitrary` instances to
+avoid using `suchThat` (which discards invalid values) but this didn't
+fix the problem. Eventually I tried redefining `ArbMetadata` like
+this:
 
-````.scala
+````{.scala}
 implicit val ArbMetadata = Arbitrary(
   for {
     identifier <- arbitrary[Identifier]
@@ -68,21 +66,24 @@ implicit val ArbMetadata = Arbitrary(
 and the problem went away. Trying to use `arbitrary[Set[Identifier]]`
 in various ways in the Scala REPL confirmed that it is the problem; we
 can easily generate as large a `List[Identifier]` as we like, but a
-`List[Set[Identifier]]` almost never works:
+`Set[Identifier]` fails fairly frequently:
 
-````.scala
-Gen.listOfN(100, arbitrary[Identifier]).map(_.length).sample
-Gen.listOfN(100, arbitrary[Set[Identifier]]).map(_.length).sample
+````{.scala}
+// This always generates a Some[List[Identifier]] value.
+Gen.listOfN(100, arbitrary[Identifier]).map(*.length).sample
+// Sometimes we get a Some[List[Set[Identifier]]] and others None.
+Gen.listOfN(100, arbitrary[Set[Identifier]]).map(*.length).sample
 ````
 
 It appears as though whatever mechanism is used by `arbitrary[Set[_]]`
-to construct the sets, it doesn't like duplicate elements. You can
-confirm this easily by trying `arbitrary[Set[Unit]]`; any `Gen[Unit]`
-has no choice but to return a the single value of type `Unit` (or
-fail) and, as expected, this almost never succeeds. Replacing the
-problematic `arbitrary[Set[Identifier]]` in the original code with
+to construct the sets, it doesn't fails when the generator for the
+value type returns duplicate elements. You can confirm this easily by
+trying `arbitrary[Set[Unit]]`; any `Gen[Unit]` has no choice but to
+return a the single value of type `Unit` (or to fail) and, as
+expected, this almost never succeeds. Replacing the problematic
+`arbitrary[Set[Identifier]]` in the original code with
 `arbitrary[Seq[Identifier]].map(_.toSet)` resolves the issue:
-constructing a set from a list of possible duplicate `Identifier`s
+constructing a set from a list of possibly duplicate `Identifier`s
 always works.
 
 After a bit of reading in the ScalaCheck source code it *seems* as

@@ -34,7 +34,7 @@ I hate having to restore repositories from backup (especially when I
 don't *have* backups and have to rely on my local clones) so I always
 make a throw-away clone when I'm rewriting history, etc.
 
-```.bash
+```{.bash}
 git clone git@example.com:midgard.git import-nirvana
 cd import-nirvana
 git remote add nirvana git@example.com:nirvana.git
@@ -59,7 +59,7 @@ These changes involve rewriting history so I'll do them on a new
 able to discard the branch and try again without cloning and fetching
 both repositories from scratch.
 
-```.bash
+```{.bash}
 git checkout -b rewrite nirvana/master
 ```
 
@@ -70,7 +70,7 @@ standard input and must produce the new message on its standard
 output. Using `echo` and `cat` to add "Nirvana: " to the start of the
 first line looks like this:
 
-```.bash
+```{.bash}
 git filter-branch --msg-filter '/bin/echo -n "Nirvana: " && cat'
 ```
 
@@ -80,7 +80,7 @@ quite a bit more complex. Instead of `echo`ing some text and then
 `cat`ing the current message we'll `mkdir` a new directory and then
 `mv` the files into it.
 
-```
+```{.bash}
 git filter-branch --tree-filter 'mkdir -p nirvana &&
 	find . -mindepth 1 -maxdepth 1 ! -name nirvana -exec mv {} nirvana
 	\;' HEAD
@@ -114,7 +114,7 @@ rewritten to have all files under the `nirvana/` directory it should
 be trivial to rebase the `rewrite` branch on the `midgard/master`
 branch.
 
-```.bash
+```{.bash}
 git rebase origin/master
 ```
 
@@ -129,7 +129,7 @@ opportunity to `git rebase -i` and squash some commits, update build
 scripts to build the imported code, etc. Once this is done I generally
 push the branch into the origin repository (`midgard`)
 
-```.bash
+```{.bash}
 git push -u review origin/import-nirvana
 ```
 
