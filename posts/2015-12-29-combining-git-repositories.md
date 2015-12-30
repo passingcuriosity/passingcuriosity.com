@@ -1,6 +1,6 @@
 ---
 title: Combining git repositories
-tags: git, howto, rewrite, history
+tags: howto, git, rewrite, history
 location: Sydney, New South Wales
 excerpt: 
   A quick run down of combining git repositories which do not share history.
