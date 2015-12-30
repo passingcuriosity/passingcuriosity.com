@@ -5,6 +5,7 @@ module Main where
 import           Control.Applicative
 import           Control.Monad
 import qualified Data.ByteString.Lazy            as LBS
+import           Data.Char                       (toLower)
 import           Data.Hashable
 import           Data.List
 import qualified Data.Map                        as M
@@ -232,18 +233,18 @@ main = hakyllWith hakyllCfg $ do
                 >>= relativizeUrls
 
     tagsRules tags $ \tag tag_pattern -> do
-
         let title = "Posts tagged " <> tag
+        let slug = slugify tag
 
         paginated_tags <- buildPaginateWith
             (sortRecentFirst >=> return . paginateEvery pageSize)
             tag_pattern
             (\n -> fromFilePath $ if n == 1
-                then "tags" </> tag </> "index.html"
-                else "tags" </> tag </> show n </> "index.html")
+                then "tags" </> slug </> "index.html"
+                else "tags" </> slug </> show n </> "index.html")
 
         let p1_id = paginatePage paginated_tags 1
-        let path = joinPath ["tags", tag, tag <> ".xml"]
+        let path = "tags" </> slug </> slug
         let feed = specialFeed tag
 
         paginateRules paginated_tags $ \page_number pattern -> do
@@ -251,14 +252,14 @@ main = hakyllWith hakyllCfg $ do
             when (1 == page_number) $ do
                 -- Atom feed
                 version "atom" $ do
-                    route $ customRoute (const path)
+                    route $ customRoute (const $ path <> ".xml")
                     compile $ loadAllSnapshots tag_pattern "content"
                         >>= fmap (take 10) . recentFirst
                         >>= renderAtom feed feedCtx
 
                 -- RSS feed
                 version "rss" $ do
-                    route $ customRoute (const path)
+                    route $ customRoute (const $ path <> ".rss")
                     compile $ loadAllSnapshots tag_pattern "content"
                         >>= fmap (take 10) . recentFirst
                         >>= renderRss feed feedCtx
@@ -431,7 +432,7 @@ tagsField' =
   where
     simpleRenderLink :: String -> Maybe FilePath -> Maybe BH.Html
     simpleRenderLink tag Nothing         =
-      Just . (BH.a ! BA.href (toValue . dropFileName $ "/" </> "tags" </> tag </> "index.html")) $ toHtml tag
+      Just . (BH.a ! BA.href (toValue . dropFileName $ "/" </> "tags" </> slugify tag </> "index.html")) $ toHtml tag
     simpleRenderLink tag (Just filePath) =
       Just . (BH.a ! BA.href (toValue . dropFileName $ "/" </> filePath)) $ toHtml tag
 
@@ -454,7 +455,7 @@ tagCloudField' key =
                 size     = floor $ minSize + relative * (maxSize - minSize) :: Int
             in renderHtml
                  . (BH.a ! BA.style (toValue $ "font-size: " <> show size <> "%")
-                         ! BA.href (toValue . dropFileName $ "/" </> "tags" </> tag </> "index.html"))
+                         ! BA.href (toValue . dropFileName $ "/" </> "tags" </> slugify tag </> "index.html"))
                  $ toHtml tag
 
 -- | Absolute url to the resulting item
@@ -559,3 +560,10 @@ embedKMLImages = withTags $ \tag -> case tag of
             then TS.TagOpen "embed" (a <> [("class", "embed-kml-map")])
             else t
     embed tag = tag
+
+-- | Convert random 'String' to url-y 'String'.
+slugify :: String -> String
+slugify s = map (\c -> if p c then c else '-') $ map toLower s
+  where
+    cs = ['a'..'z'] ++ ['0'..'9'] ++ "-"
+    p c = c `elem` cs
