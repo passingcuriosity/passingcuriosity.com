@@ -63,16 +63,16 @@ implicit val ArbMetadata = Arbitrary(
 )
 ````
 
-and the problem went away. Trying to use `arbitrary[Set[Identifier]]`
+and the problem went away. Trying to use `arbitrary[Set[Identifier]]`{.scala}
 in various ways in the Scala REPL confirmed that it is the problem; we
 can easily generate as large a `List[Identifier]` as we like, but a
 `Set[Identifier]` fails fairly frequently:
 
 ````{.scala}
 // This always generates a Some[List[Identifier]] value.
-Gen.listOfN(100, arbitrary[Identifier]).map(*.length).sample
+Gen.listOfN(100, arbitrary[Identifier]).map(_.length).sample
 // Sometimes we get a Some[List[Set[Identifier]]] and others None.
-Gen.listOfN(100, arbitrary[Set[Identifier]]).map(*.length).sample
+Gen.listOfN(100, arbitrary[Set[Identifier]]).map(_.length).sample
 ````
 
 It appears as though whatever mechanism is used by `arbitrary[Set[_]]`
@@ -82,15 +82,15 @@ trying `arbitrary[Set[Unit]]`; any `Gen[Unit]` has no choice but to
 return a the single value of type `Unit` (or to fail) and, as
 expected, this almost never succeeds. Replacing the problematic
 `arbitrary[Set[Identifier]]` in the original code with
-`arbitrary[Seq[Identifier]].map(_.toSet)` resolves the issue:
+`arbitrary[Seq[Identifier]].map(_.toSet)`{.scala} resolves the issue:
 constructing a set from a list of possibly duplicate `Identifier`s
 always works.
 
 After a bit of reading in the ScalaCheck source code it *seems* as
 though the root cause of this problem is some instance of
-`CanBuildFrom[Set[_], A, Set[A]]` but I've no idea how to go about
-figure out which one or why it's broken. In any case, I now know a bit
-more about working with Scala.
+`CanBuildFrom[Set[_], A, Set[A]]`{.scala} but I've no idea how to go
+about figure out which one or why it's broken. In any case, I now know
+a bit more about working with Scala.
 
 For more information, see the [ScalaCheck issue #89][3].
 
