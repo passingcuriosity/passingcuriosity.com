@@ -182,6 +182,7 @@ main = hakyllWith hakyllCfg $ do
         compile $ do
             let ctx = tagCloudField' "tagcloud" 75.0 300.0 tags <>
                       sectionField "tags" <>
+                      tagdensityField "terms" tags <>
                       defaultCtx
 
             getResourceBody
@@ -455,11 +456,40 @@ tagCloudField' key =
             -- Show the relative size of one 'count' in percent
             let diff     = 1 + fromIntegral max' - fromIntegral min'
                 relative = (fromIntegral count - fromIntegral min') / diff
-                size     = floor $ minSize + relative * (maxSize - minSize) :: Int
+                size     = round $ minSize + relative * (maxSize - minSize) :: Int
             in renderHtml
                  . (BH.a ! BA.style (toValue $ "font-size: " <> show size <> "%")
                          ! BA.href (toValue . dropFileName $ "/" </> "tags" </> slugify tag </> "index.html"))
                  $ toHtml tag
+
+
+-- | Display a set of terms with relative densities.
+tagdensityField :: String -> Tags -> Context a
+tagdensityField key tags =
+    field key $ \_ -> renderTags mkLink (intercalate " <br>\n" . filter (not . null)) (sortTagsBy frequency tags)
+  where
+    frequency (t1, i1) (t2, i2) = compare (length i2) (length i1)
+    mkLink :: String -> String -> Int -> Int -> Int -> String
+    mkLink tag _ count _ max =
+        let url = "/" </> "tags" </> slugify tag </> "index.html"
+            weight = round (fromIntegral count / fromIntegral max * 100) :: Int
+            size :: String
+            size = show weight <> "%"
+            score :: BH.Html
+            score = (BH.span ! BA.class_ "score") (toHtml (" (" <> show count <> " posts)"))
+            span :: BH.Html
+            span = (BH.span ! BA.style (toValue $ "width: " <> size)
+                            ! BA.class_ "density")
+                   $ toHtml (show count)
+            term :: BH.Html
+            term = (BH.span ! BA.class_ "term") $ toHtml tag <> " " <> score
+        in if count < 10
+           then ""
+           else renderHtml
+               . (BH.a ! BA.href (toValue . dropFileName $ url)
+                       ! BA.class_ "termdensity"
+                 )
+               $ term <> " " <> span
 
 -- | Absolute url to the resulting item
 strippedUrlField :: String -> Context a
