@@ -11,6 +11,9 @@ import           Data.List
 import qualified Data.Map                        as M
 import           Data.Maybe
 import           Data.Monoid
+import           Data.Set                        (Set)
+import qualified Data.Set                        as S
+import           Data.Text                       (Text)
 import           Hakyll                          hiding (defaultContext)
 import           Network.URL
 import           System.FilePath
@@ -169,7 +172,7 @@ main = hakyllWith hakyllCfg $ do
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
-                >>= return . renderPandoc
+                >>= renderPandoc
                 >>= loadAndApplyTemplate "templates/page.html"   indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
@@ -183,7 +186,7 @@ main = hakyllWith hakyllCfg $ do
 
             getResourceBody
                 >>= applyAsTemplate ctx
-                >>= return . renderPandoc
+                >>= renderPandoc
                 >>= loadAndApplyTemplate "templates/page.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls

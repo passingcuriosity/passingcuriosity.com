@@ -20,10 +20,11 @@ executable site
                   , containers
                   , directory
                   , filepath
-                  , hakyll == 4.6.*
+                  , hakyll
                   , hashable
                   , pandoc
                   , tagsoup
+                  , text
                   , url
   ghc-options:      -threaded
   default-language: Haskell2010
