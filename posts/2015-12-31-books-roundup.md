@@ -15,32 +15,36 @@ I finished during 2015.
 
 [Young Babylon by Lu Nei](http://www.amazon.com/dp/1477829997/) was
 really good. It's great books like this that make me think I should
-venture out of my genre ghetto more frequently!
+venture out of my genre ghetto more frequently and read more literary
+fiction!
 
 I'm not much of a mystery reader by I quite enjoyed the first two
 books in Elizabeth Edmondson's *A Very English Mystery* series:
 [A Man of Some Repute](http://www.amazon.com/dp/1477829342/) and
 [A Question of Inheritance](http://www.amazon.com/dp/1503947858/).
 
-Mary Robinette Kowal's *The Glamourist Histories* is an interesting
-series, part Regency drama part magic-wielding fantasy. Unlike most
-fantasy works the magic in this world is more of a fine art than
-anything else (and more the domain of accomplished young ladies than
-swashbuckling adventurers or wise elders). It's this departure from
-the norm that makes the series so interesting. I've only read the
-first book
-[Shades of Milk and Honey](http://www.amazon.com/dp/B00BSSRN5S/) but
-the rest of on my list.
+Mary Robinette Kowal's *The Glamourist Histories* series is part
+Regency drama part magic-wielding fantasy. Unlike most fantasy works
+the magic in this world is more of a fine art than a practical or
+learned concern and more the domain of accomplished young ladies than
+swashbuckling adventurers or wise elders. It's this departure from the
+norm that makes the series so interesting. I've only read the first
+book [Shades of Milk and Honey](http://www.amazon.com/dp/B00BSSRN5S/)
+but the rest of the volumes are on my to-read list.
 
 I re-read the first two books of Naomi Novik's Temeraire
 [His Majesty's Dragon](http://www.amazon.com/dp/0345481283/) and
 [Throne of Jade](http://www.amazon.com/dp/0345481291/). I quite like
 these two books but the series wears on me as it goes on and I don't
-think I've ever managed to finish the third book.
+think I've ever managed to finish the third book. Maybe it's something
+about Napoleonic naval books because I had the same thing happen
+reading the Hornblower books too.
 
 Speaking of re-reading I read
 [The Seeress of Kell](http://www.amazon.com/dp/0345377591/), the fifth
-and final book in David (and Leigh) Eddings' Mallorean series.
+and final book in David (and Leigh) Eddings' Mallorean series. These
+books (the 12 novels proper and 1 of background material) have been
+favourites of mine for around 20 years.
 
 I read two of Katherine Kerr's story collections --
 [Dark Magicks: Two Tales](http://www.amazon.com/dp/B00D2I7SUC/) and
@@ -48,7 +52,7 @@ I read two of Katherine Kerr's story collections --
 were both good, but I'll read pretty much anything set in her Deverry
 world. I also tried one of her newer 'urban fantasy'-ish series with
 [Sorcerer's Luck](http://www.amazon.com/dp/B00E8T2AK2/). Set in some
-contemporary North American city but with nordic magic-y stuff, it was
+contemporary North American city but with Nordic magic-y stuff, it was
 better than the "sexy vampires" urban fantasy slop that's so popular
 the last few years (thanks for that Laurell K. Hamilton) but not my
 cup of tea.
@@ -113,15 +117,30 @@ reading any more Voltaire.
 
 ## Short
 
-[On Rumours by Cass Sunstein]()
+[On Rumours by Cass Sunstein](http://www.amazon.com/dp/B0063GJMVS/)
+describes the way in which rumours arise and are spread. I think it
+would have been improved with more discussion of empirical results but
+it was interesting nonetheless.
 
-I managed a few of Black Inc's series of essays Short Black mostly as
+I managed a few of Black Inc.'s series of essays Short Black mostly as
 a late-December attempt to reach my target of 50 books. Alas, I
 haven't made it but the three Short Blacks I read were pretty good
 [No Fixed Address by Robyn Davidson](http://www.amazon.com/dp/B00XKJCUH4/),
 [The Australian Disease by Richard Flanagan](http://www.amazon.com/dp/B006AWP9BW/),
 and especially
-[Fat City by Karen Hitchcock](http://www.amazon.com/dp/B00XIXGOLA/).
+[Fat City by Karen Hitchcock](http://www.amazon.com/dp/B00XIXGOLA/),
+[Booze Territory by Anna Krien](http://www.amazon.com/dp/B00XIXGOHE/),
+and
+[The Brave Ones: East Timor, 1999 by John Birmingham](http://www.amazon.com/dp/B00XIXGOYW/).
+
+[Gods of Metal by Eric Schlosser](http://www.amazon.com/dp/B010CFWEME/)
+describes the remarkable success of the Plowshares movement at
+breaking into various military bases, storage facilities, missile
+silos, ships, hangers, and other parts of the US nuclear weapons
+military-industrial complex. I'd ordinarily have skipped this --
+expecting a breathless accounting of megatons and MIRVs and
+death-tolls -- but the focus was very much on the activists and it was
+a great read.
 
 I quite liked
 [A Cup of Sake Beneath the Cherry Trees by Kenko](http://www.amazon.com/dp/B00R730F2Q/)
