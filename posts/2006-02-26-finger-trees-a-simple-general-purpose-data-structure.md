@@ -1,7 +1,7 @@
 ---
 wordpressid: 1646
 layout: post
-title: Finger Trees: A Simple General-purpose Data Structure
+title: "Finger Trees: A Simple General-purpose Data Structure"
 wordpressurl: http://passingcuriosity.com/2006/finger-trees-a-simple-general-purpose-data-structure/
 ---
 

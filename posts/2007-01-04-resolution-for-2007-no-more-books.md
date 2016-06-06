@@ -1,7 +1,7 @@
 ---
 wordpressid: 1408
 layout: post
-title: Resolution for 2007: no more books!
+title: "Resolution for 2007: no more books!"
 tags: books, life
 wordpressurl: http://passingcuriosity.com/2007/1408/
 ---

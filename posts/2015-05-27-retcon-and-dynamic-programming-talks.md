@@ -2,13 +2,13 @@
 title: Retcon and dynamic programming talks
 tags: presentations, events, fp-syd, lambdajam
 location: Sydney, New South Wales
-excerpt: 
+excerpt: |
   I've given two talks in the last week or so: one on Retcon and another on
   dynamic programming in Haskell. Here are the slides.
 ---
 
 As promised in a previous post, I've posted the slides for the two talks I've
-recently presented to my [Speaker Deck account][1]. 
+recently presented to my [Speaker Deck account][1].
 
 [Retcon: imposing eventual consistency on disparate data sources][2] was
 presented at the [Yow! Lambda Jam][3] conference on May 21 2015; and

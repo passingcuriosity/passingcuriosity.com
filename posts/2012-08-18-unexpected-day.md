@@ -1,6 +1,6 @@
 ---
-title: PyconAU 2012: Unexpected Day
-tags: PyconAU 2012, Python, spelunking, packets, networks, ffi
+title: "PyconAU 2012: Unexpected Day"
+tags: event, PyconAU 2012, Python, spelunking, packets, networks, ffi
 location: Hobart, Tasmania
 excerpt: Notes from a talk about using the Python FFI and libpcap at Pycon AU 2012.
 ---

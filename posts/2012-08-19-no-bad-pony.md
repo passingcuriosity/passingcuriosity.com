@@ -1,6 +1,6 @@
 ---
-title: PyconAU 2012: No, Bad Pony!
-tags: PyconAU 2012, Python, django
+title: "PyconAU 2012: No, Bad Pony!"
+tags: event, PyconAU 2012, Python, django
 location: Hobart, Tasmania
 excerpt: Notes from a talk about Django feature requests and why they don't get implemented at Pycon AU 2012.
 ---

@@ -1,6 +1,6 @@
 ---
-title: PyconAU 2012: Server performance
-tags: PyconAU 2012, Python, performance
+title: "PyconAU 2012: Server performance"
+tags: event, PyconAU 2012, Python, performance
 location: Hobart, Tasmania
 excerpt: Notes from a talk about server performance at Pycon AU 2012.
 ---

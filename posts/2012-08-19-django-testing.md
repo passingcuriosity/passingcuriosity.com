@@ -1,6 +1,6 @@
 ---
-title: PyconAU 2012: Django Testing
-tags: PyconAU 2012, Python, django, testing
+title: "PyconAU 2012: Django Testing"
+tags: event, PyconAU 2012, Python, django, testing
 location: Hobart, Tasmania
 excerpt: Notes from a talk about testing Django solutions at Pycon AU 2012.
 ---
@@ -18,6 +18,6 @@ quicker and easier. Laziness #ftw!
     ./manage.py test
 
     ./manage.py startapp mustsee
-    
+
 Add a model and then add a test.
 

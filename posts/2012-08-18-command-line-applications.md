@@ -1,6 +1,6 @@
 ---
-title: PyconAU 2012: Writing command-line applications
-tags: PyconAU 2012, Python, command-line, user interface
+title: "PyconAU 2012: Writing command-line applications"
+tags: event, PyconAU 2012, Python, command-line, user interface
 location: Hobart, Tasmania
 excerpt: Notes from a talk about writing command-line applications in Python at Pycon AU 2012.
 ---

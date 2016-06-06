@@ -1,5 +1,5 @@
 ---
-title: PyconAU 2012: Implementing a cloud service in Python
+title: "PyconAU 2012: Implementing a cloud service in Python"
 tags: PyconAU 2012, Python, cloud
 location: Hobart, Tasmania
 excerpt: Notes from a talk at Pycon AU 2012.

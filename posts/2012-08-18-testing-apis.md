@@ -1,6 +1,6 @@
 ---
-title: PyconAU 2012: Testing and being lazy and stuff
-tags: PyconAU 2012, Python, performance
+title: "PyconAU 2012: Testing and being lazy and stuff"
+tags: event, PyconAU 2012, Python, performance
 location: Hobart, Tasmania
 excerpt: Notes from a talk about testing Python web projects at Pycon AU 2012.
 ---

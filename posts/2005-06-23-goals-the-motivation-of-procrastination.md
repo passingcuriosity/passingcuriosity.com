@@ -1,7 +1,7 @@
 ---
 wordpressid: 1430
 layout: post
-title: Goals: the Motivation of Procrastination
+title: "Goals: the Motivation of Procrastination"
 tags: logic, haskell
 wordpressurl: http://passingcuriosity.com/2005/goals-the-motivation-of-procrastination/
 ---

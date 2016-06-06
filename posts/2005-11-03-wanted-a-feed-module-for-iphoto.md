@@ -1,7 +1,7 @@
 ---
 wordpressid: 1642
 layout: post
-title: Wanted: A feed module for iPhoto
+title: "Wanted: A feed module for iPhoto"
 wordpressurl: http://passingcuriosity.com/2005/wanted-a-feed-module-for-iphoto/
 ---
 

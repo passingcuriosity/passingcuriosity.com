@@ -1,7 +1,7 @@
 ---
 wordpressid: 1578
 layout: post
-title: RFC4042: UTF-9 and UTF-18 Efficient Transformation Formats of Unicode
+title: "RFC4042: UTF-9 and UTF-18 Efficient Transformation Formats of Unicode"
 wordpressurl: http://passingcuriosity.com/2005/rfc4042-utf-9-and-utf-18-efficient-transformation-formats-of-unicode/
 ---
 

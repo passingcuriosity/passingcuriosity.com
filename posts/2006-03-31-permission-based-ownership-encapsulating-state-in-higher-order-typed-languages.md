@@ -1,7 +1,7 @@
 ---
 wordpressid: 1664
 layout: post
-title: Permission-based ownership: encapsulating state in higher-order typed languages
+title: "Permission-based ownership: encapsulating state in higher-order typed languages"
 tags: papers, reading, programming languages
 wordpressurl: http://passingcuriosity.com/2006/permission-based-ownership-encapsulating-state-in-higher-order-typed-languages/
 ---
@@ -13,7 +13,7 @@ I'm still puzzling through the examples, but it looks pretty cool. The
 essential idea is to use the type system (an extension of <acronym>System
 F</acronym> with references and ownership called <acronym>System
 F<sub><i>own</i></sub></acronym>) to ensure that the internal details of
-modules cannot be messed with. 
+modules cannot be messed with.
 
 They give an illustrative example involving customers in one domain, banking
 machinery in a second and account details in a third. The customers are allowed

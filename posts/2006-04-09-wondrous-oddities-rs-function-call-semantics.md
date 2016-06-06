@@ -1,7 +1,7 @@
 ---
 wordpressid: 1673
 layout: post
-title: Wondrous oddities: R's function-call semantics
+title: "Wondrous oddities: R's function-call semantics"
 tags: programming languages
 wordpressurl: http://passingcuriosity.com/2006/wondrous-oddities-rs-function-call-semantics/
 ---
