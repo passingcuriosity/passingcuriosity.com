@@ -55,9 +55,26 @@ sudo chgrp -R exchangefiles /home/exchangefiles/
 # SSHD configuration
 
 The OpenSSH server configuration is typically called something like
-`/etc/ssh/sshd_config`. Find this file and open it in an editor; we're going to
-add a section to the **end** of the file using the `Match` directive which
-applies to users in our group:
+`/etc/ssh/sshd_config`. Find this file and open it in an editor. First
+we'll make sure it will support SFTP in a chrooted environment. Search
+for a existing `Subsystem sftp` statement or insert it if it's missing:
+
+````
+# Enable to built-in implementation of SFTP.
+Subsystem sftp internal-sftp
+````
+
+Here `internal-sftp` means "use the SFTP server built into
+`sshd`". The default on many platforms is to use an external SFTP
+implementation (`/usr/libexec/sftp-server` on Mac OS X or
+`/usr/libexec/openssh/sftp-server` on RedHat-y Linux distros) but this
+won't exist inside the chroot. (Previous versions of this post omitted
+discussion of `Subsystem`; thanks to
+[Matthew Saltzman](http://www.math.clemson.edu/~mjs/) for suggesting
+the improvement.)
+
+Next we're going to add a section to the **end** of the file using the
+`Match` directive which applies to users in our group:
 
 ````
 Match Group exchangefiles
@@ -67,6 +84,7 @@ After that we specify the configuration directives which apply the matched
 connections:
 
 ````
+
 # Force the connection to use the built-in SFTP support.
 ForceCommand internal-sftp
 # Chroot the connection into the specified directory.
