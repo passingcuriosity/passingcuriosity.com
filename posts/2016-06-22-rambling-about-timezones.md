@@ -53,5 +53,13 @@ are supposed to correspond to the the numbers on my clock" and not
 "instant" and "timestamp" (respectively) to refer to those latter
 things.
 
+---
+
+**Update** On Monday, July 4 2016 a meeting of Egypt's cabinet
+[cancelled daylight savings time][3] which was due to start on
+Thursday, July 7. Three day's notice is enough to upgrade the TZ
+database on all your computer systems, right?
+
 [1]: http://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time
 [2]: https://github.com/eggert/tz/blob/master/australasia#L187
+[3]: http://www.sis.gov.eg/En/Templates/Articles/tmpArticleNews.aspx?ArtID=105572
