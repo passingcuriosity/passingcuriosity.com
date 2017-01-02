@@ -1,5 +1,11 @@
-flags: {}
+flags:
+  hakyll:
+    checkExternal: false
+  pandoc:
+    https: false
 packages:
 - '.'
-extra-deps: []
-resolver: lts-6.2
+extra-deps:
+- hakyll-4.9.2.0
+- pandoc-1.17.1
+resolver: lts-7.14

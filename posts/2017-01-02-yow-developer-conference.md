@@ -1,11 +1,15 @@
 ---
 title: Yow! Conference, Sydney 2013
 location: Sydney, New South Wales
-tags: event, conference, yow, software development, functional programming, security, csharp
+tags: event, conference, software, development, functional programming, old-post-is-old
 excerpt: 
-  December 12-13 saw the Yow! Australian Developer Conference finally reach
-  Sydney. Here are my notes from the two days of sessions.
+  December 12-13, 2013 saw the Yow! Australian Developer Conference
+  finally reach Sydney. Here are my notes from the two days of
+  sessions.
 ---
+
+> It's the beginning of a new year so I'm cleaning out some files in
+> my drafts directory. This post was started on December 13, 2013.
 
 - ~40 speakers
 - ~440 attendees

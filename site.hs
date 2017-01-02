@@ -300,7 +300,7 @@ paginatePage pag pageNumber
 
 tagFeedCtx :: Maybe Identifier -> Context a
 tagFeedCtx ident = case ident of
-    Nothing -> mempty
+    Nothing  -> mempty
     Just pid -> feedField "rss" pid <> feedField "atom" pid
   where
     feedField name an_id = field
@@ -396,7 +396,7 @@ defaultContext _ =
   where
     dropFN :: [String] -> Item a -> Compiler String
     dropFN [fn] _ = return . dropFileName $ fn
-    dropFN _ _ = error "Called dropFileName with no arguments"
+    dropFN _ _    = error "Called dropFileName with no arguments"
 
     firstFN :: [String] -> Item a -> Compiler String
     firstFN ss _ = case ss of
@@ -540,7 +540,7 @@ imageField name =
 contentCompiler :: Compiler (Item String)
 contentCompiler =
     pandocCompilerWith read_opts write_opts
-        >>= return . fmap embedKMLImages
+        >>= return . fmap embedKMLImages . fmap bootstrap
         >>= shill
   where
     read_opts = defaultHakyllReaderOptions
@@ -584,7 +584,7 @@ urlAddQuery param url = exportURL . flip add_param param <$> importURL url
 embedKMLImages :: String -> String
 embedKMLImages = withTags $ \tag -> case tag of
     TS.TagOpen _ _ -> embed tag
-    _ -> tag
+    _              -> tag
   where
     embed :: TS.Tag String -> TS.Tag String
     embed t@(TS.TagOpen "embed" a) = case lookup "src" a of
@@ -593,6 +593,11 @@ embedKMLImages = withTags $ \tag -> case tag of
             then TS.TagOpen "embed" (a <> [("class", "embed-kml-map")])
             else t
     embed tag = tag
+
+bootstrap :: String -> String
+bootstrap = withTags $ \tag -> case tag of
+  TS.TagOpen "table" a -> TS.TagOpen "table" (a <> [("class", "table")])
+  _                    -> tag
 
 -- | Convert random 'String' to url-y 'String'.
 slugify :: String -> String
