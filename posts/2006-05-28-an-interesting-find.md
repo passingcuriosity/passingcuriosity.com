@@ -6,10 +6,10 @@ tags: picture, curious, object
 wordpressurl: http://passingcuriosity.com/2006/an-interesting-find/
 ---
 
-<a href="http://photos1.blogger.com/blogger/5615/352/1600/ruler%2C%20open%2C%20standing.jpg">
-<img style="cursor:hand;" src="http://photos1.blogger.com/blogger/5615/352/200/ruler%2C%20open%2C%20standing.jpg" border="0" alt="" height="120px" /></a>
-<a href="http://photos1.blogger.com/blogger/5615/352/1600/ruler%2C%20open%2C%20laying.jpg">
-<img style="cursor:hand;" src="http://photos1.blogger.com/blogger/5615/352/200/ruler%2C%20open%2C%20laying.jpg" border="0" alt="" height="120px" /></a>
+<a href="https://photos1.blogger.com/blogger/5615/352/1600/ruler%2C%20open%2C%20standing.jpg">
+<img  src="https://photos1.blogger.com/blogger/5615/352/200/ruler%2C%20open%2C%20standing.jpg" /></a>
+<a href="https://photos1.blogger.com/blogger/5615/352/1600/ruler%2C%20open%2C%20laying.jpg">
+<img src="https://photos1.blogger.com/blogger/5615/352/200/ruler%2C%20open%2C%20laying.jpg" /></a>
 
 One of my house-mates made an interesting find yesterday: a 36 inch
 folding ruler. After a bit of cleaning up (it was caked with grease and

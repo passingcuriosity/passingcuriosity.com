@@ -8,7 +8,7 @@ wordpressurl: http://passingcuriosity.com/?p=1302
 ---
 
 This post is some notes I took during a presentation at the [Perth Atheist
-Meetup](http://www.meetup.com/PerthAtheists/) given by Aaron Alderman. They
+Meetup](https://www.meetup.com/PerthAtheists/) given by Aaron Alderman. They
 were taken at speed (and without the overhead presentation which we were
 supposed to see as well) and are certain to contain errors.
 
@@ -20,7 +20,7 @@ added, some expanded, but none deleted.
 Introduction 
 ========
 
-[![Aaron Alderman](http://farm3.static.flickr.com/2640/3717264578_3923b7cf1a.jpg)](http://www.flickr.com/photos/29967059@N02/3717264578/)
+[![Aaron Alderman](https://farm3.static.flickr.com/2640/3717264578_3923b7cf1a.jpg)](https://www.flickr.com/photos/29967059@N02/3717264578/)
 
 Aaron introduced himself and described his background a little (raised in a secular family which became religious after an adverse life event) before jumping into eight objections to Christianity.
 
@@ -29,11 +29,11 @@ Which one is True?
 
 There are roughly 30,000 denominations of Christianity which can be grouped into various categories:
 
-- [Catholicism](http://en.wikipedia.org/wiki/Catholicism) (which may include various Eastern Orthodox churches as well as the Roman Catholic church)
-- [Protestantism](http://en.wikipedia.org/wiki/Protestantism)
-- [Anglicanism](http://en.wikipedia.org/wiki/Anglicanism)
-- [Pentecostalism](http://en.wikipedia.org/wiki/Pentecostalism)
-- [Restorationism](http://en.wikipedia.org/wiki/Restorationism) (who dropped Nicene creed and the rest of the "scholarship")
+- [Catholicism](https://en.wikipedia.org/wiki/Catholicism) (which may include various Eastern Orthodox churches as well as the Roman Catholic church)
+- [Protestantism](https://en.wikipedia.org/wiki/Protestantism)
+- [Anglicanism](https://en.wikipedia.org/wiki/Anglicanism)
+- [Pentecostalism](https://en.wikipedia.org/wiki/Pentecostalism)
+- [Restorationism](https://en.wikipedia.org/wiki/Restorationism) (who dropped Nicene creed and the rest of the "scholarship")
 
 All of these denominations have various differences, many are mutually incompatible.
 
@@ -117,7 +117,7 @@ For most of the history of Christianity they've been using an apparently errant 
 
 From a secular (even just rational) point of view, the idea that god has guided translation, transcription, interpretation so that it is still "religiously" correct seems to beg the question.
 
-[![Some of the audience](http://farm3.static.flickr.com/2446/3716450411_da158859fa.jpg)](http://www.flickr.com/photos/29967059@N02/3716450411/)
+[![Some of the audience](https://farm3.static.flickr.com/2446/3716450411_da158859fa.jpg)](https://www.flickr.com/photos/29967059@N02/3716450411/)
 
 The Old Testament
 ---------------

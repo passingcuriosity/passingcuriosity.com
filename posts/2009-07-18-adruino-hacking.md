@@ -28,4 +28,4 @@ What to do with it?
 
 Slides and notes from this presentation are available at Trent's home page.
 
-Photos [my Barcamp Perth 2009 set on Flickr](http://www.flickr.com/photos/thsutton/sets/72157621612695764/).
+Photos [my Barcamp Perth 2009 set on Flickr](https://www.flickr.com/photos/thsutton/sets/72157621612695764/).

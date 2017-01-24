@@ -13,12 +13,12 @@ recently presented to my [Speaker Deck account][1].
 [Retcon: imposing eventual consistency on disparate data sources][2] was
 presented at the [Yow! Lambda Jam][3] conference on May 21 2015; and
 
-<script async class="speakerdeck-embed" data-id="62b734cf825f43c1ac54bd1f49039448" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="62b734cf825f43c1ac54bd1f49039448" data-ratio="1.33333333333333" src="https://speakerdeck.com/assets/embed.js"></script>
 
 [Dynamic programming in Haskell][4] was presented at [FP-Syd][5] on May 27
 2015.
 
-<script async class="speakerdeck-embed" data-id="58fadd2b671940ea99fe3fec545f909c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="58fadd2b671940ea99fe3fec545f909c" data-ratio="1.33333333333333" src="https://speakerdeck.com/assets/embed.js"></script>
 
 NB: The algorithms presented are as described in [Introduction to
 Algorithms][6] (2nd ed) by Cormen, Leiserson, Rivest, and Stein; the

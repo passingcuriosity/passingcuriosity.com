@@ -1024,7 +1024,7 @@ $(function(){
 (function($){
     /* Insert stylesheet */
     var css = document.createElement('link'); css.rel = 'stylesheet';
-    css.href = "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+    css.href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
     document.head.appendChild(css);
 
     $('#footericons a').each(function(){

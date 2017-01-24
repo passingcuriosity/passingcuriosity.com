@@ -13,7 +13,7 @@ by [Lililicious][4]. Revisiting <acronym title="Maria-sama ga
 Miteru">marimite</acronym> brings back my wish that the books (other than the
 <a href="http://ziggr.com/mariasama/">first</a>) were available in English.
 
-[1]: http://photos1.blogger.com/blogger/5615/352/200/mariam.jpg
-[2]: http://photos1.blogger.com/blogger/5615/352/1600/mariam.0.jpg
+[1]: https://photos1.blogger.com/blogger/5615/352/200/mariam.jpg
+[2]: https://photos1.blogger.com/blogger/5615/352/1600/mariam.0.jpg
 [3]: http://www.lililicious.net/projectDet.php?id=10
 [4]: http://www.lililicious.net/

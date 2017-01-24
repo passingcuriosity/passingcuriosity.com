@@ -20,8 +20,8 @@ very well as I can't seem to get Safari to extract the image URLs from an XML
 feed and most interesting sites have a bunch of junk images as well
 ([Flickr][5], for example, has heaps and heaps of blank GIFs for spacing).
 
-[1]: http://www.apple.com/itunes/
-[2]: http://www.apple.com/ilife/iphoto/
+[1]: https://www.apple.com/itunes/
+[2]: https://www.apple.com/ilife/iphoto/
 [3]: http://www.ubcbotanicalgarden.org/potd/
-[4]: http://www.apple.com/macosx/features/automator/
-[5]: http://www.flickr.com/
+[4]: https://www.apple.com/macosx/features/automator/
+[5]: https://www.flickr.com/

@@ -48,7 +48,7 @@ feedCfg = FeedConfiguration
     , feedDescription = "Latest posts from Passing Curiosity."
     , feedAuthorName = "Thomas Sutton"
     , feedAuthorEmail = "me@thomas-sutton.id.au"
-    , feedRoot = "http://passingcuriosity.com/"
+    , feedRoot = "https://passingcuriosity.com"
     }
 
 specialFeed :: String -> FeedConfiguration
@@ -134,8 +134,8 @@ main = hakyllWith hakyllCfg $ do
                 >>= return . fmap demoteHeaders
                 >>= saveSnapshot "content"
                 >>= loadAndApplyTemplate "templates/post.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/default.html" ctx
 
     match "about.md" $ do
         route routeFileToDirectory
@@ -145,8 +145,8 @@ main = hakyllWith hakyllCfg $ do
 
             contentCompiler
                 >>= loadAndApplyTemplate "templates/page.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/default.html" ctx
 
     match "contact.md" $ do
         route routeFileToDirectory
@@ -156,8 +156,8 @@ main = hakyllWith hakyllCfg $ do
 
             contentCompiler
                 >>= loadAndApplyTemplate "templates/page.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/default.html" ctx
 
     match "index.md" $ do
         route   $ setExtension "html"
@@ -174,8 +174,8 @@ main = hakyllWith hakyllCfg $ do
                 >>= applyAsTemplate indexCtx
                 >>= renderPandoc
                 >>= loadAndApplyTemplate "templates/page.html"   indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
 
     match "tags.md" $ do
         route routeFileToDirectory
@@ -189,8 +189,8 @@ main = hakyllWith hakyllCfg $ do
                 >>= applyAsTemplate ctx
                 >>= renderPandoc
                 >>= loadAndApplyTemplate "templates/page.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/default.html" ctx
 
     --
     -- Generated
@@ -233,8 +233,8 @@ main = hakyllWith hakyllCfg $ do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/default.html" ctx
 
     tagsRules tags $ \tag tag_pattern -> do
         let title = "Posts tagged " <> tag
@@ -289,8 +289,8 @@ main = hakyllWith hakyllCfg $ do
 
                 makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
-                    >>= loadAndApplyTemplate "templates/default.html" ctx
                     >>= relativizeUrls
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
 
 paginatePage :: Paginate -> PageNumber -> Maybe Identifier
 paginatePage pag pageNumber
@@ -547,7 +547,7 @@ contentCompiler =
     write_opts = defaultHakyllWriterOptions
         { writerHTMLMathMethod = MathJax mathjax
         }
-    mathjax = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    mathjax = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)

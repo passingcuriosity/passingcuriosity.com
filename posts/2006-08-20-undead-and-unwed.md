@@ -23,10 +23,10 @@ I think not), but Betsy brought to mind David Eddings' description of his hero,
 
 In any case, I'll definitely have a look at the rest of Davidson's books.
 
-[0-1]: http://photos1.blogger.com/blogger/5615/352/200/0_7499_3645_2.jpg
-[0-2]: http://photos1.blogger.com/blogger/5615/352/1600/0_7499_3645_2.jpg
-[1]: http://www.amazon.com/dp/0749936452/
+[0-1]: https://photos1.blogger.com/blogger/5615/352/200/0_7499_3645_2.jpg
+[0-2]: https://photos1.blogger.com/blogger/5615/352/1600/0_7499_3645_2.jpg
+[1]: https://www.amazon.com/dp/0749936452/
 [2]: http://www.maryjanicedavidson.net/
-[3]: http://maryjanicedavidson.blogspot.com/
-[4]: http://en.wikipedia.org/wiki/Garion
-[5]: http://en.wikipedia.org/wiki/Perceval
+[3]: https://maryjanicedavidson.blogspot.com/
+[4]: https://en.wikipedia.org/wiki/Garion
+[5]: https://en.wikipedia.org/wiki/Perceval
