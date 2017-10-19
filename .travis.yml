@@ -15,17 +15,6 @@ notifications:
     on_success: change
     on_failure: change
 
-# The following enables several GHC versions to be tested; often it's enough to
-# test only against the last release in a major GHC version. Feel free to omit
-# lines listings versions you don't need/want testing for.
-env:
-  - PKG_CONFIG_PATH=$HOME/.stack/local/lib/pkgconfig
-  - LD_LIBRARY_PATH=$HOME/.stack/local/lib
-  - LD_RUN_PATH=$HOME/.stack/local/lib
-  - CFLAGS=-I$HOME/.stack/local/include
-  - LDFLAGS=-L$HOME/.stack/local/lib
-  - STACK_RESOLVER=lts-9
-
 # Download the latest stack command.
 before_install:
   - travis_retry wget https://www.stackage.org/stack/linux-x86_64
@@ -38,15 +27,15 @@ install:
 # Here starts the actual work to be performed for the package under test; any
 # command which exits with a non-zero exit code causes the build to fail.
 script:
- - cabal check
- - cabal sdist
- - export SRC=$(cabal info . | awk '{print $2;exit}')
- - tar -xzf "dist/$SRC.tar.gz"
- - cd "$SRC"
- - travis_retry ../stack --no-terminal --resolver $STACK_RESOLVER setup
- - travis_retry ../stack --no-terminal --resolver $STACK_RESOLVER install --only-snapshot -j4 --verbosity info
- - ../stack --no-terminal --resolver $STACK_RESOLVER build
- - ../stack exec site build || ../stack exec site rebuild
+ - export PKG_CONFIG_PATH=$HOME/.stack/local/lib/pkgconfig
+ - export LD_LIBRARY_PATH=$HOME/.stack/local/lib
+ - export LD_RUN_PATH=$HOME/.stack/local/lib
+ - export CFLAGS=-I$HOME/.stack/local/include LDFLAGS=-L$HOME/.stack/local/lib
+ - export STACK_RESOLVER=lts-9
+ - travis_retry ./stack --no-terminal --resolver $STACK_RESOLVER setup
+ - travis_retry ./stack --no-terminal --resolver $STACK_RESOLVER install --only-snapshot -j4 --verbosity info
+ - ./stack --no-terminal --resolver $STACK_RESOLVER build
+ - ./stack exec site build || ./stack exec site rebuild
 
 # Deploy built site to S3
 # deploy:
