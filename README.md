@@ -1,6 +1,8 @@
 Passing Curiosity
 =================
 
+[![Build Status](https://travis-ci.org/thsutton/passingcuriosity.com.svg?branch=master)](https://travis-ci.org/thsutton/passingcuriosity.com)
+
 This repository contains the code and content for my personal web-site at
 <http://passingcuriosity.com/>. The code (see `src/`) is based on
 [Hakyll][hakyll], a static site generator library written in Haskell.
