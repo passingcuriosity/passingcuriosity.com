@@ -34,18 +34,19 @@ script:
  - $STACK exec site build || $STACK exec site rebuild
 
 # Deploy built site to S3
-# deploy:
-#   provider: s3
-#   access_key_id: "YOUR AWS ACCESS KEY"
-#   secret_access_key: "YOUR AWS SECRET KEY"
-#   region: "ap-southeast-2"
-#   bucket: "passingcuriosity.com"
-#   skip_cleanup: true
-#   local_dir: "_site"
-#   acl: public_read
-#   cache_control: "public"
-#   detect_encoding: true
-#   default_text_charset: "utf-8"
-#   on:
-#     repo: thsutton/passingcuriosity.com
-#     branch: master
+deploy:
+  provider: s3
+  access_key_id: AKIAJ6M2UBGAPX7K7LQA
+  secret_access_key:
+    secure: R8wfmMZ4cCu3Ugm9ASGuoCbPrl/WEPaVlT1aKJ5JQYU1Xo4zSr5q4jpr/XD/zs5LG1G8y1hUnk2p2lmceSA5jF1v4aHeIRGLVM6yZbsDWTxDarFmgdHavC9W5q/Oe3QXylzoU7bZX5f/61BEudZ6mn1kb0TgHepY0IlHtMAJsGo=
+  region: "ap-southeast-2"
+  bucket: "passingcuriosity.com"
+  skip_cleanup: true
+  local_dir: "_site"
+  acl: public_read
+  cache_control: "public"
+  detect_encoding: true
+  default_text_charset: "utf-8"
+  on:
+    repo: thsutton/passingcuriosity.com
+    branch: master
