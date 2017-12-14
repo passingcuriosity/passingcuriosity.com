@@ -1,6 +1,6 @@
 
 # Include Haskell tools
-language: haskell
+language: generic
 
 # Use the docker infrastructure
 sudo: false
