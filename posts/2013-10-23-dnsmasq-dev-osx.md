@@ -33,12 +33,13 @@ how to install new system software and change your system configuration. Like
 all such changes, you **should not proceed** unless you are confident you have
 understood them *and* that you can reverse the changes if needed.
 
-> The world has moved on since I wrote this post in 2013. In
-> particular, many web browsers now enforce many more restrictions on
-> outgoing connections. If you are doing web development using
-> browsers like Chrome you should probable **use `.test` instead of
-> `.dev`** because `.dev` is a gTLD owned by Google. See [this blog
-> post][mattias] for more details.
+> The web world has moved on since I wrote this post in 2013. `.dev` is
+> now a real domain (owned by Google) and some browsers (at least Google
+> Chrome) require all connections to `.dev` to use HTTPS. If you are
+> going to follow these instructions you should probably **use `.test`
+> instead of `.dev`**. See [this blog post][mattias] for more details.
+> 
+> Thanks to Kinjal Dixit for the suggestion.
 
 [mattias]: https://ma.ttias.be/chrome-force-dev-domains-https-via-preloaded-hsts/
 
