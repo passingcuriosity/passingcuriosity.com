@@ -39,7 +39,7 @@ understood them *and* that you can reverse the changes if needed.
 > going to follow these instructions you should probably **use `.test`
 > instead of `.dev`**. See [this blog post][mattias] for more details.
 > 
-> Thanks to Kinjal Dixit for the suggestion.
+> Thanks to Kinjal Dixit and Milan Peters for the suggestion.
 
 [mattias]: https://ma.ttias.be/chrome-force-dev-domains-https-via-preloaded-hsts/
 
