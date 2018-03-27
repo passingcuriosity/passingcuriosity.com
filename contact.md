@@ -20,9 +20,6 @@ Email
 Linked In
 : [Thomas Sutton](https://au.linkedin.com/in/thsutton)
 
-Twitter
-: [thsutton](https://twitter.com/thsutton)
-
 GitHub
 : [github.com/thsutton](https://github.com/thsutton)
 

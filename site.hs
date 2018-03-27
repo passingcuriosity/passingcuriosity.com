@@ -30,9 +30,6 @@ import           Text.Pandoc
 -- * Configuration
 --------------------------------------------------------------------------------
 
-twitterUser :: String
-twitterUser = "@thsutton"
-
 amazonUSTag :: String
 amazonUSTag = "passingcuriosity-20"
 
@@ -378,11 +375,6 @@ defaultContext _ =
     titleField    "title-meta" <>
 
     imageField "image" <>
-
-    constField "twitter_card" "summary" <>
-    constField "twitter_site" twitterUser <>
-    constField "twitter_creator" twitterUser <>
-    titleField "twitter_title" <>
 
     -- Default to main feeds
     constField "atom_feed" "/atom.xml" <>
