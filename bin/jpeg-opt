@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -n "$(which jpegtran)" ]; then
-    jpegtran -optimize -copy none
+    djpeg | cjpeg -quality 50 | jpegtran -optimize -copy none
 else
     cat
 fi
