@@ -502,7 +502,7 @@ imageField name =
             _  -> do
                 let m = length files
                 let f = toFilePath . itemIdentifier $ item
-                let c = hash f `mod` m
+                let c = hash (f <> f) `mod` m
                 let img = files !! c
                 return img
     -- | Load images for use with 'imageField'.

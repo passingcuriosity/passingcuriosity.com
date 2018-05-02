@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -n "$(which jpegtrann)" ]; then
+if [ -n "$(which jpegtran)" ]; then
     jpegtran -optimize -copy none
 else
     cat
