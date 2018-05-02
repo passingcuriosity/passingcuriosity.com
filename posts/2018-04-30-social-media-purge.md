@@ -24,8 +24,8 @@ I've signed up to in the last two decades or so. So far I've deleted:
    written book. 
 
 I tried to delete my vestigial *Facebook* account but can't because I
-would need to verify it first. Alas I use private mode to I can't verify
+would need to verify it first. I use private mode so I can't verify
 myself using an already-logged-in computer and the
-contact-a-few-of-your-friends is out because I have no idea how to
-contact most of the people it offered. Oh well, I'll just leave the
+contact-a-few-of-your-friends method is out because I have no idea how
+to contact most of the people it offered. Oh well, I'll just leave the
 account locked.
