@@ -12,11 +12,10 @@ programming and located in Australia.
 
 The site itself is built using [Hakyll][], a static site generator written in
 [Haskell][]. The theme uses [Bootstrap][] and is based on the [Clean Blog][]
-design. All content -- including the [photography][Flickr] -- is by me.
+design. All content -- including the photography -- is by me.
 
 [me]: http://thomas-sutton.id.au/
 [Hakyll]: http://jaspervdj.be/hakyll/
 [Haskell]: https://www.haskell.org/
 [Bootstrap]: http://getbootstrap.com/
-[Clean Blog]: http://startbootstrap.com/template-overviews/clean-blog/ 
-[Flickr]: https://www.flickr.com/photos/thsutton
+[Clean Blog]: http://startbootstrap.com/template-overviews/clean-blog/

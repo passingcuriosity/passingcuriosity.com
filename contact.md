@@ -12,7 +12,7 @@ Location
 : Sydney, Australia
 
 Time zone
-: UTC+1100
+: UTC+1000
 
 Email
 : [me@thomas-sutton.id.au](mailto:me@thomas-sutton.id.au)
@@ -25,6 +25,3 @@ GitHub
 
 Stack Exchange
 : [thsutton](https://stackexchange.com/users/52384/thsutton)
-
-Flickr
-: [thsutton](https://flickr.com/photos/thsutton)

@@ -6,10 +6,8 @@ excerpt:
   A roundup of the books I finished reading during 2015.
 ---
 
-Here's a roundup of the books that [my Goodreads account][1] tells me
-I finished during 2015.
-
-[1]: https://www.goodreads.com/user/show/7377512-thomas-sutton
+Here's a roundup of the books that my Goodreads account (deleted in
+2018) tells me I finished during 2015.
 
 # Fiction
 
