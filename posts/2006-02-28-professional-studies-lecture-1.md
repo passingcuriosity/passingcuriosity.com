@@ -2,6 +2,7 @@
 wordpressid: 1507
 layout: post
 title: Professional Studies Lecture 1
+tags: education
 wordpressurl: http://passingcuriosity.com/2006/professional-studies-lecture-1/
 ---
 
@@ -45,8 +46,6 @@ The recommended texts are <a class="title" href="http://isbn.nu/0787909939">The 
 20% of our final grade will come from our attendance and participation in
 tutorial and the remainder will be based on the documents we produce as a
 result of our observations during SUPP.
-
-<hr/>
 
 After about 45 minutes on administrivia, the lecturer moved on to looking at
 the topic of question and questioning. She began by presenting some dialogue

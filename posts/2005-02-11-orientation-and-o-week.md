@@ -2,15 +2,15 @@
 wordpressid: 1464
 layout: post
 title: Orientation and O-Week
+tags: university
 wordpressurl: http://passingcuriosity.com/2005/orientation-and-o-week/
 ---
+
 The SRs and the B&G Members Association and Co seem to be gearing up for O-Week. As I write they are busy painting signs about the weeks events, decorating their floors and buildings, and what have you.
 
 It's going to be strange. At UTas, O-Week was, for me at least, the first week. Nothing more, nothing less. Burgmann college (where I stayed over summer) is supposed to have a party (probably several) that usually gets noise complaints. To the police. From the other side of the lake.
 
 I'll either love it, or hate it.
-
-<hr/>
 
 On the "here and now" side, I went and saw Weifa Liang (the Honours Convenor) today after getting enrolled, getting my logon and password (the reason for the lack of posts this last week) and all the rest of it. So now I have a desk at the DCS (in honours room, a.k.a. "The Zoo") and I had an email from Rajeev Gore (my supervisor) about getting some office space at the RSISE as well.
 
