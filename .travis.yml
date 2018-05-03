@@ -27,7 +27,7 @@ install:
 # Here starts the actual work to be performed for the package under test; any
 # command which exits with a non-zero exit code causes the build to fail.
 script:
- - export STACK="./stack --no-terminal --resolver lts-9"
+ - export STACK="./stack --no-terminal"
  - travis_retry $STACK setup
  - travis_retry $STACK install --only-snapshot -j4 --verbosity info --flag hakyll:-checkExternal --flag pandoc:-https
  - $STACK build
