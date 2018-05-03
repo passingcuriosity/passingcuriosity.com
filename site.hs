@@ -36,6 +36,9 @@ import qualified Text.URI                        as URI
 amazonUSTag :: String
 amazonUSTag = "passingcuriosity-20"
 
+amazonAUTag :: String
+amazonAUTag = "passingcurios-22"
+
 -- | Site configuration
 hakyllCfg :: Configuration
 hakyllCfg = defaultConfiguration
