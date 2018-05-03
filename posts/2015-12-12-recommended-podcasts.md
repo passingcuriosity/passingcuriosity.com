@@ -1,6 +1,5 @@
 ---
 title: Recommended Podcasts
-strapline: Here's a list of the podcasts I've been listening to lately.
 tags: recommended, podcast
 location: Sydney, New South Wales
 excerpt: 

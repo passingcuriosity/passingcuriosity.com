@@ -1,6 +1,5 @@
 ---
 title: Jenkins jobs with multiple repositories
-strapline: Building Jenkins jobs based on multiple git repositories
 tags: jenkins, testing, continuous integration
 excerpt: 
   Here's the way I configure Jenkins jobs to run when changes are committed to

@@ -1,6 +1,5 @@
 ---
 title: February Meetups
-strapline: Events I attended during February, 2015.
 tags: event, functional programming, haskell, work
 location: Sydney, New South Wales
 excerpt: 

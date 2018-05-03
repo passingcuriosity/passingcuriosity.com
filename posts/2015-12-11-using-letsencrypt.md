@@ -1,6 +1,5 @@
 ---
 title: Using Let's Encrypt
-strapline: Request and install free SSL certificates with Let's Encrypt
 tags: howto, security, ssl, nginx
 location: Sydney, New South Wales
 twitter_image: https://passingcuriosity.com/files/2015/letsencrypt/qualys-ssl-test.png

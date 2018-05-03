@@ -1,6 +1,5 @@
 ---
 title: Sequence edit distance
-strapline: Edit distance generalised to other data types.
 tags: haskell, functional programming, algorithms, abstraction
 location: Sydney, New South Wales
 excerpt: 

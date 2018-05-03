@@ -1,10 +1,9 @@
 ---
 title: Multiple JSON encodings in Haskell
-strapline: Working with multiple JSON encodings of the same data type
 tags: haskell, functional programming, work, patterns
 location: Sydney, New South Wales
 excerpt: 
-  Here's a nice "pattern" to work with multiple JSON encodings of the same set
+  Here's a nice pattern to work with multiple JSON encodings of the same set
   of types in a Haskell program.
 ---
 

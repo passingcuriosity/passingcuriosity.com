@@ -4,14 +4,13 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="$if(layout)$ $layout$-heading $else$ post-heading$endif$">
                 <h1>$title$</h1>
+                <hr class="small">
                 $if(strapline)$
-                    <hr class="small">
                     <h2>$strapline$</h2>
-                $else$
-                $if(excerpt)$
                     <hr class="small">
-                    <span class="subheading">$excerpt$</span>
                 $endif$
+                $if(excerpt)$
+                    <span class="subheading">$excerpt$</span>
                 $endif$
                 $if(author)$
                         $if(date)$

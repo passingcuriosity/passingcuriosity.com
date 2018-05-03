@@ -1,6 +1,5 @@
 ---
 title: F# Type Providers
-strapline: Learning about type providers at my first Sydney F# meetup
 tags: fsharp, functional programming, meetup, event
 location: Sydney, New South Wales
 excerpt: 

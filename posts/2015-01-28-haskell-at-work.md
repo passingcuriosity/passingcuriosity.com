@@ -1,6 +1,5 @@
 ---
 title: Haskell at Work
-strapline: Using Haskell in the Real World at my new job.
 tags: haskell, functional programming, work
 location: Sydney, New South Wales
 excerpt: 
