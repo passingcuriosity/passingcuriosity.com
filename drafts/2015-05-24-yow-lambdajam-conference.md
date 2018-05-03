@@ -1,6 +1,6 @@
 ---
 title: Yow! Lambda Jam 2015
-tags: events, conferences, functional programming, presentations
+tags: events, lambdajam, conferences, functional programming, presentations
 location: Brisbane, Queensland
 excerpt:
   I attended and gave a talk at the Yow! Lambda Jam functional programming
