@@ -99,24 +99,53 @@ Whisky appreciation at the Oak Barrel
 [Bruichladdich][2] [tasting with brand ambassador Chloe Wood][3] at
 the Oak Barrel.
 
-- Bruichladdich 'The Laddie'
+- Bruichladdich Classic Laddie
 
-- Bruichladdich
+- Bruichladdich 2001 Resurrection
 
 - Port Charlotte Islay Barley
 
-- Octomore 7.1
+- Octomore 7.1 Scottish Barley
 
-- Octomore 7.3
+- Octomore 7.3 Islay Barley
 
-- Octomore
+- Octomore 10 Year Old Edition 2
+
+I have bottles of the Port Charlotte and the Octomore 10 but these are
+all very nice.
 
 [2]: https://www.bruichladdich.com/
 [3]: http://www.oakbarrel.com.au/News/bruichladdich-tasting-with-islays-chloe-wood
 
 # 20th February
 
-Sake appreciation at the Oak Barrel
+Sake appreciation at the Oak Barrel.
+
+- *Shirakawa Onikoroshi* A little funky with floral notes. Clean taste
+  with hints of fruit, sweet but quickly gone.
+
+- *Shirakawa Komedakeno* A little restrained than the first. Feels and
+  tastes a bit thinner.
+
+- *Imada Fukucho Junmai Ginjo Genshu* Apple and melon. Fuller bodied
+  taste, quite sweet. Feels a little fizzy in the mouth, as with some
+  nigori.
+
+- *Wakatsuru Oyamanishiki Junmai* A touch of funkiness, a little dry.
+
+- *Wakatsuru Sohin Daiginjo* Quite restrained nose. Quite dry with a
+  long finish. Feels rather viscous (for sake) in the mouth.
+
+- *Wakatsuru Ginjo Koshu* Nose is quite prominent with funky, cheesey,
+  savoury elements. Tangy acidic finish.
+
+- *Heiwa Shuzo Tsuru-ume Yuzushu* Smells like yuzu. Tastes like yuzu.
+  It's made from junmai sake and yuzu juice, so that's not really a
+  surprise. Happily yuzu is delicious. Think limoncello without the
+  sugary sweetness and you have a pretty good idea.
+
+Wakatsuru also make whisky. I have a bottle of their Junenmyo blended
+whisky.
 
 # 27th February
 
@@ -126,6 +155,30 @@ Inn. This is one instance where I didn't note anything down.
 # 1st March
 
 [Kilkerran][4] [tasting with David Allen][5] at the Oak Barrel.
+
+- Kilkerran 12 year old (46%) Lightly peated, sweet, spicy. A hint
+  medicinal.
+
+- Kilkerran 8 year old (56.2%) Nose has buggered off; just the tiniest
+  hint of something sweet and medicinal. Less peat, gentler spice.
+
+- *2016 Open Day Bottling* (56.4%) Single sherry cask. Very dark. Sweet
+  nose, dried fruits - currants. Quite a fast finish. Honey, burned
+  caramel.
+
+- *Kilkerran Run Cask* Not much nose to speak of; smooth, raw sugar.
+
+- *Kilkerran Madeira Cask* (57%) Sweet syrups. Thick. Cereal notes. More
+  spices than the rum cask. Molasses.
+
+- *Kilkerran Triple Distilled* Ex-bourbon. Low key, delicate nose.
+  Cream. Stewed apple, cinnamon.
+
+- *Kilkerran Triple Distilled Open Day 2017?* (60.3%) Vanilla, cream,
+  caramel, butterscotch.
+
+- *Kilkerran Heavily Peated* Peat but not super smokey. Sweet. Doesn't
+  stick around.
 
 [4]: https://www.kilkerransinglemalt.com/
 [5]: http://www.oakbarrel.com.au/News/kilkerran-tasting-david-allen
@@ -176,13 +229,28 @@ life I've ever spat alcohol out after tasting it! We tried, in order:
 [North Star Spirits][18] [tasting with Iain Croucher][19] at the Oak
 Barrel.
 
-- Benrinnes 10-Year-Old PX Finish
-- Glenturret 8-Year-Old Refill Ex-Bourbon
-- Bruichladdich 15-Year-Old French Oak
-- Cambus 24-Year-Old Refill PX Butt
-- Orkney 17-Year-Old PX Finish (Undisclosed distillery)
-- Islay 12-Year-Old Refill Hogshead (Undisclosed distillery)
-- Fortified Wine PX
+- *Benrinnes 10 Year Old PX Finish* Triple distilled. Sultana, caramel,
+  cooked sugar. Plums and red fruit. Vanilla. Finishes with stewed fruit.
+
+- *Cambus 24 Year Old Refill PX Butt* Single grain. Nose clean and clear,
+  hints of resin. Run and rasin.
+
+- *Bruichladdich 15 Year Old French Oak* Fruits. Long, dry, smokey
+  finish. Pitchy.
+
+- *Glenturret 8 Year Old Refill Ex-Bourbon* Savoury, meaty notes. Long,
+  peaty finish. Very nice.
+
+- *Orkney 17 Year Old PX Finish* Honey and herbs. Cream, sultanas, oils.
+
+- *Islay 12 Year Old Refill Hogshead* Smokey, sweatness, heather. Lovely
+  waves of alternating smoke and peat.
+
+- *Montilla PX Fortified Wine* I'm no wine drinker (I'll generally drink
+  water instead) but this is very nice.
+
+I got a bottle of the Glenturret and, for the second time, missed out on
+the fortified wine.
 
 [18]: https://northstarspirits.com/
 [19]: http://www.oakbarrel.com.au/News/north-star-iain-croucher-tasting
@@ -192,13 +260,62 @@ Barrel.
 [Masterclass with Dave Broom, Charles MacLean and Alex Bruce][20] at the Oak
 Barrel.
 
+- Adelphi Brisbane
+
+- Adelphi E&K
+
+- Signatory Vintage Port Dundas
+
+- GlenDronach Allardice 18 Year Old
+
+- Ardnamurchan 2017 AD Spirit
+
+- Adelphi Laphriog 2000 17 Year Old
+
 [20]: http://www.oakbarrel.com.au/News/dave-broom-charles-maclean-alex-bruce-in-conversation
 
 # 15th March
 
-Whisky appreciation at the Oak Barrel
+Whisky appreciation at the Oak Barrel.
+
+- *Black Bottle* Treacle with a touch of dried summer fruits. A little smoke
+  upfront, quickly fades. Short and simple.
+
+- *North Star Vega* Blended malt. Sweet cherries and candied fruit. Thin.
+  Touch of caramels. Finish has hints of banana.
+
+- *Iniquity Batch 8* Medicinal notes, sweet, sourdough. Vanilla. Thick
+  and syrupy.
+
+- *Kilkerran 8 Year Old* A little smoke and peat. Quite sweet with
+  developing spices.
+
+- *Paul John Oak Barrel Bottling* Calm nose: almonds and walnuts.
+  Unusually, to my taste, gets better with water.
+
+- *Port Charlotte Islay* Smoke and peat. Lemongrass, fresh cut grass.
+  Yum!
+
+- *Limeburners Whisky Liqueur* Thick, golden. Honey and flowers (maybe
+  eucalypts).
 
 # 22nd March
 
-Sake masterclass "hot vs cold" with Rey from SakeNet at the Oak
-Barrel.
+["hot vs cold" sake masterclass][21] with Rey from SakeNet at the Oak
+Barrel. Six drinks (five sake and one umeshu) tasted warmed and cold.
+
+- *Hiokizakura Junmai Daiginjo Goriki*
+
+- *Taka Junmai Ginjo Omachi*
+
+- *Bentenmusume Junmai Goriki*
+
+- *Suiryu Junmai Hiyaoroshi*
+
+- *Suiryu Junmai Nigori "Kimoto no Dobu"*
+
+- *Uzenshiraume Junmai Umeshu*
+
+I bought a 1800 ml bottle of the Bentenmusume.
+
+[21]: http://www.oakbarrel.com.au/shop/search/event/event-sake-18-temperature-guest
