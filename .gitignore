@@ -5,6 +5,7 @@
 
 # Ignore Hakyll output
 /_*/
+/TAGS
 
 # Cabal
 /.cabal-sandbox/

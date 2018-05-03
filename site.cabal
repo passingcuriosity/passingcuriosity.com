@@ -22,9 +22,9 @@ executable site
                   , filepath
                   , hakyll
                   , hashable
+                  , modern-uri
                   , pandoc
                   , tagsoup
                   , text
-                  , url
   ghc-options:      -threaded
   default-language: Haskell2010

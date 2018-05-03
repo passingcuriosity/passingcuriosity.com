@@ -14,8 +14,8 @@ import           Data.Monoid
 import           Data.Set                        (Set)
 import qualified Data.Set                        as S
 import           Data.Text                       (Text)
+import qualified Data.Text                       as T
 import           Hakyll                          hiding (defaultContext)
-import           Network.URL
 import           System.FilePath
 import           Text.Blaze.Html                 (toHtml, toValue, (!))
 import           Text.Blaze.Html.Renderer.String (renderHtml)
@@ -23,6 +23,9 @@ import qualified Text.Blaze.Html5                as BH
 import qualified Text.Blaze.Html5.Attributes     as BA
 import qualified Text.HTML.TagSoup               as TS
 import           Text.Pandoc
+import           Text.URI                        (URI)
+import qualified Text.URI                        as URI
+
 
 {-# ANN module ("HLint: ignore Use liftM" :: String) #-}
 
@@ -544,7 +547,12 @@ shill item = return $ fmap (withUrls amazon) item
 
 -- | Add a query parameter to a URL.
 urlAddQuery :: (String, String) -> String -> Maybe String
-urlAddQuery param url = exportURL . flip add_param param <$> importURL url
+urlAddQuery (key, value) url = do
+    u <- URI.mkURI (T.pack url)
+    k <- URI.mkQueryKey (T.pack key)
+    v <- URI.mkQueryValue (T.pack value)
+    let u' = (u { URI.uriQuery = (URI.QueryParam k v) : (URI.uriQuery u)})
+    return (T.unpack . URI.render $ u')
 
 -- | Rewrite HTML, classify @<embed>@ tags for @.kml@ files so JavaScript can
 -- display them on embedded maps.
