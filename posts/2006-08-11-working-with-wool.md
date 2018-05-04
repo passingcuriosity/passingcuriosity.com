@@ -1,8 +1,5 @@
 ---
-wordpressid: 1531
-layout: post
 title: Working with wool
-wordpressurl: http://passingcuriosity.com/2006/working-with-wool/
 tags: education, textiles, design, felt, knitting, wool
 ---
 

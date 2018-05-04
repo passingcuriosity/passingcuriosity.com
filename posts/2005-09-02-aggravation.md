@@ -1,8 +1,5 @@
 ---
-wordpressid: 1633
-layout: post
 title: Aggravation
-wordpressurl: http://passingcuriosity.com/2005/aggravation/
 ---
 I've just finished the <a href="http://togaware.redirectme.net/access/assignment.html">second assignment</a> for the <a href="http://datamining.anu.edu.au/student/math3346_2005.html">data mining course</a> I'm doing this semester. The one thing I got out of it is a strong desire to avoid <a href="http://www.r-project.org/">R</a>.
 

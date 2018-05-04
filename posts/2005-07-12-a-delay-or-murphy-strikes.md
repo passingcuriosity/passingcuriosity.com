@@ -1,9 +1,6 @@
 ---
-wordpressid: 1439
-layout: post
 title: A Delay or Murphy Strikes
 tags: computers, apple, life
-wordpressurl: http://passingcuriosity.com/2005/a-delay-or-murphy-strikes/
 ---
 
 I've just had to take my iBook in to <a

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1642
-layout: post
 title: "Wanted: A feed module for iPhoto"
-wordpressurl: http://passingcuriosity.com/2005/wanted-a-feed-module-for-iphoto/
 ---
 
 While [iTunes][1] does a decent job of managing MP3 enclosures in news feeds

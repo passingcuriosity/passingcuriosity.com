@@ -1,8 +1,5 @@
 ---
-wordpressid: 1674
-layout: post
 title: Threads Cannot Be Implemented As a Library
-wordpressurl: http://passingcuriosity.com/2006/threads-cannot-be-implemented-as-a-library/
 ---
 
 <span class="title">Threads Cannot Be Implemented As a Library</span> by Hans-J. Boehm. In PLDI'05. <a href="http://www.hpl.hp.com/techreports/2004/HPL-2004-209.pdf">(PDF)</a>

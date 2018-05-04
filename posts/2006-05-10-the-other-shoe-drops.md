@@ -1,9 +1,6 @@
 ---
-wordpressid: 1523
-layout: post
 title: The Other Shoe Drops
 tags: education, teaching, practicum
-wordpressurl: http://passingcuriosity.com/2006/the-other-shoe-drops/
 ---
 
 Today was the third day of <acronym>Professional Experience

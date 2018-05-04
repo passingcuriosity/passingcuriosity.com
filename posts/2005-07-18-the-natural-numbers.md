@@ -1,8 +1,5 @@
 ---
-wordpressid: 1440
-layout: post
 title: The Natural Numbers
-wordpressurl: http://passingcuriosity.com/2005/the-natural-numbers/
 ---
 One of the statements in my calculus language is the operator declaration:<blockquote style="text-align: center; font-weight: bold;">Neg operator "~" has arity 1, fixity 0, priority 1.</blockquote>As negative numbers don't really make much sense as the arity and fixity of an operator, I've just spent a while knocking up a Haskell implementation of the <a href="http://en.wikipedia.org/wiki/Natural_numbers">natural numbers</a>.
 

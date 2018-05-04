@@ -1,8 +1,5 @@
 ---
-wordpressid: 1445
-layout: post
 title: More on Literate Haskell
-wordpressurl: http://passingcuriosity.com/2005/more-on-literate-haskell/
 ---
 
 I've been having fun extending my environment for literate Haskell programming

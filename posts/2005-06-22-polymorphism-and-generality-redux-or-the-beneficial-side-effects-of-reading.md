@@ -1,8 +1,5 @@
 ---
-wordpressid: 1429
-layout: post
 title: Polymorphism and Generality Redux; or The Beneficial Side Effects of Reading
-wordpressurl: http://passingcuriosity.com/2005/polymorphism-and-generality-redux-or-the-beneficial-side-effects-of-reading/
 ---
 I've started looking at how to code my backtracking monad (the framework that will provide the branching, failure, etc within which the tableau method for each logic will be implemented). To try to get a handle on the subject, I've started looking at <a href="http://portal.acm.org/citation.cfm?id=351258" style="font-style: italic;">Deriving Backtracking Monad Transformers</a> by Ralf Hinze.
 

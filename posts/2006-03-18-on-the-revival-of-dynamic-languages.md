@@ -1,8 +1,5 @@
 ---
-wordpressid: 1655
-layout: post
 title: On the Revival of Dynamic Languages
-wordpressurl: http://passingcuriosity.com/2006/on-the-revival-of-dynamic-languages/
 ---
 
 <a class="title"

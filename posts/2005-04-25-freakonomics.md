@@ -1,9 +1,6 @@
 ---
-wordpressid: 1584
-layout: post
 title: Freakonomics
 tags: books, economics
-wordpressurl: http://passingcuriosity.com/2005/freakonomics/
 ---
 
 [Freakonomics][1] and [SuperFreakonomics][2], both by Steven D. Levitt and

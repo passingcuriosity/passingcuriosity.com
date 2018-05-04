@@ -1,9 +1,6 @@
 ---
-wordpressid: 1582
-layout: post
 title: Books, Glorious Books
 tags: books, programming languages
-wordpressurl: http://passingcuriosity.com/2005/books-glorious-books/
 ---
 
 One field of Computer Science I am particularly interested in is programming

@@ -1,10 +1,6 @@
 ---
-wordpressid: 4
-wordpressurl: http://barcamp2.wordpress.com/?p=4
-layout: post
 title: World Blog Awards
-tags: bcperth09
-categories: [barcamp]
+tags: bcperth09, events, barcamp
 location: Perth, Western Australia
 excerpt: 
   Notes from an announcement at Barcamp Perth 2009 about the "World Blog

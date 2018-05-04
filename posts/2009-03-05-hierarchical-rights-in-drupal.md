@@ -1,7 +1,4 @@
 ---
-wordpressid: 450
-wordpressurl: http://passingcuriosity.com/?p=450
-layout: post
 title: Hierarchical Rights in Drupal
 tags: drupal, authorisation, permissions, ideas
 location: Perth, Western Australia

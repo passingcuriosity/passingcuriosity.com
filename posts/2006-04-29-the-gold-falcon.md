@@ -1,9 +1,6 @@
 ---
-wordpressid: 1688
-layout: post
 title: The Gold Falcon
 tags: books, fantasy
-wordpressurl: http://passingcuriosity.com/2006/the-gold-falcon/
 ---
 
 I went into town today and saw that Katherine Kerr's new book [The Gold

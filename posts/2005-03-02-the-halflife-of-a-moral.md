@@ -1,8 +1,5 @@
 ---
-wordpressid: 1568
-layout: post
 title: The Halflife of a Moral
-wordpressurl: http://passingcuriosity.com/2005/the-halflife-of-a-moral/
 ---
 <a href="http://www.theaustralian.news.com.au/common/story_page/0,5744,12413894%255E12274,00.html">America unbuttons a new front in the war on breasts</a>
 

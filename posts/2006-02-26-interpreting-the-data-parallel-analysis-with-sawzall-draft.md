@@ -1,9 +1,6 @@
 ---
-wordpressid: 1644
-layout: post
 title: "Interpreting the Data: Parallel Analysis with Sawzall (Draft)"
 tags: papers, programming languages
-wordpressurl: http://passingcuriosity.com/2006/interpreting-the-data-parallel-analysis-with-sawzall-draft/
 ---
 
 <a class="title" href="http://labs.google.com/papers/sawzall.html" title="Interpreting the Data: Parallel Analysis with Sawzall (Draft)">Interpreting the Data: Parallel Analysis with Sawzall (Draft)</a>

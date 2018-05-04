@@ -1,7 +1,4 @@
 ---
-wordpressid: 446
-wordpressurl: http://passingcuriosity.com/?p=446
-layout: post
 title: Content types and dispositions in PHP
 location: Perth, Western Australia
 excerpt: 

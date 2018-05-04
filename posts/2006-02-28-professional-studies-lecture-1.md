@@ -1,9 +1,6 @@
 ---
-wordpressid: 1507
-layout: post
 title: Professional Studies Lecture 1
 tags: education
-wordpressurl: http://passingcuriosity.com/2006/professional-studies-lecture-1/
 ---
 
 <a href="http://www.utas.edu.au/units/ESA160">ESA160 - Professional Studies 1A</a>.

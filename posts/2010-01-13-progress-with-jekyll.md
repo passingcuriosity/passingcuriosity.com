@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Progress with Jekyll
 tags: web, development, jekyll, meta
 location: Perth, Western Australia

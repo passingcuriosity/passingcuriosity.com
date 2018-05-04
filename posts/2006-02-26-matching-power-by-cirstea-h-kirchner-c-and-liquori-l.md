@@ -1,8 +1,5 @@
 ---
-wordpressid: 1645
-layout: post
 title: Matching Power by Cirstea H, Kirchner C and Liquori L.
-wordpressurl: http://passingcuriosity.com/2006/matching-power-by-cirstea-h-kirchner-c-and-liquori-l/
 ---
 
 <a href="http://rho.loria.fr/data/rta2001.pdf" class="title" title="Matching Power">Matching Power</a> by Cirstea H, Kirchner C and Liquori L.

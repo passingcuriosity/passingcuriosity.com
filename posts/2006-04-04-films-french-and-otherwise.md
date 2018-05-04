@@ -1,8 +1,5 @@
 ---
-wordpressid: 1668
-layout: post
 title: Films; French and Otherwise
-wordpressurl: http://passingcuriosity.com/2006/films-french-and-otherwise/
 ---
 I've watched a couple of good films recently. First, a couple French films distributed in Australia by <a href="http://www.madman.com.au/">Madman Films</a>.
 

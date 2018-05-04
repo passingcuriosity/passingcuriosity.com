@@ -1,8 +1,5 @@
 ---
-wordpressid: 1648
-layout: post
 title: Putting Curry-Howard to Work
-wordpressurl: http://passingcuriosity.com/2006/putting-curry-howard-to-work/
 ---
 
 <a class="title" href="http://portal.acm.org/citation.cfm?id=1088348.1088356" title="Putting Curry-Howard to Work">Putting Curry-Howard to Work</a> by Tim Sheard.

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1577
-layout: post
 title: Branching Time Temporal Logic
-wordpressurl: http://passingcuriosity.com/2005/branching-time-temporal-logic/
 ---
 <a href="http://portal.acm.org/citation.cfm?id=800057.808661">Deciding branching time logic</a>
 

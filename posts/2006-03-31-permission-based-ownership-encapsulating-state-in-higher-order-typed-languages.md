@@ -1,9 +1,6 @@
 ---
-wordpressid: 1664
-layout: post
 title: "Permission-based ownership: encapsulating state in higher-order typed languages"
 tags: papers, reading, programming languages
-wordpressurl: http://passingcuriosity.com/2006/permission-based-ownership-encapsulating-state-in-higher-order-typed-languages/
 ---
 
 [Permission-based ownership: encapsulating state in higher-order typed

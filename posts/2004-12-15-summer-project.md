@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Summer Project
 tags: srp, logic, graph, visualisation
 location: Canberra, Australia
-wordpressid: 1384
-wordpressurl: http://passingcuriosity.com/2004/summer-project/
 ---
 
 I remembered today that I had a Blogger account and thought that I should

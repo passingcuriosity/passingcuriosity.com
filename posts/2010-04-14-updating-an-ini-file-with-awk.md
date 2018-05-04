@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Updating an INI file with AWK
 tags: programming, awk, text
 location: Perth, Western Australia

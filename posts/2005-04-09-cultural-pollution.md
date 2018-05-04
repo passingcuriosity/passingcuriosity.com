@@ -1,8 +1,5 @@
 ---
-wordpressid: 1473
-layout: post
 title: Cultural Pollution
-wordpressurl: http://passingcuriosity.com/2005/cultural-pollution/
 ---
 I've been reading quite a bit of fan fiction recently and it has caused me to ponder cultural pollution. A lot of the stories I have read recently have been for fandoms with a non-American background. In spite of stories being set in the UK and with a cast of characters from the UK, many of these stories are littered with Americanisms, some of which indicate an alarming lack of knowledge about the rest of the world.
 

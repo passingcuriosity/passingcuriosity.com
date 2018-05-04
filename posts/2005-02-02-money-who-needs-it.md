@@ -1,9 +1,6 @@
 ---
-layout: post
 title: "Money: Who Needs It?"
 tags: comics, manga, books
-wordpressid: 1461
-wordpressurl: http://passingcuriosity.com/2005/money-who-needs-it/
 ---
 
 I saw a comic shop whilst in town today, and decided to pop in for a look.  I

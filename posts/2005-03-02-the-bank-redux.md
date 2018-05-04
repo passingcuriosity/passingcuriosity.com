@@ -1,8 +1,5 @@
 ---
-wordpressid: 1468
-layout: post
 title: The Bank, Redux
-wordpressurl: http://passingcuriosity.com/2005/the-bank-redux/
 ---
 Today, the ATM ate my card. I'm not sure why the banks expire bank cards, but I'm sure that there is a good reason. I just wish that they would wait until the new card is activated until they do so. Now I am without a bank card until next week some time, when the new new one arrives. (The old new one appears to have disappeared somewhere on the path from the bank to me via my old residence in Tasmania and my families home.)
 

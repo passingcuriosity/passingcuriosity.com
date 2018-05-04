@@ -1,9 +1,6 @@
 ---
-wordpressid: 1643
-layout: post
 title: Lock-Free Data Structures using STMs in Haskell
 tags: reading, papers, haskell
-wordpressurl: http://passingcuriosity.com/2005/lock-free-data-structures-using-stms-in-haskell/
 ---
 
 [Lock-Free Data Structures using STMs in Haskell][0] Anthony Discolo,

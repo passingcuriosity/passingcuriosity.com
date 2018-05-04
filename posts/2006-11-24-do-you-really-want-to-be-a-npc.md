@@ -1,9 +1,6 @@
 ---
-wordpressid: 1712
-layout: post
 title: "Do you REALLY want to be a NPC?"
 tags: voting
-wordpressurl: http://passingcuriosity.com/2006/do-you-really-want-to-be-a-npc/
 ---
 
 In a <a href="http://megatokyo.com/index.php?strip_id=935">recent rant</a>,

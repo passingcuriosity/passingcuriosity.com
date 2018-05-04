@@ -1,8 +1,5 @@
 ---
-wordpressid: 1436
-layout: post
 title: Done! or It's A Start!
-wordpressurl: http://passingcuriosity.com/2005/done-or-its-a-start/
 ---
 
 Last night (or, more correctly, this morning) I constructed a model: `~a, b`

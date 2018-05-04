@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Going Further with Litecal
-category: drupal
 tags: drupal, views, calendar, litecal
 location: Perth, Western Australia
 excerpt: 

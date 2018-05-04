@@ -2,7 +2,6 @@
 title: Order of Operations
 tags: mathematics, education, parsing
 location: Launceston, Tasmania
-wordpressurl: http://passingcuriosity.com/2006/order-of-operations/
 excerpt: 
   A short ramble about precedence of operations, prefix and postfix
   languages, etc.

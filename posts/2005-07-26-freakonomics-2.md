@@ -1,9 +1,6 @@
 ---
-wordpressid: 1616
-layout: post
 title: Freakonomics
 tags: books
-wordpressurl: http://passingcuriosity.com/2005/freakonomics-2/
 ---
 
 I'm about half-way through reading <a

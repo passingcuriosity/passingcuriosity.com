@@ -1,9 +1,6 @@
 ---
-wordpressid: 1415
-layout: post
 title: The Course Outline
 tags: physics
-wordpressurl: http://passingcuriosity.com/2006/the-course-outline/
 ---
 
 The first lecture began with the distribution (in three locations several hundred kilometres apart) of textbooks, questionnaires, course outlines, and a sheet of useful data and formulae. The skeleton of the course is described below, with more detail to come in subsequent posts.

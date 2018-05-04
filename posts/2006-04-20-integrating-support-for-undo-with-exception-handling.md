@@ -1,9 +1,6 @@
 ---
-wordpressid: 1681
-layout: post
 title: Integrating support for undo with exception handling
 tags: programming, cs, papers, reading, haskell
-wordpressurl: http://passingcuriosity.com/2006/integrating-support-for-undo-with-exception-handling/
 ---
 
 <a class="title" href="http://research.microsoft.com/research/pubs/view.aspx?tr_id=845">Integrating support for undo with exception handling</a> by Avraham Shinnar; David Tarditi; Mark Plesko and Bjarne Steensgaard.

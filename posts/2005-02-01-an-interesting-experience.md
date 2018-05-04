@@ -1,9 +1,6 @@
 ---
-wordpressid: 1459
-layout: post
 title: An Interesting Experience
 tags: university, life
-wordpressurl: http://passingcuriosity.com/2005/an-interesting-experience/
 ---
 
 It struck me today, that this year is going to be an interesting experience.

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1532
-layout: post
 title: Internet cookbooks for the win!
 tags: internet, online, cooking
-wordpressurl: http://passingcuriosity.com/2006/internet-cookbooks-for-the-win/
 ---
 
 Rather than buy a few cookbooks, or a guide to leather-work or knitting, I

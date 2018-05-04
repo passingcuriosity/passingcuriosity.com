@@ -1,10 +1,6 @@
 ---
-layout: post
 title: A Comics Update
-tags: comics
-locations: Canberra, Australia
-wordpressid: 1581
-wordpressurl: http://passingcuriosity.com/2005/a-comics-update/
+location: Canberra, Australia
 tags: comics, manga, books
 excerpt: 
   Notes on a few new comics including Nightmares & Fairy Tales, Courtney

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1659
-layout: post
 title: An efficient implementation of SELF a dynamically-typed object-oriented language based on prototypes
-wordpressurl: http://passingcuriosity.com/2006/an-efficient-implementation-of-self-a-dynamically-typed-object-oriented-language-based-on-prototypes/
 ---
 <span class="title">An efficient implementation of SELF a dynamically-typed object-oriented language based on prototypes</span> by Craig Chambers, David Ungar, and Elgin Lee. <a href="http://research.sun.com/self/papers/oopsla89.ps.gz">(PS)</a>
 

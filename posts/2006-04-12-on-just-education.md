@@ -1,9 +1,6 @@
 ---
-wordpressid: 1677
-layout: post
 title: On Just Education?
 tags: books, education, philosophy
-wordpressurl: http://passingcuriosity.com/2006/on-just-education/
 ---
 
 [Justice][1] and [On Education][2], both by [Harry Brighouse][3]

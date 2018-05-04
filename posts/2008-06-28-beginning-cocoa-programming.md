@@ -1,8 +1,5 @@
 ---
-wordpressid: 86
-layout: post
 title: Beginning Cocoa Programming
-wordpressurl: http://passingcuriosity.com/blog/?p=4
 ---
 
 I made the switch to Apple computers nearly four years ago when I used part of

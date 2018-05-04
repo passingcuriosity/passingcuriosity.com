@@ -1,7 +1,4 @@
 ---
-wordpressid: 1051
-wordpressurl: http://passingcuriosity.com/?p=1051
-layout: post
 title: Authorising user actions in SPIP
 location: Perth, Western Australia
 tags: spip, php, code, authorisation, security

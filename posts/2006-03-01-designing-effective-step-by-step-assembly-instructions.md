@@ -1,8 +1,5 @@
 ---
-wordpressid: 1652
-layout: post
 title: Designing Effective Step-By-Step Assembly Instructions
-wordpressurl: http://passingcuriosity.com/2006/designing-effective-step-by-step-assembly-instructions/
 ---
 <a class="title" href="https://graphics.stanford.edu/papers/assembly_instructions/" title="Designing Effective Step-By-Step Assembly Instructions">Designing Effective Step-By-Step Assembly Instructions</a> by Agrawala M, Phan D, Heiser J, Haymaker J, Klingner J, Hanrahan P, Tversky B. In ACM Transactions on Graphics, 2003.
 

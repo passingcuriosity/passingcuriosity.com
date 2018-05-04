@@ -1,9 +1,6 @@
 ---
-wordpressid: 1541
-layout: post
 title: The Teaching Begins
 tags: education, teaching, practicum, science, it
-wordpressurl: http://passingcuriosity.com/2006/the-teaching-begins/
 ---
 
 The second week of PE2 began with my colleague teacher off ill. This was

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1672
-layout: post
 title: Great Moments in Logic...
 tags: logic, reading,
-wordpressurl: http://passingcuriosity.com/2006/great-moments-in-logic/
 ---
 
 [Great Moments in Logic...][1] by [Greg Restall][2].

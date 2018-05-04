@@ -1,9 +1,6 @@
 ---
-wordpressid: 1520
-layout: post
 title: Teaching; A First Reaction
 tags: teaching, education, practical
-wordpressurl: http://passingcuriosity.com/2006/teaching-a-first-reaction/
 ---
 
 Today was the first day of my first block of professional experience at

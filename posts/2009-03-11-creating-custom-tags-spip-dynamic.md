@@ -1,8 +1,5 @@
 ---
-wordpressid: 286
-layout: post
 title: Creating custom tags for SPIP - Dynamic Tags
-wordpressurl: http://passingcuriosity.com/?p=286
 ---
 
 A lot of the content on modern web-sites is dynamic: from lists of "currently

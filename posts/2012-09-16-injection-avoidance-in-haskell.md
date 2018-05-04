@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Injection avoidance in Haskell
 tags: haskell, ghc, security, static
 location: Perth, Western Australia

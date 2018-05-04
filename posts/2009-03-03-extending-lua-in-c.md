@@ -1,9 +1,6 @@
 ---
-wordpressid: 440
-layout: post
 title: Extending Lua in C
 tags: lua, c, openssl, hash, development
-wordpressurl: http://passingcuriosity.com/?p=440
 excerpt: 
   Wrapping OpenSSL hash algorithms for use in Lua.
 ---

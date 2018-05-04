@@ -1,9 +1,6 @@
 ---
-wordpressid: 1476
-layout: post
 title: Mac OS X Tiger
 tags: computers, apple
-wordpressurl: http://passingcuriosity.com/2005/mac-os-x-tiger/
 ---
 
 <a href="http://www.apple.com/macosx/">Apple - Mac OS X</a>

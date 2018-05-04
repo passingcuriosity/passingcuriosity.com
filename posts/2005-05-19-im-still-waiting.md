@@ -1,9 +1,6 @@
 ---
-wordpressid: 1591
-layout: post
 title: I'm Still Waiting...
 tags: books, comics
-wordpressurl: http://passingcuriosity.com/2005/im-still-waiting/
 ---
 
 I'm not sure what the hold-up is, but I am *still* waiting for my copy of

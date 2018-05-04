@@ -1,8 +1,5 @@
 ---
-wordpressid: 1545
-layout: post
 title: Cooking (and Blogging Software)
-wordpressurl: http://passingcuriosity.com/2006/cooking-and-blogging-software/
 ---
 
 I made some <a href="https://en.wikipedia.org/wiki/Baklava">baklava</a>

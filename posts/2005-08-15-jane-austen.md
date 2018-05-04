@@ -1,9 +1,6 @@
 ---
-wordpressid: 1628
-layout: post
 title: Jane Austen
 tags: books, classics, function
-wordpressurl: http://passingcuriosity.com/2005/jane-austen/
 ---
 
 I've just started reading *Mansfield Park* by Jane Austen. I got an etext from

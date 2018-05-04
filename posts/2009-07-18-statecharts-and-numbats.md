@@ -1,10 +1,6 @@
 ---
-wordpressid: 1312
-wordpressurl: http://passingcuriosity.com/?p=1312
-layout: post
 title: Notes on "Statecharts and Numbats"
-tags: bcperth09
-categories: [barcamp]
+tags: bcperth09, events, barcamp
 location: Perth, Western Australia
 excerpt: 
   This post consists of my notes on the Statecharts and Numbats presentation

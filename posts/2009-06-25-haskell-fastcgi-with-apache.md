@@ -1,13 +1,10 @@
 ---
-layout: post
 title: Haskell FastCGI with Apache
 tags: haskell, web, fastcgi
 location: Perth, Western Australia
 excerpt: 
   Getting started writing web applications in Haskell is pretty easy with
   FastCGI.
-wordpressid: 1290
-wordpressurl: http://passingcuriosity.com/?p=1290
 ---
 
 It's pretty easy to get started with Haskell web-applications using the

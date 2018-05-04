@@ -1,9 +1,6 @@
 ---
-wordpressid: 1544
-layout: post
 title: My iBook is in the shop again
 tags: computers, apple
-wordpressurl: http://passingcuriosity.com/2006/1544/
 ---
 
 So my Apple iBook G4 is in the shop. Again. Getting repaired. Again. Having its

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1611
-layout: post
 title: Female Vampire Associates
 tags: books, fiction, fantasy
-wordpressurl: http://passingcuriosity.com/2005/female-vampire-associates/
 ---
 
 I'm not sure how recent a development it is, but there certainly seem to be a

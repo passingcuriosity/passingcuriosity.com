@@ -2,7 +2,6 @@
 title: Sydney Devops Meetup, August 2013
 tags: event, devops, release management, services, java, erlang, red hat, knife, chef
 location: Sydney, New South Wales
-toc: display
 excerpt: 
   A talk on release management at Yahoo!7 and lightning talks on plain old
   services, Erlang and Elixir, the RedHat Summit, and support tooling with

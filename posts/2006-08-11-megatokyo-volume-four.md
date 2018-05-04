@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Megatokyo volume four
 tags: books, manga
 excerpt: A quick review of Megatokyo book four.
-wordpressid: 1708
-wordpressurl: http://passingcuriosity.com/2006/megatokyo-volume-four/
 ---
 
 ![Megatokyo Volume 4 Cover](/files/2006/08/11/megatokyo-four-cover.jpg)

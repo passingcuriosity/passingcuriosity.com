@@ -1,9 +1,6 @@
 ---
-wordpressid: 1574
-layout: post
 title: Megatokyo
 tags: comics, manga, books
-wordpressurl: http://passingcuriosity.com/2005/megatokyo/
 ---
 
 [Megatokyo: 683 Crazy Talk][1]

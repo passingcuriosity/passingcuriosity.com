@@ -1,8 +1,5 @@
 ---
-wordpressid: 1516
-layout: post
 title: Design and Technology
-wordpressurl: http://passingcuriosity.com/2006/design-and-technology/
 ---
 This week's practical session we started working on the first three of the C.A.D. worksheets we're using to learn <a href="http://www.ozcad.com.au/">VectorWorks</a>.
 

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1522
-layout: post
 title: Categories and Tags
-wordpressurl: http://passingcuriosity.com/2006/categories-and-tags/
 ---
 
 I've added support for [tags][1] to this blog using Del.icio.us. New

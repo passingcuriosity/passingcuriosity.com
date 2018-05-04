@@ -1,8 +1,5 @@
 ---
-wordpressid: 1551
-layout: post
 title: More on Composable Memory Transactions
-wordpressurl: http://passingcuriosity.com/2005/more-on-composable-memory-transactions/
 ---
 
 *Caveat: I am not an RTS expert, not a Haskell expert, nor a concurrency, languages, or OS guru. This little spiel is probably rife with errors, but I'll publish this post in the hope that someone will point them out.*

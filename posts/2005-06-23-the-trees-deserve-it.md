@@ -1,9 +1,6 @@
 ---
-wordpressid: 1608
-layout: post
 title: The Trees Deserve It
 tags: books, functional programming
-wordpressurl: http://passingcuriosity.com/2005/the-trees-deserve-it/
 ---
 
 I ordered another book today: [Purely Functional Data Structures][1] by Chris

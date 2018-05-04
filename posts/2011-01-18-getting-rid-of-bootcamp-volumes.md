@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Getting rid of Boot Camp volumes
 tags: osx, howto, boot camp, ubuntu, apple
 location: Perth, Western Australia

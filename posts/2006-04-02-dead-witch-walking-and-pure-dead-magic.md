@@ -1,9 +1,6 @@
 ---
-wordpressid: 1667
-layout: post
 title: Dead Witch Walking and Pure Dead Magic
 tags: books
-wordpressurl: http://passingcuriosity.com/2006/dead-witch-walking-and-pure-dead-magic/
 ---
 
 [![Dead Witch Walking][1p]][1]

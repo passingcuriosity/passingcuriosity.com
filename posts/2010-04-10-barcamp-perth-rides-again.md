@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Barcamp Perth rides again
-tags: bcperth4, barcamp
-categories: [barcamp]
+tags: bcperth4, barcamp, events
 location: Perth, Western Australia
 excerpt: 
   Barcamp Perth 4.0 (or 2010, there seems to be some confusion) was held today

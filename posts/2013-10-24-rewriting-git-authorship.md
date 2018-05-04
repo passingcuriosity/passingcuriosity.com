@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Rewriting git commit authorship
 tags: git, howto, rewrite, history
 location: Sydney, New South Wales

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1416
-layout: post
 title: A Brief History of Physics
 tags: physics
-wordpressurl: http://passingcuriosity.com/2006/a-brief-history-of-physics/
 ---
 
 Aristotle was perhaps the first in the Western tradition to look at mechanics

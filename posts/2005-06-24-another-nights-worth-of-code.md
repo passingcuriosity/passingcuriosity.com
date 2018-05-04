@@ -1,8 +1,5 @@
 ---
-wordpressid: 1433
-layout: post
 title: Another Night's Worth of Code
-wordpressurl: http://passingcuriosity.com/2005/another-nights-worth-of-code/
 ---
 I've just finished the first major part of my first step along the road to [real] implementation: I now have a working type for propositional calculus, a simple representation of a tableau branch, can saturate said branch (modulo the rules which branch) and generate a model (which is simply a list of literals at this point).
 

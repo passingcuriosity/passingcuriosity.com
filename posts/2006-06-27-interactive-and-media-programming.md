@@ -1,9 +1,6 @@
 ---
-wordpressid: 1703
-layout: post
 title: Interactive and Media Programming
 tags: education, teaching, programming, projects
-wordpressurl: http://passingcuriosity.com/2006/interactive-and-media-programming/
 ---
 
 As I've mentioned a few times, I'm hoping to work on some materials for computer science education this semester. The gist of my current plans is a core of basic computer science material (very basic data structures and algorithms) backed up by a range of individual and small group projects. I hope to provide a wide enough range of projects to ensure that most students will find something engaging enough that they learn (even in spite of their wanting only to use the Internet).

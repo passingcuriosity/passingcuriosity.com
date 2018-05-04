@@ -1,9 +1,6 @@
 ---
-wordpressid: 1555
-layout: post
 title: Tools for reading
 tags: computers, apple, reading
-wordpressurl: http://passingcuriosity.com/2005/tools-for-reading/
 ---
 
 Since I got my iBook, I've been using [Bibdesk][1] to manage a BibTeX database

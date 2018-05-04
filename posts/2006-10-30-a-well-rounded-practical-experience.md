@@ -1,9 +1,6 @@
 ---
-wordpressid: 1543
-layout: post
 title: A well-rounded practical experience
 tags: education, teaching, practicum, planning
-wordpressurl: http://passingcuriosity.com/2006/a-well-rounded-practical-experience/
 ---
 
 I've just put in my preferences for my Professional Experience 3

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1467
-layout: post
 title: Music and the Purchase Thereof
-wordpressurl: http://passingcuriosity.com/2005/music-and-the-purchase-thereof/
 ---
 <span style="font-style: italic;"><a href="http://www.lessthanjake.com/discography/index.php?id=cd_bsides">Less Than Jake: B is for B-Sides</a>
 <a href="http://www.centralstationrec.com/detail.cfm?Searchby=Artist&RecID=2147325140">4 Strings: Believe</a></span>

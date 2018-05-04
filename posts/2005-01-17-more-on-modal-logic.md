@@ -1,9 +1,6 @@
 ---
-layout: post
 title: More on Modal Logic
 tags: books, logic
-wordpressid: 1552
-wordpressurl: http://passingcuriosity.com/2005/more-on-modal-logic/
 ---
 
 Whilst I appreciate and, I hope, understand the pedagogical value of using

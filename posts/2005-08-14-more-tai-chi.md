@@ -1,8 +1,5 @@
 ---
-wordpressid: 1497
-layout: post
 title: More Tai Chi
-wordpressurl: http://passingcuriosity.com/2005/more-tai-chi/
 ---
 For my second week of Tai Chi lessons (there are two a week), I've managed to remember the first few steps of the short version of <a href="http://en.wikipedia.org/wiki/Tai_Chi_Chuan">Tai Chi</a> (I'm not sure which style we're learning, but it might be the <span style="font-style: italic;">Combined 48 Forms</span>).
 

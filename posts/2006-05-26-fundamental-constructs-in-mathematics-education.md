@@ -1,9 +1,6 @@
 ---
-wordpressid: 1694
-layout: post
 title: Fundamental Constructs in Mathematics Education
 tags: books, maths, education
-wordpressurl: http://passingcuriosity.com/2006/fundamental-constructs-in-mathematics-education/
 ---
 
 [Fundamental Constructs in Mathematics Education][1] John Mason and Sue

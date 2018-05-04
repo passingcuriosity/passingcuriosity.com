@@ -1,9 +1,6 @@
 ---
-wordpressid: 1598
-layout: post
 title: Neil Gaiman - Stardust
 tags: books, fantasy
-wordpressurl: http://passingcuriosity.com/2005/neil-gaiman-stardust/
 ---
 
 After fighting a losing battle against procrastination this morning, I went

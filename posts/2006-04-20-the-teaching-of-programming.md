@@ -1,9 +1,6 @@
 ---
-wordpressid: 1682
-layout: post
 title: The Teaching of Programming
 tags: haskell, programming
-wordpressurl: http://passingcuriosity.com/2006/the-teaching-of-programming/
 ---
 
 Having decided that computer science isn't really my thing (I prefer it

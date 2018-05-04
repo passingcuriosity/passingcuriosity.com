@@ -1,9 +1,6 @@
 ---
-wordpressid: 1535
-layout: post
 title: Illiteracy
 tags: literacy, education, sad
-wordpressurl: http://passingcuriosity.com/2006/illiteracy/
 ---
 
 I read this comment on a story a few days ago and was appalled.

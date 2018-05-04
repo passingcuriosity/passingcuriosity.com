@@ -1,9 +1,6 @@
 ---
-wordpressid: 1623
-layout: post
 title: Vendetta (by Throwdown)
 tags: music, metal
-wordpressurl: http://passingcuriosity.com/2005/vendetta-by-throwdown/
 ---
 
 As I'm on a roll of posts about anime, books, blog-posts and the like, I've

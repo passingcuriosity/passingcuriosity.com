@@ -1,9 +1,6 @@
 ---
-wordpressid: 1542
-layout: post
 title: A Second First Lesson
 tags: education, teaching, practicum, computer, cad
-wordpressurl: http://passingcuriosity.com/2006/a-second-first-lesson/
 ---
 
 Today I took my first CAD lesson as teacher. I'd intended for the

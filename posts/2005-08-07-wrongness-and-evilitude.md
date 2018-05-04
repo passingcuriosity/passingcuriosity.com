@@ -1,8 +1,5 @@
 ---
-wordpressid: 1625
-layout: post
 title: Wrongness and Evilitude
-wordpressurl: http://passingcuriosity.com/2005/wrongness-and-evilitude/
 ---
 There are three items that have shown up on my feeds that I thought I'd post here.
 

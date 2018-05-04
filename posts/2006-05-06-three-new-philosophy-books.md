@@ -1,9 +1,6 @@
 ---
-wordpressid: 1691
-layout: post
 title: Three new philosophy books
 tags: books, logic, philosophy
-wordpressurl: http://passingcuriosity.com/2006/three-new-philosophy-books/
 ---
 
 I've just bought three new philosophy books: [Logic][1] by [Greg Restall][1-1]

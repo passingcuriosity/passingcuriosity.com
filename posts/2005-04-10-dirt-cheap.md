@@ -1,9 +1,6 @@
 ---
-wordpressid: 1580
-layout: post
 title: Dirt Cheap
 tags: books, poverty
-wordpressurl: http://passingcuriosity.com/2005/dirt-cheap/
 ---
 
 [Dirt Cheap][1] by Elisabeth Wynhausen

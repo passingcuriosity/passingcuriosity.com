@@ -1,9 +1,6 @@
 ---
-wordpressid: 1654
-layout: post
 title: Maria-sama ga Miteru Novel English Translation Project
 tags: books, translation, japanese, resolutions
-wordpressurl: http://passingcuriosity.com/2006/maria-sama-ga-miteru-novel-english-translation-project/
 ---
 
 Some of my favourite anime and manga are based on Japanese novels which can be

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1537
-layout: post
 title: The First Day of Classes
 tags: education, teaching, practicum, planning
-wordpressurl: http://passingcuriosity.com/2006/the-first-day-of-classes/
 ---
 
 Today was the second day of PE2 and the first day of classes for term

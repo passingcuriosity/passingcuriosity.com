@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Graphviz, Dot and Large Graphs
-author: Thomas Sutton
 tags: srp, logic, graph, visualisation
 location: Canberra, Australia
 excerpt: Notes on my graph visualisation project.

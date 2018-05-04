@@ -1,9 +1,6 @@
 ---
-wordpressid: 1690
-layout: post
 title: The Fun of Programming
 tags: books, haskell, programming
-wordpressurl: http://passingcuriosity.com/2006/the-fun-of-programming/
 ---
 
 My copy of [The Fun of Programming][1] edited by Jeremy Gibbons and Oege de

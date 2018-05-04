@@ -1,8 +1,5 @@
 ---
-wordpressid: 1617
-layout: post
 title: No Thru Road!
-wordpressurl: http://passingcuriosity.com/2005/no-thru-road/
 ---
 I've been playing with <a href="http://www.cse.unsw.edu.au/~dons/hs-plugins/"><code>hs-plugins</code></a>, trying to get a version of my generated propositional calculus code working as a dynamically loaded plug-in. I've run into some difficulties with the type signatures of the plug-in API, a concrete plug-in, and the plug-in user.
 

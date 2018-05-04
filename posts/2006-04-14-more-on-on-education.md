@@ -1,9 +1,6 @@
 ---
-wordpressid: 1679
-layout: post
 title: More on &quot;On Education&quot;
 tags: education, philosophy, books
-wordpressurl: http://passingcuriosity.com/2006/more-on-on-education/
 ---
 
 ![On Education](https://images.amazon.com/images/P/0415327903.01._AA240_SCLZZZZZZZ_.jpg)

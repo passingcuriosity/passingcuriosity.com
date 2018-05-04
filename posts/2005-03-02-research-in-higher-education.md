@@ -1,8 +1,5 @@
 ---
-wordpressid: 1569
-layout: post
 title: Research in Higher Education
-wordpressurl: http://passingcuriosity.com/2005/research-in-higher-education/
 ---
 <a href="http://www.theaustralian.news.com.au/sectionindex1/0,5745,aushighered%255E%255ETEXT,00.html">The Australian: Higher Education</a>
 

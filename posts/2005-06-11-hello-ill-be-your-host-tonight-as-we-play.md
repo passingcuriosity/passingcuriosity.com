@@ -1,8 +1,5 @@
 ---
-wordpressid: 1427
-layout: post
 title: Hello, I'll be your host tonight as we play...
-wordpressurl: http://passingcuriosity.com/2005/hello-ill-be-your-host-tonight-as-we-play/
 ---
 <span style="font-weight: bold;">Name that Project...</span>
 

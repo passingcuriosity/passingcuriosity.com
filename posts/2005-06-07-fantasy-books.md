@@ -1,9 +1,6 @@
 ---
-wordpressid: 1596
-layout: post
 title: Fantasy Books
 tags: books, fiction, fantasy
-wordpressurl: http://passingcuriosity.com/2005/fantasy-books/
 ---
 
 I've just started reading Traci Harding's latest book: [The Gene of Isis][1]

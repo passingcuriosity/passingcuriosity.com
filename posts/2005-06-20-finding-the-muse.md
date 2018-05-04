@@ -1,8 +1,5 @@
 ---
-wordpressid: 1602
-layout: post
 title: Finding the Muse
-wordpressurl: http://passingcuriosity.com/2005/finding-the-muse/
 ---
 <a href="http://fanfiction.portkey.org/story/3531/1">Finding the Muse</a>
 

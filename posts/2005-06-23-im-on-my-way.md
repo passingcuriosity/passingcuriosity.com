@@ -1,8 +1,5 @@
 ---
-wordpressid: 1485
-layout: post
 title: I'm on my Way...
-wordpressurl: http://passingcuriosity.com/2005/im-on-my-way/
 ---
 The mid-semester holiday starts, for me, when I submit my second report for <span style="font-style: italic;">Milestone Papers in Computing</span>, that is, tomorrow morning. Rather than spend the next few weeks in cold, wet Canberra, I'm going to wet, cold Tasmania.
 

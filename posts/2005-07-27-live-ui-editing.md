@@ -1,8 +1,5 @@
 ---
-wordpressid: 1618
-layout: post
 title: Live UI Editing
-wordpressurl: http://passingcuriosity.com/2005/live-ui-editing/
 ---
 Some language communities (CommonLisp is probably the largest, most obvious example) are used to incremental development, live updates, online bug-fixing and the many other benefits of a language with a REPL.
 

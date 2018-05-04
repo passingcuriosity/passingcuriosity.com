@@ -1,8 +1,5 @@
 ---
-wordpressid: 1455
-layout: post
 title: Relational Algebra in Haskell
-wordpressurl: http://passingcuriosity.com/2005/relational-algebra-in-haskell/
 ---
 
 I've just spoken to <a href="http://thatlogicblog.blogspot.com/">Jon</a> about the problems and ideas I have <a href="http://labelledtableaux.blogspot.com/2005/07/thoughts-on-hypergraphs.html">posted</a> about previously. One of the things I came away with is the suggestion that I might be thinking about  relational algebras (perhaps an <a href="http://en.wikipedia.org/wiki/Algebra_over_a_set">algebra over a set</a>) rather than hypergraphs. I'm not entirely sure that this is the case (the "hypergraph" Wikipedia article above seems to describe what I'm thinking of), but the "algebra over a set" article is certainly applicable as well).

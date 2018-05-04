@@ -1,9 +1,6 @@
 ---
-wordpressid: 1687
-layout: post
 title: Teachers, students & the law
 tags: books, law, education
-wordpressurl: http://passingcuriosity.com/2006/teachers-students-the-law/
 ---
 
 [1]: http://www.victorialaw.org.au/books/teachers_students_and_the_law.htm

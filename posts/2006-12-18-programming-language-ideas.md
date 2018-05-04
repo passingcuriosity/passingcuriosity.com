@@ -1,8 +1,5 @@
 ---
-wordpressid: 1402
-layout: post
 title: Programming language design ideas
-wordpressurl: http://passingcuriosity.com/2006/1402/
 ---
 This post will contain some of my musings on programming language design. At some point, my first programming language will be based on these ideas.
 

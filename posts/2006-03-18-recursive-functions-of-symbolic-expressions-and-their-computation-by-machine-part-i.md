@@ -1,8 +1,5 @@
 ---
-wordpressid: 1656
-layout: post
 title: Recursive functions of symbolic expressions and their computation by machine, Part I
-wordpressurl: http://passingcuriosity.com/2006/recursive-functions-of-symbolic-expressions-and-their-computation-by-machine-part-i/
 ---
 <a href="http://www-formal.stanford.edu/jmc/recursive.pdf">Recursive functions of symbolic expressions and their computation by machine, Part I</a> by John McCarthy.
 

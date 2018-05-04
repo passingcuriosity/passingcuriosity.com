@@ -1,8 +1,5 @@
 ---
-wordpressid: 1425
-layout: post
 title: Data Structures
-wordpressurl: http://passingcuriosity.com/2005/data-structures/
 ---
 I'm getting to the point where I'll have to start thinking about the data structures used to implement my tableaux. They need to be as small as possible and allow fast membership testing and updating. As my current goal is to accept a formula to prove and produce either a counter-model or a "yes" as output. As such, I will only ever need access to those parts of the tree on the path from the current node, to the root. The tree is, essentially, the progress of the computation backtracking over time.
 

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1443
-layout: post
 title: Thoughts on Hypergraphs
-wordpressurl: http://passingcuriosity.com/2005/thoughts-on-hypergraphs/
 ---
 <emph>I'll start this post with a disclaimer that I am a mathematically naive person and don't really know what I'm talking about.</emph>
 

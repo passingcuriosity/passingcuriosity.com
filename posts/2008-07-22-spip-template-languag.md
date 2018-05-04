@@ -1,7 +1,4 @@
 ---
-wordpressid: 139
-wordpressurl: http://passingcuriosity.com/?p=62
-layout: post
 title: The SPIP Template Language
 tags: spip, cms, template, language
 location: Perth, Western Australia

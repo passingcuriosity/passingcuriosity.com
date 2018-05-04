@@ -1,9 +1,6 @@
 ---
-wordpressid: 1558
-layout: post
 title: The Seikai Trilogy
 tags: comics, manga, anime, books
-wordpressurl: http://passingcuriosity.com/2005/the-seikai-trilogy/
 ---
 
 I made the mistake of going into [Impact Comics][4] on the way back to school

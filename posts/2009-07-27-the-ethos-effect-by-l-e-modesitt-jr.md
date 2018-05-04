@@ -1,8 +1,5 @@
 ---
-wordpressid: 1764
-layout: post
 title: The Ethos Effect by L. E. Modesitt Jr
-wordpressurl: http://passingcuriosity.com/?p=1764
 ---
 
 Feeling a bit scifi-y over the weekend, I wound up buying and reading [The

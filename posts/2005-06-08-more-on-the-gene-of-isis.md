@@ -1,9 +1,6 @@
 ---
-wordpressid: 1597
-layout: post
 title: More on The Gene of Isis
 tags: books, fantasty, review
-wordpressurl: http://passingcuriosity.com/2005/more-on-the-gene-of-isis/
 ---
 
 Yesterday, I [began reading][1] [The Gene of Isis][2] by Traci Harding. I've

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1512
-layout: post
 title: Teacher Identity
-wordpressurl: http://passingcuriosity.com/2006/teacher-identity/
 ---
 This morning's professional studies lecture was about teacher identity. <a href="http://fcms.its.utas.edu.au/educ/educ/pagedetails.asp?lpersonId=2601">Dr. Cole</a> covered a number of topics beginning with the question: "What is a teacher?" He contrasted the rather anachronistic view of the teacher as authority and disciplinarian whose primary relationship with students is one of power (he drew parallels to similar relationships between Britain and the rest of the Empire) with a stereotype of the "progressive" teacher who is full of enthusiasm, a drive to change the world and is soon run down by the relentless grind. He then described a more realistic view of the teacher as a (small) part of the educational institution: a system whose structure, goals and values are fixed and within which we must work.
 

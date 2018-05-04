@@ -1,9 +1,6 @@
 ---
-wordpressid: 1595
-layout: post
 title: Science Fiction...
 tags: books, science fiction, fiction
-wordpressurl: http://passingcuriosity.com/2005/science-fiction/
 ---
 
 A while back, I bought a novel on impulse (it was cheap). To my surprise (and

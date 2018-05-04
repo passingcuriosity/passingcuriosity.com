@@ -1,8 +1,5 @@
 ---
-wordpressid: 1626
-layout: post
 title: A Humanities Kick...
-wordpressurl: http://passingcuriosity.com/2005/a-humanities-kick/
 ---
 
 <!-- TODO -->

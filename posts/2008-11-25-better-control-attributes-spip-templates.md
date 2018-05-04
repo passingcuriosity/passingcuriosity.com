@@ -1,7 +1,4 @@
 ---
-wordpressid: 325
-wordpressurl: http://passingcuriosity.com/?p=325
-layout: post
 title: A better way to control attributes in SPIP templates
 tags: spip, php, code, html, attributes
 location: Perth, Western Australia

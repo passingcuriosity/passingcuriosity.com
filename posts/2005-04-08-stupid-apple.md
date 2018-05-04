@@ -1,9 +1,6 @@
 ---
-wordpressid: 1472
-layout: post
 title: Stupid Apple!
 tags: techonology, apple
-wordpressurl: http://passingcuriosity.com/2005/stupid-apple/
 ---
 
 As much as I love my iBook, want a iMac and find my iPod handy, I hate Apple.

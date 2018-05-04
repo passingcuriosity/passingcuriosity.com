@@ -1,9 +1,6 @@
 ---
-wordpressid: 1525
-layout: post
 title: "Wanted: LaTeX packages"
 tags: LaTeX, wishlist
-wordpressurl: http://passingcuriosity.com/2006/wanted-latex-packages/
 ---
 
 I've got a hankering to dig out my incomplete thesis and polish it off as an

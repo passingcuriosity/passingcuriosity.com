@@ -1,9 +1,6 @@
 ---
-wordpressid: 1538
-layout: post
 title: My First Lesson
 tags: education, teaching, practicum, science
-wordpressurl: http://passingcuriosity.com/2006/my-first-lesson/
 ---
 
 I taught my first lesson of PE2 in a year ten science class today. Last

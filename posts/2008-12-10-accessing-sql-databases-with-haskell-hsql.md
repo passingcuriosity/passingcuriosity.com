@@ -1,9 +1,6 @@
 ---
-wordpressid: 389
-layout: post
 title: Accessing SQL databases with Haskell -- HSQL
 tags: howto, haskell, database
-wordpressurl: http://passingcuriosity.com/?p=389
 ---
 
 (Or "Connecting to SQL databases with Haskell" as per DoeL's suggestion, it was

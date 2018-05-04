@@ -1,9 +1,6 @@
 ---
-wordpressid: 1448
-layout: post
 title: Stupidity or How Dumb Can I Get
 tags: haskell, plugins
-wordpressurl: http://passingcuriosity.com/2005/stupidity-or-how-dumb-can-i-get/
 ---
 
 I've just been trying to install <a

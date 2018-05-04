@@ -1,9 +1,6 @@
 ---
-wordpressid: 1698
-layout: post
 title: David and Leigh Eddings
 tags: books, reading, fantasy
-wordpressurl: http://passingcuriosity.com/2006/david-and-leigh-eddings/
 ---
 
 I've just begun rereading that masterpiece of epic fantasy, David and Leigh

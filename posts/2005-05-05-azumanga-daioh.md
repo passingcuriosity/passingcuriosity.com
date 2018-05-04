@@ -1,9 +1,6 @@
 ---
-wordpressid: 1587
-layout: post
 title: Azumanga Daioh
 tags: manga, comics, anime
-wordpressurl: http://passingcuriosity.com/2005/azumanga-daioh/
 ---
 
 I got the first volume of ADV Manga's translation of [Azumanga Daioh][1] today

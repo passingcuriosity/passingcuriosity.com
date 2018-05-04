@@ -1,9 +1,6 @@
 ---
-wordpressid: 1666
-layout: post
 title: Gold Falcon
 tags: books, fantasy
-wordpressurl: http://passingcuriosity.com/2006/gold-falcon/
 ---
 
 I saw a little display in <a href="http://birchalls.com.au/">Birchall's</a>

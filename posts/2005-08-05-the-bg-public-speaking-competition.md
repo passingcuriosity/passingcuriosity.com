@@ -1,8 +1,5 @@
 ---
-wordpressid: 1495
-layout: post
 title: The B&amp;G Public Speaking Competition
-wordpressurl: http://passingcuriosity.com/2005/the-bg-public-speaking-competition/
 ---
 I've just watched the annual <a href="http://bandg.anu.edu.au/">Burton and Garran Hall</a> public speaking competition. There were eight speakers who each had seven minutes to make their point, whatsoever it was, in-front of an audience of their peers and a panel of three judges. What follows is my recollection of the speakers most important (from my perspective) points.
 

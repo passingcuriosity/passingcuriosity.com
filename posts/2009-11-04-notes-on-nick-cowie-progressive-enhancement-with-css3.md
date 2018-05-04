@@ -1,6 +1,4 @@
 ---
-wordpressid: 2120
-layout: post
 title: Nick Cowie's talk on Progressive Enhancement with CSS3
 excerpt: 
   My notes on Nick Cowie's talk "Progressive Enhancement with CSS3" at 

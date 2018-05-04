@@ -1,9 +1,6 @@
 ---
-wordpressid: 1549
-layout: post
 title: The Code Book (Simon Singh)
 tags: books, cryptography, popular science
-wordpressurl: http://passingcuriosity.com/2005/the-code-book-simon-singh/
 ---
 
 

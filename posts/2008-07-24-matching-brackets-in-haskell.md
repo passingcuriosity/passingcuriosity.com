@@ -1,8 +1,5 @@
 ---
-wordpressid: 155
-layout: post
 title: Matching Brackets in Haskell
-wordpressurl: http://passingcuriosity.com/?p=78
 ---
 
 I have no idea where I came across the link (someone's solution in

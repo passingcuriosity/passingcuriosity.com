@@ -1,8 +1,5 @@
 ---
-wordpressid: 1437
-layout: post
 title: Parsing and Patterns
-wordpressurl: http://passingcuriosity.com/2005/parsing-and-patterns/
 location: Launceston, Tasmania
 ---
 

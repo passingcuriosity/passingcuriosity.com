@@ -1,7 +1,4 @@
 ---
-wordpressid: 2038
-wordpressurl: http://passingcuriosity.com/?p=2038
-layout: post
 title: UML Statecharts meeting in Perth
 tags: meetup, event, uml, states
 ---

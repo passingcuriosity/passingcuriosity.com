@@ -1,9 +1,6 @@
 ---
-wordpressid: 1647
-layout: post
 title: Cross-National Correlations of Quantifiable Societal Health with Popular Religiosity and Secularism in the Prosperous Democracies
 tags: reading, papers, religion, humanities
-wordpressurl: http://passingcuriosity.com/2006/cross-national-correlations-of-quantifiable-societal-health-with-popular-religiosity-and-secularism-in-the-prosperous-democracies/
 ---
 
 [Cross-National Correlations of Quantifiable Societal Health with Popular

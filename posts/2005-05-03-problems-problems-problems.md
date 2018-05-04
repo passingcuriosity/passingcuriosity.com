@@ -1,8 +1,5 @@
 ---
-wordpressid: 1475
-layout: post
 title: Problems, problems, problems...
-wordpressurl: http://passingcuriosity.com/2005/problems-problems-problems/
 ---
 I had a meeting with my supervisor today and thought that I'd better raise some of the issues I've been having. Basically, what it all boils down to is motivation, or rather a lack there of. If one took all of the time I've spent working on my honours project, my coursework and attending lectures, labs and tutorials over the last 2 months or so, it would not amount to a full week.
 

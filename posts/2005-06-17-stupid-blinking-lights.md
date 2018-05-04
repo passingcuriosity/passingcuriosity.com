@@ -1,8 +1,5 @@
 ---
-wordpressid: 1484
-layout: post
 title: Stupid Blinking Lights
-wordpressurl: http://passingcuriosity.com/2005/stupid-blinking-lights/
 ---
 I have never liked strobing lights. From flashing on the TV screen, to lights at clubs, flashing lights make me uncomfortable. I doubt that it is <a href="http://en.wikipedia.org/wiki/Photosensitive_epilepsy">photosensitive epilepsy</a>.
 

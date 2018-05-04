@@ -1,9 +1,6 @@
 ---
-wordpressid: 1533
-layout: post
 title: Internet language resources for the win!
 tags: internet, online, language, learning, podcasts
-wordpressurl: http://passingcuriosity.com/2006/internet-language-resources-for-the-win/
 ---
 
 I've been thinking about trying to learn another language for a while now. I'd

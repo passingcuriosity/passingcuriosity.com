@@ -1,7 +1,4 @@
 ---
-wordpressid: 394
-wordpressurl: http://passingcuriosity.com/?p=394
-layout: post
 title: Literate Haskell with Markdown and Syntax Highlighting
 tags: haskell, literate programming, markdown, syntax, pandoc, latex
 location: Perth, Western Australia

@@ -1,8 +1,5 @@
 ---
-layout: post
 title: Adding LaTeX output to HsColour
-wordpressid: 1409
-wordpressurl: http://passingcuriosity.com/2007/1409/
 ---
 
 My patch adding [LaTeX](http://www.latex-project.org/) output to

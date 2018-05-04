@@ -1,8 +1,5 @@
 ---
-wordpressid: 1661
-layout: post
 title: Essential Language Support for Generic Programming
-wordpressurl: http://passingcuriosity.com/2006/essential-language-support-for-generic-programming/
 ---
 
 <a class="title" href="http://www.osl.iu.edu/publications/prints/2005/siek05:_fg_pldi.pdf">Essential Language Support for Generic Programming</a> by Jeremy Siek and Andrew Lumsdaine.

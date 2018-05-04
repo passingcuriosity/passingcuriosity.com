@@ -1,8 +1,5 @@
 ---
-wordpressid: 1977
-layout: post
 title: "HAgg: a Haskell FastCGI application (in development)"
-wordpressurl: http://passingcuriosity.com/?p=1977
 ---
 
 I've had just about as much of PHP as I can take. I distrust the

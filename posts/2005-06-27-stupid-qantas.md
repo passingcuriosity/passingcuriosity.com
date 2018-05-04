@@ -1,9 +1,6 @@
 ---
-wordpressid: 1486
-layout: post
 title: Stupid QANTAS
 tags: life, flying, travel
-wordpressurl: http://passingcuriosity.com/2005/stupid-qantas/
 ---
 
 I've been flying with <a href="http://www.virginblue.com.au/">Virgin Blue</a>

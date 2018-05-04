@@ -1,5 +1,4 @@
 ---
-adverts: display
 title: Using Dnsmasq for local development on OS X
 tags: dns, howto, dnsmasq, local, development
 location: Sydney, New South Wales

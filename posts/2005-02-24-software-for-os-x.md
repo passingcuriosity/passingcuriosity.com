@@ -1,9 +1,6 @@
 ---
-wordpressid: 1564
-layout: post
 title: Software for OS X
 tags: software
-wordpressurl: http://passingcuriosity.com/2005/software-for-os-x/
 ---
 <a href="http://mac.sofotex.com/download-125128.html">GNUPlot</a> (needs <a href="http://aquaterm.sf.net/">AquaTerm</a>)
 <a href="http://caml.inria.fr/ocaml/distrib.html">O'Caml</a>

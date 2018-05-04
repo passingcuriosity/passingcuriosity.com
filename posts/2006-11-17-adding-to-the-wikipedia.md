@@ -1,8 +1,5 @@
 ---
-wordpressid: 1711
-layout: post
 title: Adding to the Wikipedia
-wordpressurl: http://passingcuriosity.com/2006/adding-to-the-wikipedia/
 ---
 
 I've just added my first real contribution to the

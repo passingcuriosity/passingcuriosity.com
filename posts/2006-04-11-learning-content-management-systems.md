@@ -1,8 +1,5 @@
 ---
-wordpressid: 1676
-layout: post
 title: Learning Content Management Systems
-wordpressurl: http://passingcuriosity.com/2006/learning-content-management-systems/
 ---
 <a href="http://www.dotlrn.org/"><acronym>.LRN</acronym></a> -- a free software educational content management system based on the <a href="http://openacs.org/">OpenACS</a> platform. Quite difficult to get installed (a task that I have not yet managed to complete).
 

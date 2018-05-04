@@ -1,7 +1,4 @@
 ---
-wordpressid: 249
-wordpressurl: http://passingcuriosity.com/?p=249
-layout: post
 title: Creating custom tags for SPIP - Static tags
 tags: spip, php, code, template, tags
 location: Perth, Western Australia

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1557
-layout: post
 title: "Kripke: Names, necessity, and identity"
 tags: books, logic, philosophy
-wordpressurl: http://passingcuriosity.com/2005/kripke-names-necessity-and-identity/
 ---
 
 [Kripke: Names, necessity, and identity][1]

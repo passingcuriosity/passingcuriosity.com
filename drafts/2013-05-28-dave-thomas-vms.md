@@ -1,7 +1,6 @@
 ---
 title: Dave Thomas on VMs
-categories: virtual machines, software engineering
-tags: java, jvm, 
+tags: java, jvm, virtual machines, software engineering
 location: Sydney, New South Wales
 excerpt: 
   Dave Thomas gave a talk about virtual machines.

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1678
-layout: post
 title: Appleseed
-wordpressurl: http://passingcuriosity.com/2006/appleseed/
 ---
 I bought Madman Entertainment's <a href="http://www.madman.com.au/actions/catalogue.do?releaseId=4819&method=view">special edition</a> DVD of <a href="http://appleseedthemovie.com/">Appleseed</a> today and I've just finished watching it. The art is absolutely beautiful &mdash; equalling, if not surpassing, <span class="title">Ghost in the Shell: Stand Alone Complex</span> which is the current top of my ooooh-pretty-shiny-art list. 
 

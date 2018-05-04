@@ -1,8 +1,5 @@
 ---
-wordpressid: 1575
-layout: post
 title: Project Description and Literature Review
-wordpressurl: http://passingcuriosity.com/2005/project-description-and-literature-review/
 ---
 We've passed the first milestone in the Honours program: project descriptions and literature reviews were due today. I'm fairly happy with mine. The literature review proper could have been improved, but I'm really happy with the background sections.
 

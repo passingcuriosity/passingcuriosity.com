@@ -1,9 +1,6 @@
 ---
-wordpressid: 1563
-layout: post
 title: On (or rather next to) my iPod
 tags: apple
-wordpressurl: http://passingcuriosity.com/2005/on-or-rather-next-to-my-ipod/
 ---
 
 [iPod Note Reader User Guide (PDF)][1]

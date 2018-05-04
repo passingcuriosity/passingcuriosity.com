@@ -1,9 +1,6 @@
 ---
-wordpressid: 1453
-layout: post
 title: Annoyances of the Feature Kind
 tags: haskell, functional programming, data structures
-wordpressurl: http://passingcuriosity.com/2005/annoyances-of-the-feature-kind/
 ---
 
 Yesterday, I finally sat down and wrote a priority queue (a [heap][1] to those

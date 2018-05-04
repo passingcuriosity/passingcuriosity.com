@@ -1,9 +1,6 @@
 ---
-wordpressid: 1588
-layout: post
 title: The Cost of Dead Trees
 tags: books, costs
-wordpressurl: http://passingcuriosity.com/2005/the-cost-of-dead-trees/
 ---
 
 I've just been reading a bit of [Concepts, Techniques and Models of Computer

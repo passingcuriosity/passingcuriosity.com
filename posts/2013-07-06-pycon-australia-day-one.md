@@ -1,8 +1,6 @@
 ---
-layout: post
 title: PyCon Australia 2013, Day One
 tags: event, python, conference, engineering, packaging, security, testing, performance, procrastination
-toc: display
 location: Hobart, Tasmania
 excerpt: 
   These are my notes from day one of PyCon Australia 2013 in Hobart, Tasmania.

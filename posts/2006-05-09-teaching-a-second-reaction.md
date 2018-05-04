@@ -1,9 +1,6 @@
 ---
-wordpressid: 1521
-layout: post
 title: Teaching; A Second Reaction
 tags: education, teaching, practicum
-wordpressurl: http://passingcuriosity.com/2006/teaching-a-second-reaction/
 ---
 
 My second day of teaching went quite a bit better than the first. I

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Providing default settings for Django applications
 tags: programming, python, django, application, settings
 location: Perth, Western Australia

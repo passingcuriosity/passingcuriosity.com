@@ -1,8 +1,5 @@
 ---
-wordpressid: 1397
-layout: post
 title: The Joys of Working Code
-wordpressurl: http://passingcuriosity.com/2005/the-joys-of-working-code/
 ---
 
 I've discovered that the `AffineTransform` support in **prefuse** appears to

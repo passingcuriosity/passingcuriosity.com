@@ -1,9 +1,6 @@
 ---
-wordpressid: 1464
-layout: post
 title: Orientation and O-Week
 tags: university
-wordpressurl: http://passingcuriosity.com/2005/orientation-and-o-week/
 ---
 
 The SRs and the B&G Members Association and Co seem to be gearing up for O-Week. As I write they are busy painting signs about the weeks events, decorating their floors and buildings, and what have you.

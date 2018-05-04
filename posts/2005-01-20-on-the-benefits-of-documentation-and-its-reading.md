@@ -1,8 +1,5 @@
 ---
-wordpressid: 1395
-layout: post
 title: On the Benefits of Documentation and Its Reading
-wordpressurl: http://passingcuriosity.com/2005/on-the-benefits-of-documentation-and-its-reading/
 ---
 
 I am stupid. That is the only possible explanation for the way I've wasted

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1513
-layout: post
 title: Professional Studies Tutorial 1
-wordpressurl: http://passingcuriosity.com/2006/professional-studies-tutorial-1/
 ---
 In our first professional studies tutorial, we formed our Professional Learning Teams. The purpose of these teams is to give us a small group (a total of five people) with whom to discuss what happens during our school placements.
 

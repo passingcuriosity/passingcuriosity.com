@@ -1,8 +1,5 @@
 ---
-wordpressid: 1866
-layout: post
 title: AES encryption in Python with M2Crypto
-wordpressurl: http://passingcuriosity.com/?p=1866
 tags: python, openssl, development, aes, encryption
 excerpt: 
   Using the M2Crypto Python library to perform AES encryption.

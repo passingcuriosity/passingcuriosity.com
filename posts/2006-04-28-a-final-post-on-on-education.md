@@ -1,9 +1,6 @@
 ---
-wordpressid: 1686
-layout: post
 title: A Final Post On 'On Education'
 tags: books, education, philosophy
-wordpressurl: http://passingcuriosity.com/2006/a-final-post-on-on-education/
 ---
 
 I've just finished [reading On Education][1] by Harry Brighouse. It is, without

@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Tweaking the configuration of cabal-dev 
-categories: [haskell]
 tags: haskell, cabal-dev, sandbox, configuration
 location: Perth, Western Australia
 excerpt: 

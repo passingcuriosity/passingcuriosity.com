@@ -1,9 +1,6 @@
 ---
-wordpressid: 1635
-layout: post
 title: The Evangelical Atheist - God is a Dick
 tags: atheism
-wordpressurl: http://passingcuriosity.com/2005/the-evangelical-atheist-god-is-a-dick/
 ---
 
 [The Evangelical Atheist - God is a Dick](http://evangelicalatheist.com/category/god-is-a-dick/)

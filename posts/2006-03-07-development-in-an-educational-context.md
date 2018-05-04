@@ -1,8 +1,5 @@
 ---
-wordpressid: 1514
-layout: post
 title: Development in an Educational Context
-wordpressurl: http://passingcuriosity.com/2006/development-in-an-educational-context/
 ---
 This afternoon (though I'm posting this the day after) we had <a href="http://fcms.its.utas.edu.au/educ/educ/pagedetails.asp?lpersonId=1652">Dr. Marion Myhill</a> give a lecture on development in an educational context, the first lecture in the developmental strand of professional studies.
 

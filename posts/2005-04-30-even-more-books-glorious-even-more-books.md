@@ -1,9 +1,6 @@
 ---
-wordpressid: 1585
-layout: post
 title: "[Even More] Books, Glorious [Even More] Books"
 tags: books, comics
-wordpressurl: http://passingcuriosity.com/2005/even-more-books-glorious-even-more-books/
 ---
 
 I picked up [Practical Common Lisp][pcl] from the Co-op Bookshop yesterday.

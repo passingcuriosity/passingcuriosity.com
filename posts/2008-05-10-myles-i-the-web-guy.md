@@ -1,10 +1,6 @@
 ---
-wordpressid: 1063
-wordpressurl: http://barcamp2.wordpress.com/?p=10
-layout: post
 title: Myles-i the web guy
-tags: event, bcperth09
-categories: [barcamp]
+tags: event, barcamp, bcperth09
 location: Perth, Western Australia
 excerpt: 
   Notes from a question and answer session with Myles Eftos at Barcamp Perth

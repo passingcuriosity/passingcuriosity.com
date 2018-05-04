@@ -1,8 +1,5 @@
 ---
-wordpressid: 1646
-layout: post
 title: "Finger Trees: A Simple General-purpose Data Structure"
-wordpressurl: http://passingcuriosity.com/2006/finger-trees-a-simple-general-purpose-data-structure/
 ---
 
 <a href="http://www.soi.city.ac.uk/~ross/papers/FingerTree.html" title="Finger Trees: A Simple General-purpose Data Structure" class="title">Finger Trees: A Simple General-purpose Data Structure</a> by Ralf Hinze and Ross Paterson.

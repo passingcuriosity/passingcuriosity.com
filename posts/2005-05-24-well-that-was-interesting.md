@@ -1,8 +1,5 @@
 ---
-wordpressid: 1480
-layout: post
 title: Well that was interesting...
-wordpressurl: http://passingcuriosity.com/2005/well-that-was-interesting/
 ---
 I've just been poking at my iPod mini's innards (in the software sense) and had a bit of a scare. It started when my quitting iTunes somehow managed to knacker something or other causing iTunes to crash on start-up, without fail. After a few attempts to fix it (including nuking my playlists, damn it!), I unplugged my iPod, and iTunes started working again.
 

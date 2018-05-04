@@ -1,8 +1,5 @@
 ---
-wordpressid: 1466
-layout: post
 title: "Laundry: The Bane of Existence"
-wordpressurl: http://passingcuriosity.com/2005/laundry-the-bane-of-existence/
 ---
 
 I've come to a realisation: doing laundry is the bane of all that is good and

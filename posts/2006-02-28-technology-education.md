@@ -1,8 +1,5 @@
 ---
-wordpressid: 1509
-layout: post
 title: Technology Education
-wordpressurl: http://passingcuriosity.com/2006/technology-education/
 ---
 
 <a href="http://www.utas.edu.au/units/ESA184">ESA184 - Technology Education

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1559
-layout: post
 title: More on the Seikai Trilogy
 tags: comics, manga
-wordpressurl: http://passingcuriosity.com/2005/more-on-the-seikai-trilogy/
 ---
 
 I've just read/skimmed [Crest of the Stars][1] and [Banner of Stars I][2] and

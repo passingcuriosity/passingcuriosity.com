@@ -1,8 +1,5 @@
 ---
-wordpressid: 1451
-layout: post
 title: RSChem is Burning Down, Burning Down, Burning Down...
-wordpressurl: http://passingcuriosity.com/2005/rschem-is-burning-down-burning-down-burning-down/
 excerpt: 
   There was a fire at the Research School of Chemistry.
 ---

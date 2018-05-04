@@ -1,9 +1,6 @@
 ---
-wordpressid: 1573
-layout: post
 title: Animal Farm
 tags: books, orwell, fiction
-wordpressurl: http://passingcuriosity.com/2005/animal-farm/
 ---
 
 [*Animal Farm* by George Orwell][1]

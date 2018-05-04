@@ -1,8 +1,5 @@
 ---
-wordpressid: 1482
-layout: post
 title: Spam - The Other Pink Gelatinous Substance
-wordpressurl: http://passingcuriosity.com/2005/spam-the-other-pink-gelatinous-substance/
 ---
 I just received a spam (regarding lifestyle medication) with the following as its filter-avoidance random text...
 <blockquote>I like the word 'indolence.' it makes my laziness seem classy.

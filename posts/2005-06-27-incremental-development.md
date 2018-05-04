@@ -1,8 +1,5 @@
 ---
-wordpressid: 1434
-layout: post
 title: Incremental Development
-wordpressurl: http://passingcuriosity.com/2005/incremental-development/
 ---
 Incremental development is fun. I've just added support for branching as required to implement the disjunction and implication rules of my propositional calculus and it's been quite interesting to see just how easy a functional programming language makes with sort of exploratory approach to design and development.
 

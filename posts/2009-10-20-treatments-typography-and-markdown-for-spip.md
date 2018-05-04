@@ -1,9 +1,7 @@
 ---
-wordpressid: 83
-layout: post
 title: Treatments, Typography, and Markdown for SPIP
-wordpressurl: http://passingcuriosity.com/?p=144
-categories: [php, spip]
+location: Perth, Western Australia
+tags: php, spip
 excerpt: 
   A quick and rather hackish way to replace SPIP's built-in text
   markup format with Markdown.

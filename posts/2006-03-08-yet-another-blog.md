@@ -1,8 +1,5 @@
 ---
-wordpressid: 1515
-layout: post
 title: Yet Another Blog
-wordpressurl: http://passingcuriosity.com/2006/yet-another-blog/
 ---
 I've just started yet another blog: <a href="http://thsutton.wordpress.com/">The Education of an Educator</a>. As the title might suggest, this new blog will focus on the classes, discussions, readings and experiences I have during my training as a teacher. All of the relevant posts I've made here are already posted there, as is some new material, so go and have a look.
 

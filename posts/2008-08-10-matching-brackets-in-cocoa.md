@@ -1,7 +1,4 @@
 ---
-wordpressid: 194
-wordpressurl: http://passingcuriosity.com/?p=96
-layout: post
 title: Matching Brackets in Cocoa
 tags: cocoa, objective c
 location: Perth, Western Australia

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1470
-layout: post
 title: Past the First Post
-wordpressurl: http://passingcuriosity.com/2005/past-the-first-post/
 ---
 Well, I'm past the first post (even if I'm not the first past it): my project description and literature review has been submitted to the Honours convenor. If anyone is interested in reading about counter-model construction in the context of modal tableau systems, leave a comment and I'll post a PDF of it.
 

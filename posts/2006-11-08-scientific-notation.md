@@ -1,8 +1,5 @@
 ---
-wordpressid: 1418
-layout: post
 title: Scientific Notation
-wordpressurl: http://passingcuriosity.com/2006/scientific-notation/
 ---
 
 As the talk of 'prefixes' in the previous post on

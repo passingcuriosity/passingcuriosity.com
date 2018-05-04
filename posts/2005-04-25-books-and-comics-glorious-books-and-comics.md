@@ -1,9 +1,6 @@
 ---
-wordpressid: 1583
-layout: post
 title: Books (and Comics), Glorious Books (and Comics)
 tags: books, comics, manga
-wordpressurl: http://passingcuriosity.com/2005/books-and-comics-glorious-books-and-comics/
 ---
 
 I've just got back from Tasmania (visiting my family and friends). With me,

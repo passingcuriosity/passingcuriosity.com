@@ -1,8 +1,5 @@
 ---
-wordpressid: 1629
-layout: post
 title: The Existance of Time
-wordpressurl: http://passingcuriosity.com/2005/the-existance-of-time/
 ---
 A while ago, I watched the <a href="http://interestingexperience.blogspot.com/2005/08/bg-public-speaking-competition.html">annual Burton and Garran Hall public speaking competition</a>. One of the speakers presented an argument that "the structure and perception of time are invalid." This post will describe the argument made (in more or less broad strokes as suit my purposes) and some objections to it.
 

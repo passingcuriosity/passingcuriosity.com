@@ -1,8 +1,5 @@
 ---
-wordpressid: 1553
-layout: post
 title: Thoughts on a Programming Language
-wordpressurl: http://passingcuriosity.com/2005/thoughts-on-a-programming-language/
 ---
 
 I've been thinking for quite a while now, that I'd like to have a go at

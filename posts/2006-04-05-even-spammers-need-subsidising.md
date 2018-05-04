@@ -1,8 +1,5 @@
 ---
-wordpressid: 1518
-layout: post
 title: Even Spammers Need Subsidising
-wordpressurl: http://passingcuriosity.com/2006/even-spammers-need-subsidising/
 ---
 
 ![](https://photos1.blogger.com/blogger/5615/352/320/spam.jpg)

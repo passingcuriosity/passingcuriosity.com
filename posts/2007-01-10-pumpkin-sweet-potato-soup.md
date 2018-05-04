@@ -1,9 +1,6 @@
 ---
-wordpressid: 1412
-layout: post
 title: Pumpkin and sweet potato soup
 tags: cooking, recipe
-wordpressurl: http://passingcuriosity.com/2007/1412/
 ---
 
 I made a soup based on the [Spiced Pumpkin Soup][1] and [Pumpkin Soup][2]

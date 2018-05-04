@@ -1,8 +1,5 @@
 ---
-wordpressid: 1624
-layout: post
 title: Bond (the string quartet, not the spy)
-wordpressurl: http://passingcuriosity.com/2005/bond-the-string-quartet-not-the-spy/
 ---
 I've just watched the <a href="http://www.bondmusic.net/discdvd.html">DVD</a> of <a href="http://www.bondmusic.net/">Bond</a> live at the Royal Albert Hall (which I bought on special at <a href="http://www.jbhifi.com.au">JB Hi-Fi</a> in Canberra). I normally don't like recordings of concerts and this DVD demonstrates most of the reasons.
 

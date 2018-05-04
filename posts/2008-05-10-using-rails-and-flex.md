@@ -1,10 +1,6 @@
 ---
-wordpressid: 3
-wordpressurl: http://barcamp2.wordpress.com/?p=3
-layout: post
 title: Using Rails and Flex
-tags: bcperth09
-categories: [barcamp]
+tags: bcperth09, events, barcamp
 location: Perth, Western Australia
 excerpt: 
   Notes from a talk on Using Rails and Flex at Barcamp Perth 2009.

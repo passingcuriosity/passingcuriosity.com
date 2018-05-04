@@ -1,8 +1,5 @@
 ---
-wordpressid: 1479
-layout: post
 title: Work for Idle Hands
-wordpressurl: http://passingcuriosity.com/2005/work-for-idle-hands/
 ---
 After a meeting with my supervisor, I've decided that this week is the last straw - if I can't manage to get a handle on my pile of assignments this week, then I obviously don't want to be here right now. I had a bit of a go at some of it last night and seemed to get on all right.
 

@@ -1,8 +1,5 @@
 ---
-layout: post
 title: Colouring Inside the Box
-wordpressid: 1394
-wordpressurl: http://passingcuriosity.com/2005/colouring-inside-the-box/
 ---
 
 [SET012-demo.png (PNG Image, 2551x284 pixels)](/matrix/developing/SET012-demo.png)

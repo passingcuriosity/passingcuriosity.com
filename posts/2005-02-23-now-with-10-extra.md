@@ -1,9 +1,6 @@
 ---
-wordpressid: 1465
-layout: post
 title: Now with 10 percent extra!
 tags: university
-wordpressurl: http://passingcuriosity.com/2005/now-with-10-extra/
 ---
 
 So my first week of classes as an Honours student is well underway and I can't

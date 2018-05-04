@@ -1,8 +1,5 @@
 ---
-wordpressid: 1449
-layout: post
 title: Presentations...
-wordpressurl: http://passingcuriosity.com/2005/presentations/
 ---
 I have to give my mid-term seminar tomorrow afternoon and I'm getting rather nervous about it.
 

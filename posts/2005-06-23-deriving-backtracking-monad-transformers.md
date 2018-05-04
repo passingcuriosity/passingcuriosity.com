@@ -1,8 +1,5 @@
 ---
-wordpressid: 1607
-layout: post
 title: Deriving Backtracking Monad Transformers
-wordpressurl: http://passingcuriosity.com/2005/deriving-backtracking-monad-transformers/
 ---
 I started reading <a href="http://portal.acm.org/citation.cfm?id=351258">Deriving Backtracking Monad Transformers</a>, by Ralf Hinze, this afternoon (or, rather, yesterday afternoon). It's <a href="http://labelledtableaux.blogspot.com/2005/06/polymorphism-and-generality-redux-or.html">already</a> been valuable, though that was more of a side effect.
 

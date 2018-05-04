@@ -1,9 +1,6 @@
 ---
-wordpressid: 1701
-layout: post
 title: Classical-y Music
 tags: music, classical, opera, musicals
-wordpressurl: http://passingcuriosity.com/2006/classical-y-music/
 ---
 
 I've been looking around on <a href="http://www.apple.com/itunes/">iTunes</a> Music Store today and managed to spend more than $20, mainly on classical-y songs.

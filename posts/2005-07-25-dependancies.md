@@ -1,8 +1,5 @@
 ---
-wordpressid: 1447
-layout: post
 title: Dependancies...
-wordpressurl: http://passingcuriosity.com/2005/dependancies/
 ---
 I'm currently experimenting with <a href="http://www.cse.unsw.edu.au/~dons/hs-plugins/">hs-plugins</a>, a library which supports dynamically loading plugins in Haskell. Or, rather, I would be if I could manage to sort out the various hassles I'm encountering in installing it. 
 

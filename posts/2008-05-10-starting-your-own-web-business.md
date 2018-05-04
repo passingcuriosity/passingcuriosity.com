@@ -1,10 +1,6 @@
 ---
-wordpressid: 5
-wordpressurl: http://barcamp2.wordpress.com/?p=5
-layout: post
 title: Starting your own web-business
-tags: bcperth09
-categories: [barcamp]
+tags: barcamp, events, bcperth09
 location: Perth, Western Australia
 excerpt: 
   Notes from a Barcamp Perth 3.0 talk on starting your own web business by

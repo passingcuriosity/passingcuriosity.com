@@ -1,8 +1,5 @@
 ---
-wordpressid: 1442
-layout: post
 title: Literate Haskell
-wordpressurl: http://passingcuriosity.com/2005/literate-haskell/
 ---
 Last night I spent a while wrestling with latex, vim, make and ghc as part of my source-code reorganisation. One of the things I've been wanting for quite a while, is a vim syntax highlighting mode that understands the LaTeX literate Haskell syntax and displays both the Haskell code and the LaTeX code properly. Last night, I finally got it to work, though it has taken a bit of hackery in my Haskell files: I need to have a comment in every file so that the highlighter can detect the LaTeX.
 

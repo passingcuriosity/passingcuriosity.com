@@ -1,8 +1,5 @@
 ---
-wordpressid: 1426
-layout: post
 title: Polymorphism and Generality
-wordpressurl: http://passingcuriosity.com/2005/polymorphism-and-generality/
 ---
 One of the main goals of this project, to my mind at least, is generality. The prover must be easily extendable with support for a wide range (ideally, the entire range) of labelled tableaux calculi. Furthermore, it ought to be possible to define new logics as extensions to existing logics: propositional modal logic, for example, is an extension of the propositional calculus to support two new operators: &#9671; and &#9633;.
 

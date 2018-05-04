@@ -1,9 +1,6 @@
 ---
-wordpressid: 1609
-layout: post
 title: A4 paper format / International standard paper sizes
 tags: standards, iso, paper
-wordpressurl: http://passingcuriosity.com/2005/a4-paper-format-international-standard-paper-sizes/
 ---
 
 [A4 paper format / International standard paper sizes][1] by Markus Kuhn.

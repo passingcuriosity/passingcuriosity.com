@@ -1,9 +1,6 @@
 ---
-wordpressid: 1540
-layout: post
 title: A Week Accompli
 tags: education, teaching, practicum, cad
-wordpressurl: http://passingcuriosity.com/2006/a-week-accompli/
 ---
 
 The last day of my first week began with the IT class talking about

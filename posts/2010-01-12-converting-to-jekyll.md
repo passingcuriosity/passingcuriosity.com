@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Converting to Jekyll
 tags: blog, meta, jekyll
 location: Perth, Western Australia

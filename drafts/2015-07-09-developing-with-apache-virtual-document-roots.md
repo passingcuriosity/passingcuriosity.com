@@ -1,5 +1,4 @@
 ---
-adverts: display
 title: Using Apache Virtual Document Roots for local development on OS X
 tags: howto, dns, http, apache, local, development
 location: Sydney, New South Wales

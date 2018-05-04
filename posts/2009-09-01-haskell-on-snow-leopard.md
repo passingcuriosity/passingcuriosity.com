@@ -1,9 +1,6 @@
 ---
-wordpressid: 1997
-layout: post
 title: Haskell on Snow Leopard
 tags: howto, haskell, apple
-wordpressurl: http://passingcuriosity.com/?p=1997
 ---
 
 Being the closet Apple fanboy that I am, I pre-ordered Snow Leopard and had my

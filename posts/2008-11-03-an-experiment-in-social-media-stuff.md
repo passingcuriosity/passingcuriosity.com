@@ -1,9 +1,6 @@
 ---
-wordpressid: 233
-layout: post
 title: An Experiment in Social Media Stuff
 tags: meetup, event, atheism
-wordpressurl: http://passingcuriosity.com/?p=185
 ---
 
 I'm a member of the [Perth Atheists meet-up](http://www.perthatheists.org/) and

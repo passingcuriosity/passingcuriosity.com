@@ -1,10 +1,7 @@
 ---
-wordpressid: 1302
-layout: post
 title: Notes on "Debunking Christianity"
 tags: meetup, atheism
 location: Perth, Western Australia
-wordpressurl: http://passingcuriosity.com/?p=1302
 ---
 
 This post is some notes I took during a presentation at the [Perth Atheist

@@ -1,9 +1,6 @@
 ---
-wordpressid: 1567
-layout: post
 title: The Supernatural
 tags: books, reading, fiction
-wordpressurl: http://passingcuriosity.com/2005/the-supernatural/
 ---
 
 [*Cerulean Sins* by Laurell K. Hamilton][1] and [*Industrial Magic* by Kelley

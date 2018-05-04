@@ -1,5 +1,4 @@
 ---
-adverts: display
 title: Restricted SFTP-only access to a single directory using OpenSSH
 tags: howto, ssh, sftp, chroot, linux
 location: Sydney, New South Wales

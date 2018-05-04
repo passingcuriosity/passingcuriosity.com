@@ -1,9 +1,6 @@
 ---
-wordpressid: 1571
-layout: post
 title: Rush Limbaugh Eats Everything
 tags: comics
-wordpressurl: http://passingcuriosity.com/2005/rush-limbaugh-eats-everything/
 ---
 
 <a href="http://www.e-sheep.com/rusheats/">Rush Limbaugh Eats Everything</a>

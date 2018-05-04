@@ -1,9 +1,6 @@
 ---
-wordpressid: 1524
-layout: post
 title: An Interesting Find
 tags: picture, curious, object
-wordpressurl: http://passingcuriosity.com/2006/an-interesting-find/
 ---
 
 <a href="https://photos1.blogger.com/blogger/5615/352/1600/ruler%2C%20open%2C%20standing.jpg">

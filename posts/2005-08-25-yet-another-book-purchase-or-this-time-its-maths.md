@@ -1,9 +1,6 @@
 ---
-wordpressid: 1631
-layout: post
 title: Yet Another Book Purchase or This Time, It's Maths
 tags: books, maths
-wordpressurl: http://passingcuriosity.com/2005/yet-another-book-purchase-or-this-time-its-maths/
 ---
 
 Recent [Data Mining][1] lectures have been looking at the [Apriori

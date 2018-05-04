@@ -1,9 +1,6 @@
 ---
-wordpressid: 1657
-layout: post
 title: Harry Potter and the Half-Crazed Bureaucracy
 tags: reading, papers, books
-wordpressurl: http://passingcuriosity.com/2006/harry-potter-and-the-half-crazed-bureaucracy/
 ---
 
 [Harry Potter and the Half-Crazed Bureaucracy][1] by Benjamin H. Barton.

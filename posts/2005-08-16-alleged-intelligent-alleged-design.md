@@ -1,8 +1,5 @@
 ---
-wordpressid: 1499
-layout: post
 title: Alleged &quot;Intelligent&quot;, Alleged &quot;Design&quot;
-wordpressurl: http://passingcuriosity.com/2005/alleged-intelligent-alleged-design/
 ---
 What jeezuz me off is the way that people are serious in considering "Intelligent Design". As many, many, many articles (by qualified commentators) have pointed out, "Intelligent Design" is not a scientific theory.
 

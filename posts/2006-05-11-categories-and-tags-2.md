@@ -1,8 +1,5 @@
 ---
-wordpressid: 1692
-layout: post
 title: Categories and Tags
-wordpressurl: http://passingcuriosity.com/2006/categories-and-tags-2/
 ---
 
 As on <a href="http://interestingexperience.blogspot.com/">my other

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1460
-layout: post
 title: The Co-op Bookshop
-wordpressurl: http://passingcuriosity.com/2005/the-co-op-bookshop/
 ---
 
 [The Co-op Bookshop][1]

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1389
-layout: post
 title: Java Programming Language
-wordpressurl: http://passingcuriosity.com/2004/java-programming-language/
 ---
 
 [Java Programming Language, JDK 5](http://java.sun.com/j2se/1.5.0/docs/guide/language/)

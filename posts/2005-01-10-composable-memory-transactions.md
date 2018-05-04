@@ -1,8 +1,5 @@
 ---
-wordpressid: 1550
-layout: post
 title: Composable Memory Transactions
-wordpressurl: http://passingcuriosity.com/2005/composable-memory-transactions/
 ---
 
 *[Composable Memory Transactions][1]*. Tim Harris, Simon Marlow, Simon Peyton

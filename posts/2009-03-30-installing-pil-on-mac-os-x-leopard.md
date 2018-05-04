@@ -1,8 +1,5 @@
 ---
-wordpressid: 1045
-layout: post
 title: Installing the Python Imaging Library on Mac OS X Leopard
-wordpressurl: http://passingcuriosity.com/?p=1045
 ---
 
 Like many other developers, I work on a variety of UNIX-like operating systems

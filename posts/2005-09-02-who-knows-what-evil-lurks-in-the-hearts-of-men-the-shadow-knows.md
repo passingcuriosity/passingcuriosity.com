@@ -1,9 +1,6 @@
 ---
-wordpressid: 1634
-layout: post
 title: Who knows what evil lurks in the hearts of men? The Shadow knows.
 tags: films, comics
-wordpressurl: http://passingcuriosity.com/2005/who-knows-what-evil-lurks-in-the-hearts-of-men-the-shadow-knows/
 ---
 
 I've just been looking for material on [The Shadow][1]. I've managed to find a

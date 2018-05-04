@@ -1,8 +1,5 @@
 ---
-wordpressid: 1438
-layout: post
 title: Cool Things That'll Help
-wordpressurl: http://passingcuriosity.com/2005/cool-things-thatll-help/
 ---
 In the cool things that will help implement this project, the Haskell Hierarchical Libraries contain a Graph library which supports querying the existence a path between specified nodes, just what I'll need to implement box rules.
 

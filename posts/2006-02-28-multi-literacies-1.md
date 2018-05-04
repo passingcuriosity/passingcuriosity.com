@@ -1,8 +1,5 @@
 ---
-wordpressid: 1508
-layout: post
 title: Multi-Literacies 1
-wordpressurl: http://passingcuriosity.com/2006/multi-literacies-1/
 ---
 <a href="http://www.utas.edu.au/units/ESA196">ESA196 - Multiliteracies 1A</a>
 

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1387
-layout: post
 title: Automated Deduction Image Gallery
-wordpressurl: http://passingcuriosity.com/2004/automated-deduction-image-gallery/
 ---
 
 I've started on a layout algorithm based on the concept of adjacency matrices.

@@ -1,8 +1,5 @@
 ---
-wordpressid: 1506
-layout: post
 title: A Change in Focus
-wordpressurl: http://passingcuriosity.com/2006/a-change-in-focus/
 ---
 
 Today I took the first step on a new path, that of teaching, with orientation day for the <a href="http://www.utas.edu.au/courses/E3H">Bachelor of Teaching</a>. This semester I will be taking:

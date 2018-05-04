@@ -1,9 +1,6 @@
 ---
-wordpressid: 1492
-layout: post
 title: Postcasts and Recharging
 tags: apple, batteries
-wordpressurl: http://passingcuriosity.com/2005/postcasts-and-recharging/
 ---
 
 A while ago, <a href="http://www.abc.net.au/triplej/hack/">Hack</a> programme

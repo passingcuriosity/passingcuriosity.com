@@ -1,9 +1,6 @@
 ---
-layout: post
 title: Logic, modal and otherwise.
 tags: books, logic, study
-wordpressid:  1548
-wordpressurl: http://passingcuriosity.com/2004/logic-modal-and-otherwise/
 ---
 
 Attending the [Logic Summer School][1] at the Australian National University

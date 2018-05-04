@@ -1,9 +1,6 @@
 ---
-wordpressid: 1706
-layout: post
 title: Maria-sama ga Miteru
 tags: comics, manga, translation
-wordpressurl: http://passingcuriosity.com/2006/maria-sama-ga-miteru/
 ---
 
 [![Maria-sama ga miteru][1]][2]

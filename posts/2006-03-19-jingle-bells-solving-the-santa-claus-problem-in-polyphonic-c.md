@@ -1,8 +1,5 @@
 ---
-wordpressid: 1658
-layout: post
 title: "Jingle Bells: Solving the Santa Claus Problem in Polyphonic C#"
-wordpressurl: http://passingcuriosity.com/2006/jingle-bells-solving-the-santa-claus-problem-in-polyphonic-c/
 ---
 
 <a class="title" href="">Jingle Bells: Solving the Santa Claus Problem in Polyphonic C#</a> by Nick Benton.

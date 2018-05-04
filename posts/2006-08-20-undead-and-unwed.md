@@ -1,9 +1,6 @@
 ---
-wordpressid: 1709
-layout: post
 title: Undead and Unwed
 tags: books, fiction, fantasy
-wordpressurl: http://passingcuriosity.com/2006/undead-and-unwed/
 ---
 
 [![Undead and Unwed][0-1]][0-2]

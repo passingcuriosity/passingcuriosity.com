@@ -1,9 +1,6 @@
 ---
-wordpressid: 1632
-layout: post
 title: A List of Things to be Read
 tags: books, maths
-wordpressurl: http://passingcuriosity.com/2005/a-list-of-things-to-be-read/
 ---
 
 There are a few topics that I'm interested in reading about, but haven't got

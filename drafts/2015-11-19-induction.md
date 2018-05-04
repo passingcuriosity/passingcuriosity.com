@@ -1,6 +1,5 @@
 ---
 title: Induction principles for the natural numbers
-author: Thomas Sutton
 location: Sydney, New South Wales
 ---
 

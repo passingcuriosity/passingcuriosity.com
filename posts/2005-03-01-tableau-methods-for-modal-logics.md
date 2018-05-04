@@ -1,9 +1,6 @@
 ---
-wordpressid: 1566
-layout: post
 title: Tableau Methods for Modal Logics
 tags: books, logic
-wordpressurl: http://passingcuriosity.com/2005/tableau-methods-for-modal-logics/
 ---
 
 [Tableau Methods for Modal and Temporal Logics][1] in [Handbook of Tableau

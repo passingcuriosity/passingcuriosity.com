@@ -1,9 +1,6 @@
 ---
-wordpressid: 1539
-layout: post
 title: Planning and Professional Development
 tags: education, teaching, practicum, professional development
-wordpressurl: http://passingcuriosity.com/2006/planning-and-professional-development/
 ---
 
 Today was the fourth day of PE2 and I spent it mainly on planning and
