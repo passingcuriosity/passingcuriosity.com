@@ -21,15 +21,11 @@ before_install:
   - tar -xvf linux-x86_64
   - mv stack-*-linux-x86_64/stack stack
 
-install:
- - echo "$(ghc --version) [$(ghc --print-project-git-commit-id 2> /dev/null || echo '?')]"
-
 # Here starts the actual work to be performed for the package under test; any
 # command which exits with a non-zero exit code causes the build to fail.
 script:
  - export STACK="./stack --no-terminal"
  - travis_retry $STACK setup
- - travis_retry $STACK install --only-snapshot -j4 --verbosity info --flag hakyll:-checkExternal --flag pandoc:-https
  - $STACK build
  - $STACK exec site build || $STACK exec site rebuild
 
@@ -48,5 +44,4 @@ deploy:
   detect_encoding: true
   default_text_charset: "utf-8"
   on:
-    repo: thsutton/passingcuriosity.com
     branch: master
