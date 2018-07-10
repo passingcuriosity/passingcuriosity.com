@@ -4,7 +4,7 @@
 # images.
 
 if [ -n "$(which jpegtran)" ]; then
-    djpeg | cjpeg -scale 1/2 -quality 50 | jpegtran -optimize -copy none
+    djpeg -scale 1/2 | cjpeg -quality 50 | jpegtran -optimize -copy none
 else
     cat
 fi
