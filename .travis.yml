@@ -7,6 +7,11 @@ notifications:
   email:
     on_success: change
     on_failure: change
+addons:
+  apt:
+    packages:
+    - libjpeg-turbo-progs
+    - jpegoptim
 before_install:
 - travis_retry wget https://www.stackage.org/stack/linux-x86_64
 - tar -xvf linux-x86_64
