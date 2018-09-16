@@ -2,7 +2,7 @@
 title: Graphviz, Dot, Large Graphs and Crashing!
 tags: srp, logic, graph, visualisation
 location: Canberra, Australia
-excerpt: Running GraphViz on my generated dot files exhausts memory and dies.
+excerpt: Running Graphviz on my generated dot files exhausts memory and dies.
   I'll need to either use a smaller problem, or another visualisation tool.
 ---
 
