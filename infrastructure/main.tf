@@ -7,6 +7,10 @@ resource "aws_s3_bucket" "hosting" {
     index_document = "index.html"
     error_document = "4xx.html"
   }
+
+  tags {
+    Site = "passingcuriosity.com"
+  }
 }
 
 resource "aws_acm_certificate" "cert" {
@@ -18,6 +22,10 @@ resource "aws_acm_certificate" "cert" {
 
   lifecycle {
     create_before_destroy = true
+  }
+
+  tags {
+    Site = "passingcuriosity.com"
   }
 }
 
@@ -106,6 +114,10 @@ resource "aws_lambda_function" "redirect" {
 
   filename         = "${substr(data.archive_file.redirect_code.output_path, length(path.cwd) + 1, -1)}"
   source_code_hash = "${data.archive_file.redirect_code.output_base64sha256}"
+
+  tags {
+    Site = "passingcuriosity.com"
+  }
 }
 
 resource "aws_cloudfront_distribution" "hosting" {
@@ -114,6 +126,10 @@ resource "aws_cloudfront_distribution" "hosting" {
   default_root_object = "index.html"
 
   aliases = ["passingcuriosity.com", "www.passingcuriosity.com"]
+
+  tags {
+    Site = "passingcuriosity.com"
+  }
 
   origin {
     origin_id   = "S3-passingcuriosity.com"
@@ -161,6 +177,11 @@ resource "aws_route53_zone" "hosting" {
   name          = "passingcuriosity.com"
   comment       = ""
   force_destroy = false
+
+  tags {
+    Site = "passingcuriosity.com"
+  }
+
 }
 
 resource "aws_route53_record" "root" {
