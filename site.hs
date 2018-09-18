@@ -180,6 +180,18 @@ main = hakyllWith hakyllCfg $ do
                 >>= relativizeUrls
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
 
+    match "4xx.md" $ do
+        route $ setExtension "html"
+        compile $ do
+            let errorCtx =
+                    sectionField "error" <>
+                    defaultCtx
+            getResourceBody
+                >>= applyAsTemplate errorCtx
+                >>= renderPandoc
+                >>= loadAndApplyTemplate "templates/page.html"   errorCtx
+                >>= loadAndApplyTemplate "templates/default.html" errorCtx
+
     match "tags.md" $ do
         route routeFileToDirectory
         compile $ do
