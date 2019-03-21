@@ -1,6 +1,6 @@
 ---
 title: Work allocation in Kafka Streams
-series: Learning Kafka Streams
+series: Learning Kafka
 tags: distributed systems, kafka, streaming, data
 location: Sydney, New South Wales
 excerpt:
