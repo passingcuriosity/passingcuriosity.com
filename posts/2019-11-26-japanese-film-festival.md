@@ -1,5 +1,5 @@
 ---
-title: 2016 Japanese Film Festival
+title: 2019 Japanese Film Festival
 location: Sydney, New South Wales
 tags: events, films, japan, festival
 excerpt: 
