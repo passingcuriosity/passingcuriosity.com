@@ -33,12 +33,6 @@ import qualified Text.URI                        as URI
 -- * Configuration
 --------------------------------------------------------------------------------
 
-amazonUSTag :: String
-amazonUSTag = "passingcuriosity-20"
-
-amazonAUTag :: String
-amazonAUTag = "passingcurios-22"
-
 -- | Site configuration
 hakyllCfg :: Configuration
 hakyllCfg = defaultConfiguration
@@ -539,22 +533,12 @@ contentCompiler :: Compiler (Item String)
 contentCompiler =
     pandocCompilerWith read_opts write_opts
         >>= return . fmap embedKMLImages . fmap bootstrap
-        >>= shill
   where
     read_opts = defaultHakyllReaderOptions
     write_opts = defaultHakyllWriterOptions
         { writerHTMLMathMethod = MathJax mathjax
         }
     mathjax = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-
--- | Sprinkle affiliate links, etc. over a blog.
-shill :: Item String -> Compiler (Item String)
-shill item = return $ fmap (withUrls amazon) item
-  where
-    amazon :: String -> String
-    amazon url = if "amazon.com/" `isInfixOf` url
-        then fromMaybe url $ urlAddQuery ("tag", amazonUSTag) url
-        else url
 
 --------------------------------------------------------------------------------
 -- * Utility
