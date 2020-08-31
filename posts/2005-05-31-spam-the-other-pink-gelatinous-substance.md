@@ -1,8 +1,0 @@
----
-title: Spam - The Other Pink Gelatinous Substance
----
-I just received a spam (regarding lifestyle medication) with the following as its filter-avoidance random text...
-<blockquote>I like the word 'indolence.' it makes my laziness seem classy.
-Gossip is sometimes referred to as halitosis of the mind
-What's another word for Thesaurus?
-Money is good for bribing yourself through the inconveniences of life.</blockquote>Perhaps spam is turning over a new leaf and attempting to contribute something back to the Internet, even if it is a few bad jokes that only a person such as myself would find amusing.
