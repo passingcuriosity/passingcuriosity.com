@@ -12,8 +12,9 @@ configuration so that I'll be able to find all the details late.
 
 The hardware involved is:
 
-1. A Proscend T-180 VDSL2 SFP module.
-2. A Ubiquiti EdgeRouter X SFP router.
+1. A [Proscend T-180 VDSL2 SFP][3] module.
+
+2. A [Ubiquiti EdgeRouter X SFP][4] router.
 
 The installation goes like so:
 
@@ -41,3 +42,8 @@ The installation goes like so:
 
 Now your router is connected! In my case, I had additional details for
 configure -- firewall, masquerading, etc. -- but that's pretty much it.
+
+[1]: https://www.nbnco.com.au/
+[2]: https://www.nbnco.com.au/learn/network-technology/fibre-to-the-building-explained-fttb
+[3]: https://www.proscend.com/en/product/VDSL2-SFP-Modem-for-Telco/180-T.html
+[4]: https://www.ui.com/edgemax/edgerouter-x-sfp/
