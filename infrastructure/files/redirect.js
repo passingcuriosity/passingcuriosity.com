@@ -4,7 +4,7 @@ const http = require('http');
 
 exports.handler = (event, context, callback) => {
   const request = event.Records[0].cf.request;
-  
+
   let prefixPath; // needed for 2nd condition
 
   if (request.uri.match('.+/$')) {
