@@ -1,9 +1,11 @@
 ---
-title: Disabling the Diffie-Hellman prime length check
+title: Reducing the Diffie-Hellman prime length requirements on OpenSSL and GnuTLS
 location: Sydney, New South Wales
-tags: howto, openssl, gnutls, diffie-hellman
-excerpt:
-  
+tags: howto, openssl, gnutls, diffie-hellman, configuration, security
+excerpt: |
+  Working inside a corporate network can often dealing with poor security
+  practices. This is how to configure common TLS clients to allow connections
+  with servers using TLS keys and parameters now considered insecure.
 ---
 
 Most operating systems do a pretty OK job of shipping libraries that have
