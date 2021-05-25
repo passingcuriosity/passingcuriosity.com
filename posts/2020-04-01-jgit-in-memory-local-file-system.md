@@ -52,7 +52,7 @@ supply that `FS` instance during construction:
 ```.java
 DfsRepositoryDescription repoDesc = new DfsRepositoryDescription();
 InMemoryRepository repo = new InMemoryRepository.Builder()
-  .setRepsositoryDescription(repoDesc)
+  .setRepositoryDescription(repoDesc)
   .setFS(FS.detect())
   .build();
 Git git = new Git(repo);
