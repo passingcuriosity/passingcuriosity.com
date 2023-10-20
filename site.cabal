@@ -22,6 +22,7 @@ executable site
                   , filepath
                   , hakyll
                   , hashable
+                  , hjsmin
                   , modern-uri
                   , pandoc
                   , tagsoup
