@@ -22,6 +22,7 @@ import           Text.Blaze.Html.Renderer.String (renderHtml)
 import qualified Text.Blaze.Html5                as BH
 import qualified Text.Blaze.Html5.Attributes     as BA
 import qualified Text.HTML.TagSoup               as TS
+import           Text.Jasmine                    (minify)
 import           Text.Pandoc
 import           Text.URI                        (URI)
 import qualified Text.URI                        as URI
@@ -83,7 +84,7 @@ main = hakyllWith hakyllCfg $ do
 
     match "assets/js/*" $ do
         route   idRoute
-        compile $ getResourceLBS >>= withItemBody (unixFilterLBS "./bin/js-opt" [])
+        compile $ getResourceLBS >>= withItemBody (return . minify)
 
     match "assets/fonts/*" $ do
         route   idRoute
