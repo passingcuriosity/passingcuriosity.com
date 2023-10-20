@@ -23,7 +23,7 @@ jobs:
 
     - name: Dependencies
       run: |
-        sudo apt install libjpeg-progs
+        sudo apt-get install -y --no-install-recommends libjpeg-progs
 
     - name: Cache
       uses: actions/cache@v3
@@ -71,7 +71,7 @@ jobs:
 
       - name: Dependencies
         run: |
-          sudo apt install awscli
+          sudo apt-get install -y --no-install-recommends awscli
 
       - name: Artifacts
         uses: actions/download-artifact@v2
