@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -24,14 +23,19 @@ jobs:
 
     - name: Dependencies
       run: |
-        sudo apt-get install libjpeg-progs
+        sudo apt install libjpeg-progs
 
     - name: Cache
       uses: actions/cache@v3
       env:
         cache-name: cache-cabal
       with:
-        path: ~/.cabal
+        path: |
+          ~/.cabal
+          ~/.cache/cabal
+          ~/.ghc
+          ~/.local/bin
+          ~/.local/state/cabal
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/*.cabal') }}-${{ hashFiles('**/cabal.project') }}
         restore-keys: |
           ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -44,8 +48,53 @@ jobs:
         cabal build --only-dependencies --enable-tests --enable-benchmarks
 
     - name: Compile
-      run: cabal build all
+      run: cabal build
 
     - name: Build
-      run: cabal exec site build
+      run: |
+        cabal exec site build
+    
+    - name: Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: site-files
+        path: _site
+        retention-days: 1
 
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Dependencies
+        run: |
+          sudo apt install awscli
+
+      - name: Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: site-files
+
+      - name: Publish
+        run: |
+          aws s3 sync _site/ s3://passingcuriosity.com/ \
+            --acl public-read \
+            --cache-control public \
+            --delete
+        env:
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: CDN
+        run: |
+          aws s3 cloudfront create-invalidation \
+            --distribution-id E3SR8FZXHQKSCN \
+            --paths "*"
+        env:
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
