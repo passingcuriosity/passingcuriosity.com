@@ -22,6 +22,10 @@ jobs:
         ghc-version: '8.10.3'
         cabal-version: '3.2'
 
+    - name: Dependencies
+      run: |
+        sudo apt-get install libjpeg-progs
+
     - name: Cache
       uses: actions/cache@v3
       env:
