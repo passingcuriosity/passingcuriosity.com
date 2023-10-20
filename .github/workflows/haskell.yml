@@ -55,7 +55,7 @@ jobs:
         cabal exec site build
     
     - name: Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: site-files
         path: _site
@@ -74,9 +74,10 @@ jobs:
           sudo apt-get install -y --no-install-recommends awscli
 
       - name: Artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: site-files
+          path: _site
 
       - name: Publish
         run: |
