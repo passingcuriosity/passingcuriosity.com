@@ -2,7 +2,7 @@
 title: Installing OpenBSD on a Microsoft Surface Go 3
 tags: howto, openbsd, unix
 excerpt: |
-  The steps I took to install OpenBSD 7.2 on a Microsoft Surface Go 3.
+  Installing OpenBSD 7.2 on a Microsoft Surface Go 3 and doing some basic setup.
 ---
 
 I have a new Microsoft Surface Go 3 and installed OpenBSD 7.2 to see how it
@@ -10,7 +10,6 @@ does as a machine to carry while travelling. The box contained the Surface Go
 itself, a 24 W charger with the silly proprietary connector, and a few bits of
 paper. I already had a Type Cover keyboard (from the Go I bought when it came
 out) so I was pretty much ready to go. 
-
 
 # Installing OpenBSD
 
@@ -73,14 +72,6 @@ http://www.omarpolo.com/post/openbsd-tethering.html
 
 # X, XenoDM, and a window manager
 
-https://www.birkey.co/2022-01-29-openbsd-7-xfce-desktop.html
-
-https://www.tumfatig.net/2019/customizing-openbsd-xenodm/
-
-https://dataswamp.org/~solene/2021-07-30-openbsd-xidle-xlock.html
-
-https://www.tumfatig.net/2021/calibrate-your-touch-screen-on-openbsd/
-
 `xtsscale` to calibrate the touch screen but you need to find the right XInput
 device. `xinput --list` will show a number of mouse devices (all alike except
 for the device and XInput IDs).
@@ -107,3 +98,10 @@ attempts but eventually it will update the calibration parameters for the
 running X server and print those same parameters so you can update your
 configuration. The details are in `xtsscale(1)`.
 
+https://www.birkey.co/2022-01-29-openbsd-7-xfce-desktop.html
+
+https://www.tumfatig.net/2019/customizing-openbsd-xenodm/
+
+https://dataswamp.org/~solene/2021-07-30-openbsd-xidle-xlock.html
+
+https://www.tumfatig.net/2021/calibrate-your-touch-screen-on-openbsd/
