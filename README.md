@@ -12,8 +12,6 @@ Dependencies
 
 JPEG image processing tools from [Independant JPEG Group][ijg].
 
-[JSMin][jsmin] JavaScript minimiser.
-
 License
 -------
 
