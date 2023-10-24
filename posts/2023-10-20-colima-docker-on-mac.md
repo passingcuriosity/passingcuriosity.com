@@ -1,5 +1,5 @@
 ---
-title: Use Colima to build and run container on macOS
+title: Use Colima to build and run containers on macOS
 tags: howto, linux, unix, docker, containers, macOS
 excerpt: |
   Use Colima for Docker and Kubernetes development on your Mac.
@@ -23,12 +23,11 @@ Install Colima along with the Docker and Kubernetes command-line tools:
 brew install colima docker kubectl
 ```
 
-If you work on a network controlled by an organisation that uses TLS
-stripping security appliances you'll probably need to install
-additional CA root certificates before you can pull container images
-from the Internet, etc.
-You can put them in the usual place in your home directory and Colima
-will automatically install them in the VMs it starts:
+If you work on a network controlled by an organisation that uses TLS stripping
+security appliances you'll probably need to install additional CA root
+certificates before you can pull container images from the Internet, etc. You
+can put them in the usual place in your home directory and Colima will
+automatically install them in the VMs it starts:
 
 ```
 mkdir -p ~/.docker/certs.d
@@ -39,16 +38,16 @@ curl -o proxy-cert.crt https://insecurity.my.corp/proxy-cert.crt
 (Do make sure you put each certificate in a separate file; if they are
 concatenated you'll need to split them.)
 
-With Colima installed, you should be able to start a Colima instance.
-There are a handful of options to control the CPU, disk, and memory
-allocation for the VM, the runtimes to configure on it, etc.
+With Colima installed, you should be able to start a Colima instance. There are
+a handful of options to control the CPU, disk, and memory allocation for the VM,
+the runtimes to configure on it, etc.
  
 ```
 colima start --memory 8 --kubernetes
 ```
  
-Check that the Docker and Kubernetes command-line tools have been
-configured to talk to the new Colima instance:
+Check that the Docker and Kubernetes command-line tools have been configured to
+talk to the new Colima instance:
  
 ```
 kubectl get pods -A
