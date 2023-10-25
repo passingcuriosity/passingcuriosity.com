@@ -22,6 +22,3 @@ Linked In
 
 GitHub
 : [github.com/thsutton](https://github.com/thsutton)
-
-Stack Exchange
-: [thsutton](https://stackexchange.com/users/52384/thsutton)
