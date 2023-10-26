@@ -160,7 +160,7 @@ main = hakyllWith hakyllCfg $ do
     match "index.md" $ do
         route   $ setExtension "html"
         compile $ do
-            posts <- fmap (take 3) . recentFirst =<<
+            posts <- fmap (take 5) . recentFirst =<<
                 loadAll ("posts/*" .&&. hasNoVersion)
 
             let indexCtx =
