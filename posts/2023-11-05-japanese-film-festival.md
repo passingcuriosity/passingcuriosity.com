@@ -34,7 +34,7 @@ and his tragic history. I really enjoyed it.
 
 *We're broke, my lord (大名倒産)* A period comedy set in the late Edo period.
 A young man　who was raised by a salted salmon merchant discovers he's the
-illegitimate son　of the [lord][] of the [estate][]. I thought it was very,
+illegitimate son of the [lord][] of the [estate][]. I thought it was very,
 very trope-y, but good fun.
 
 *Brave: Gunjo Senki* A high-school is transported back to the [warring states
@@ -64,4 +64,4 @@ higher than previous years, but it was still a fun week of cinema. Thanks
 [estate]: https://en.wikipedia.org/wiki/Han_system#Edo_period
 [warring states period]: https://en.wikipedia.org/wiki/Sengoku_period
 [Takeshi Kitano]: https://en.wikipedia.org/wiki/Takeshi_Kitano
-[Japan Foundation][]: https://jpf.org.au/
+[Japan Foundation]: https://jpf.org.au/
