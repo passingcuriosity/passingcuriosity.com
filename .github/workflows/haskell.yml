@@ -31,6 +31,7 @@ jobs:
         cache-name: cache-cabal
       with:
         path: |
+          dist-newstyle
           ~/.cabal
           ~/.cache/cabal
           ~/.ghc
@@ -56,6 +57,7 @@ jobs:
     
     - name: Artifacts
       uses: actions/upload-artifact@v3
+      if: github.ref == 'refs/heads/main'
       with:
         name: site-files
         path: _site
