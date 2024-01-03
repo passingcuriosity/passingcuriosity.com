@@ -1,9 +1,13 @@
 ---
-title: Setup Yubikey 
+title: Setup Yubikey with OpenPGP for git
 tags: howto, git, yubikey, gpg, ssh, github
 excerpt: |
   Setup a new Yubikey with, add OpenPGP keys, and configure git and GitHub to use them.
 ---
+
+This is a pretty sparse log of things to do to set up a new Yubikey with
+OpenPGP for use with `git`. If anything below doesn't make sense consult the
+sources linked at the end of the post.
 
 # Install things
 
