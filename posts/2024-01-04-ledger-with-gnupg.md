@@ -48,6 +48,10 @@ $ ledger -f 2024.journal.gpg bal
                    0
 ```
 
+For the sake of convenience, I give the encrypted files an extension like `.asc`
+or `.gpg` so that tools like [vim-gnupg][3] can transparently decrypt them for
+editing.
+
 Ledger handles encryption transparently at the file-access level, so you
 can split up your configuration and journal postings into different
 files and make each encrypted or unencrypted as you like. Personally, I
@@ -56,3 +60,4 @@ and then includes encrypted journal files containing the actual posting.
 
 [1]: https://ledger-cli.org/
 [2]: https://github.com/ledger/ledger/pull/1949
+[3]: https://github.com/jamessan/vim-gnupg
