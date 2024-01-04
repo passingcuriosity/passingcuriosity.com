@@ -7,7 +7,7 @@ excerpt: |
 
 # Writing AWK _scripts_
 
-Many large AWK scripts wrapped in a useless
+Many large AWK scripts are wrapped in a useless
 shell script. If all of your logic is in AWK
 then there's no need for the shell to get
 involves in things; just use the correct
