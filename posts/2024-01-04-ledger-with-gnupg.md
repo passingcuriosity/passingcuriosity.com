@@ -23,16 +23,19 @@ See LICENSE file included with the distribution for details and disclaimer.
 
 and check for "with support for gpg encrypted journals".
 
-If it's present, then you can _just_ encrypt your journal files and
-`ledger` will transparently the data as it reads. Doing this is a simple
-matter of encrypting the files with your own key. If you only use
-`gpg --encrypt` to encrypt files for yourself (and not to send to other
-people) then the easiest way might be to configure GnuPG to encrypt with
+If it's present, then all you have to do is encrypt your journal files and
+`ledger` will transparently decrypt the data as it reads. Doing this is a
+simple matter of encrypting the files with yourself as the recipient. If you
+only use `gpg --encrypt` to encrypt files for yourself (and not to send to
+other people) then the easiest way might be to configure GnuPG to encrypt with
 your own key by default:
 
 ```
 $ echo default-recipient-self >> ~/.gnupg/gpg.conf
 ```
+
+Alternatively, you can remember to pass the `--recipient` argument specifying
+the key ID or email address for your own key when you run `gpg --encrypt`.
 
 Now you can just create some encrypted journal files:
 
