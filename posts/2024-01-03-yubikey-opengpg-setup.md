@@ -226,6 +226,8 @@ $ gpg --lsign-key noreply@github.com
 
 - [Trusting GitHub's key](https://stackoverflow.com/a/60482908)
 
+- [YubiKey Guide](https://github.com/drduh/YubiKey-Guide)
+
 - `git-commit(1)` man page
 
 - `git-tag(1)` man page
